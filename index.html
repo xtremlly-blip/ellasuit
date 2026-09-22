@@ -442,20 +442,32 @@
         </div>
     </section>
 
-    <!-- Footer -->
-    <footer class="glass-card border-t border-gold-500/20 py-8 px-4 text-center">
-        <div class="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-gray-400">
-            <div class="flex items-center gap-2">
-                <img src="logo.png" alt="ELLA Logo" class="h-6 w-auto" onerror="this.onerror=null; this.src='https://placehold.co/100x30/0f172a/d4af37?text=ELLA';">
-                <span>© 2026 ELLA Suit Store. Confidence Tailored.</span>
-            </div>
-            <div class="flex items-center space-x-6 text-sm">
-                <a href="#" class="hover:text-gold-400"><i class="fab fa-instagram"></i></a>
-                <a href="#" class="hover:text-gold-400"><i class="fab fa-facebook"></i></a>
-                <a href="https://wa.me/251911000000" class="hover:text-gold-400"><i class="fab fa-whatsapp"></i></a>
-            </div>
+   <!-- Footer -->
+<footer class="glass-card border-t border-gold-500/20 py-8 px-4 text-center">
+    <div class="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-gray-400">
+        <div class="flex items-center gap-2">
+            <img src="logo.png" alt="ELLA Logo" class="h-6 w-auto" onerror="this.onerror=null; this.src='https://placehold.co/100x30/0f172a/d4af37?text=ELLA';">
+            <span>© 2026 ELLA Suit Store. Confidence Tailored.</span>
         </div>
-    </footer>
+        <div class="flex items-center space-x-6 text-sm">
+            <a href="https://t.me/Ellasuits" target="_blank" rel="noopener noreferrer" class="hover:text-gold-400" aria-label="Telegram">
+                <i class="fab fa-telegram"></i>
+            </a>
+            <a href="https://www.instagram.com/ellasuitstore?stkn=a3p3Y2syYnVhbGZ5&utm_source=qr" target="_blank" rel="noopener noreferrer" class="hover:text-gold-400" aria-label="Instagram">
+                <i class="fab fa-instagram"></i>
+            </a>
+            <a href="https://web.facebook.com/profile.php?id=61592446601829" target="_blank" rel="noopener noreferrer" class="hover:text-gold-400" aria-label="Facebook">
+                <i class="fab fa-facebook"></i>
+            </a>
+            <a href="http://tiktok.com/@ella.suit?_t=ZM-8xmTSIXtRJ8&_r=1" target="_blank" rel="noopener noreferrer" class="hover:text-gold-400" aria-label="TikTok">
+                <i class="fab fa-tiktok"></i>
+            </a>
+            <a href="https://wa.me/251975338888" target="_blank" rel="noopener noreferrer" class="hover:text-gold-400" aria-label="WhatsApp">
+                <i class="fab fa-whatsapp"></i>
+            </a>
+        </div>
+    </div>
+</footer>
 
     <!-- Product Modal -->
     <div id="product-modal" class="fixed inset-0 z-50 hidden bg-black/80 backdrop-blur-sm flex items-center justify-center p-4">
@@ -505,7 +517,7 @@
             const lapel = document.getElementById('lapel-select').value;
             const fit = document.getElementById('fit-select').value;
             const message = `Hello ELLA Suit Store, I customized a suit in your online studio:%0A- Color: ${currentSuitColor}%0A- Lapel: ${lapel}%0A- Fit: ${fit}%0APlease let me know availability and fitting options.`;
-            window.open(`https://wa.me/251911000000?text=${message}`, '_blank');
+            window.open(`https://wa.me/251976338888?text=${message}`, '_blank');
         }
 
         // Category Filter
@@ -526,7 +538,7 @@
             document.getElementById('modal-cat').innerText = category;
             document.getElementById('modal-img').src = imgSrc;
             document.getElementById('modal-desc').innerText = description;
-            document.getElementById('modal-wa').href = `https://wa.me/251911000000?text=Hello%20ELLA%20Suit%20Store,%20I%20am%20interested%20in%20the%20${encodeURIComponent(title)}.`;
+            document.getElementById('modal-wa').href = `https://wa.me/251975338888?text=Hello%20ELLA%20Suit%20Store,%20I%20am%20interested%20in%20the%20${encodeURIComponent(title)}.`;
             document.getElementById('product-modal').classList.remove('hidden');
         }
 
