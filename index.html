@@ -3,366 +3,543 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ELLA Suit Store | Premium Imported Menswear in Addis Ababa</title>
-    <!-- Tailwind CSS CDN -->
+    <title>ELLA | Confidence Tailored - Imported Luxury Menswear</title>
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
     <script>
         tailwind.config = {
             theme: {
                 extend: {
                     colors: {
-                        navy: {
-                            800: '#0B132B',
-                            900: '#070B19',
-                            950: '#04060F',
-                        },
                         gold: {
-                            400: '#F3C66A',
-                            500: '#D4AF37',
-                            600: '#AA8C2C',
+                            100: '#FAF4E6',
+                            300: '#E6C887',
+                            400: '#D4AF37',
+                            500: '#AA820A',
+                            600: '#8A6805',
+                        },
+                        dark: {
+                            900: '#0B0C10',
+                            800: '#12141C',
+                            700: '#1F2330',
+                            600: '#2A2E3D'
                         }
+                    },
+                    fontFamily: {
+                        serif: ['"Cormorant Garamond"', 'serif'],
+                        sans: ['Inter', 'sans-serif']
                     }
                 }
             }
         }
     </script>
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
-        body {
-            font-family: 'Plus Jakarta Sans', sans-serif;
-            background-color: #04060F;
-            color: #E2E8F0;
+        .gold-gradient-text {
+            background: linear-gradient(135deg, #FFF0CA 0%, #D4AF37 50%, #AA820A 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
         }
-        .heading-font {
-            font-family: 'Cinzel', serif;
+        .gold-border-glow {
+            box-shadow: 0 0 15px rgba(212, 175, 55, 0.15);
         }
-        .glass-card {
-            background: rgba(11, 19, 43, 0.6);
-            backdrop-filter: blur(12px);
-            border: 1px solid rgba(212, 175, 55, 0.15);
+        .gold-border-glow:hover {
+            box-shadow: 0 0 25px rgba(212, 175, 55, 0.3);
         }
-        .glass-card:hover {
-            border-color: rgba(212, 175, 55, 0.4);
+        .hero-bg {
+            background: linear-gradient(to right, rgba(11, 12, 16, 0.95), rgba(11, 12, 16, 0.7)), url('assets/hero.png'), url('https://images.unsplash.com/photo-1594938298603-c8148c4dae35?q=80&w=1920&auto=format&fit=crop');
+            background-size: cover;
+            background-position: center;
         }
     </style>
 </head>
-<body class="bg-navy-950 text-gray-200 antialiased selection:bg-gold-500 selection:text-black">
+<body class="bg-dark-900 text-gray-200 font-sans antialiased selection:bg-gold-400 selection:text-dark-900">
 
-    <!-- Header / Navigation -->
-    <header class="fixed top-0 left-0 right-0 z-50 bg-navy-950/90 backdrop-blur-md border-b border-gold-500/10">
-        <div class="max-w-7xl mx-auto px-4 lg:px-8 h-20 flex items-center justify-between">
-            <!-- Brand Logo -->
-            <a href="#" class="flex items-center gap-3">
-                <img src="assets/logo.png" alt="ELLA Suit Store Logo" class="h-12 w-auto object-contain" onerror="this.onerror=null; this.src='https://via.placeholder.com/150x50?text=ELLA+SUIT';">
+    <!-- Top Announcement Bar -->
+    <div class="bg-gradient-to-r from-gold-600 via-gold-400 to-gold-600 text-dark-900 text-xs py-2 px-4 font-semibold text-center tracking-wider">
+        <i class="fa-solid fa-plane-arrival mr-2"></i> DIRECTLY IMPORTED LUXURY MENSWEAR FROM TURKEY, ITALY, ENGLAND & THE US
+    </div>
+
+    <!-- Navigation Bar -->
+    <nav class="sticky top-0 z-50 bg-dark-900/90 backdrop-blur-md border-b border-gold-400/20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <!-- Logo -->
+                <a href="#" class="flex items-center gap-3 group">
+                    <img src="assets/logo.png" alt="ELLA Logo" class="h-10 w-auto object-contain" onerror="this.onerror=null; this.src='https://placehold.co/100x100/12141C/D4AF37?text=ELLA';">
+                    <div class="flex flex-col">
+                        <span class="font-serif text-2xl font-bold tracking-widest text-white group-hover:text-gold-400 transition">ELLA</span>
+                        <span class="text-[9px] tracking-[0.25em] text-gold-400 uppercase -mt-1">Confidence Tailored</span>
+                    </div>
+                </a>
+
+                <!-- Desktop Navigation Links -->
+                <div class="hidden md:flex items-center space-x-8 text-sm uppercase tracking-widest font-medium">
+                    <a href="#collections" class="hover:text-gold-400 transition">Collections</a>
+                    <a href="#origin" class="hover:text-gold-400 transition">Imported Luxury</a>
+                    <a href="#advisor" class="hover:text-gold-400 transition">Size Advisor</a>
+                    <a href="#contact" class="hover:text-gold-400 transition">Visit Store</a>
+                </div>
+
+                <!-- Right Actions -->
+                <div class="hidden md:flex items-center space-x-4">
+                    <a href="https://wa.me/251975338888" target="_blank" class="px-5 py-2.5 rounded-full border border-gold-400 text-gold-400 hover:bg-gold-400 hover:text-dark-900 font-semibold text-xs tracking-wider uppercase transition-all duration-300 flex items-center gap-2">
+                        <i class="fa-brands fa-whatsapp text-base"></i> VIP Inquiry
+                    </a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-gray-300 hover:text-gold-400 focus:outline-none p-2">
+                        <i class="fa-solid fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu Dropdown -->
+        <div id="mobile-menu" class="hidden md:hidden bg-dark-800 border-b border-gold-400/20 px-4 pt-2 pb-6 space-y-4">
+            <a href="#collections" class="block py-2 text-sm uppercase tracking-widest hover:text-gold-400 border-b border-gray-800">Collections</a>
+            <a href="#origin" class="block py-2 text-sm uppercase tracking-widest hover:text-gold-400 border-b border-gray-800">Imported Luxury</a>
+            <a href="#advisor" class="block py-2 text-sm uppercase tracking-widest hover:text-gold-400 border-b border-gray-800">Size Advisor</a>
+            <a href="#contact" class="block py-2 text-sm uppercase tracking-widest hover:text-gold-400">Visit Store</a>
+            <a href="https://wa.me/251975338888" target="_blank" class="block text-center py-3 rounded-md bg-gold-400 text-dark-900 font-bold text-sm tracking-wider uppercase mt-4">
+                <i class="fa-brands fa-whatsapp mr-2"></i> WhatsApp Order (+251 975 338 888)
             </a>
+        </div>
+    </nav>
 
-            <!-- Navigation Links -->
-            <nav class="hidden md:flex items-center gap-8 text-sm font-medium tracking-wide uppercase">
-                <a href="#about" class="hover:text-gold-400 transition">About Us</a>
-                <a href="#collection" class="hover:text-gold-400 transition">Import Collection</a>
-                <a href="#contact" class="hover:text-gold-400 transition">Visit Store</a>
-            </nav>
-
-            <!-- Direct WhatsApp CTA -->
-            <a href="https://wa.me/251975338888" target="_blank" class="px-5 py-2.5 bg-gold-500/10 hover:bg-gold-500 text-gold-400 hover:text-black border border-gold-500/40 rounded-full transition font-semibold text-xs tracking-wider uppercase flex items-center gap-2">
-                <i class="fab fa-whatsapp text-base"></i>
-                <span>Inquire Now</span>
-            </a>
+    <!-- Hero Section -->
+    <header class="relative hero-bg min-h-[85vh] flex items-center border-b border-gold-400/20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+            <div class="max-w-2xl space-y-6">
+                <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-gold-400/10 border border-gold-400/30 text-gold-400 text-xs uppercase tracking-widest">
+                    <i class="fa-solid fa-gem"></i> Premium Ready-To-Wear
+                </div>
+                <h1 class="font-serif text-5xl sm:text-6xl md:text-7xl font-bold leading-tight text-white">
+                    Confidence Tailored.<br>
+                    <span class="gold-gradient-text">Imported Luxury Menswear.</span>
+                </h1>
+                <p class="text-gray-300 text-base sm:text-lg leading-relaxed font-light">
+                    Directly imported fine mens fashion from Turkey, Italy, England, and the US. Hand-selected suit garments, 100% superfine wools, premium footwear, and refined accessories crafted for the modern executive.
+                </p>
+                <div class="pt-4 flex flex-wrap gap-4">
+                    <a href="#collections" class="px-8 py-4 rounded-full bg-gradient-to-r from-gold-400 to-gold-500 text-dark-900 font-bold text-sm tracking-widest uppercase hover:shadow-lg hover:shadow-gold-400/20 transition-all duration-300 transform hover:-translate-y-0.5">
+                        Explore Catalog
+                    </a>
+                    <a href="#advisor" class="px-8 py-4 rounded-full border border-gray-600 hover:border-gold-400 text-white hover:text-gold-400 font-semibold text-sm tracking-widest uppercase transition-all duration-300">
+                        Size & Style Advisor
+                    </a>
+                </div>
+                <!-- Origin Flags Banner -->
+                <div class="pt-8 border-t border-gray-800/80 flex items-center gap-6 text-xs text-gray-400 uppercase tracking-widest">
+                    <span>Direct Imports From:</span>
+                    <div class="flex gap-4 font-semibold text-gray-200">
+                        <span>🇹🇷 Turkey</span>
+                        <span>🇮🇹 Italy</span>
+                        <span>🏴󠁧󠁢󠁥󠁮󠁧󠁿 England</span>
+                        <span>🇺🇸 US</span>
+                    </div>
+                </div>
+            </div>
         </div>
     </header>
 
-    <!-- Hero Section -->
-    <section class="relative min-h-screen pt-28 pb-16 px-4 lg:px-8 max-w-7xl mx-auto flex items-center">
-        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center w-full">
-            <div class="lg:col-span-7 space-y-6">
-                <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-gold-500/10 border border-gold-500/30 text-gold-400 text-xs font-semibold tracking-widest uppercase">
-                    <i class="fas fa-globe-europe"></i> Direct Imports from Turkey, Italy, England & US
-                </div>
-                <h1 class="heading-font text-4xl sm:text-6xl lg:text-7xl font-bold text-white leading-tight">
-                    Confidence <br><span class="text-gold-400">Tailored.</span>
-                </h1>
-                <p class="text-gray-300 text-base sm:text-lg max-w-xl font-light leading-relaxed">
-                    Elevate your presence with premier European and Turkish menswear in Addis Ababa. We curate world-class 100% wool suits, tuxedos, footwear, and essentials for the modern executive.
-                </p>
-                <div class="pt-4 flex flex-wrap gap-4">
-                    <a href="#collection" class="px-8 py-4 bg-gold-500 hover:bg-gold-600 text-navy-950 font-bold rounded-lg transition shadow-lg shadow-gold-500/10 tracking-wide text-sm uppercase">
-                        Explore Collection
-                    </a>
-                    <a href="https://wa.me/251975338888" target="_blank" class="px-8 py-4 bg-navy-800 hover:bg-navy-800/80 text-white border border-gold-500/20 rounded-lg transition tracking-wide text-sm uppercase flex items-center gap-2">
-                        <i class="fab fa-whatsapp text-gold-400"></i> Contact Store
-                    </a>
-                </div>
+    <!-- Product Catalog Section -->
+    <section id="collections" class="py-20 bg-dark-900">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-12">
+                <h2 class="text-xs uppercase tracking-[0.3em] text-gold-400 font-semibold mb-2">Curated Menswear Collection</h2>
+                <p class="font-serif text-4xl sm:text-5xl text-white font-bold">Imported Luxury Ready-to-Wear</p>
+                <div class="w-16 h-0.5 bg-gold-400 mx-auto mt-4"></div>
             </div>
-            
-            <div class="lg:col-span-5 relative">
-                <div class="aspect-[4/5] rounded-2xl overflow-hidden glass-card p-2 shadow-2xl">
-                    <img src="assets/hero.png" alt="ELLA Suit Store Luxury Menswear" class="w-full h-full object-cover rounded-xl" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1594938298603-c8148c4dae35?auto=format&fit=crop&w=1000&q=80';">
+
+            <!-- Category Filter Buttons -->
+            <div class="flex flex-wrap justify-center gap-2 sm:gap-4 mb-12">
+                <button class="filter-btn active px-6 py-2.5 rounded-full border border-gold-400 bg-gold-400 text-dark-900 font-medium text-xs tracking-wider uppercase transition-all" data-category="all">All Items</button>
+                <button class="filter-btn px-6 py-2.5 rounded-full border border-dark-600 bg-dark-800 text-gray-300 hover:border-gold-400/50 font-medium text-xs tracking-wider uppercase transition-all" data-category="suits">Suits</button>
+                <button class="filter-btn px-6 py-2.5 rounded-full border border-dark-600 bg-dark-800 text-gray-300 hover:border-gold-400/50 font-medium text-xs tracking-wider uppercase transition-all" data-category="shirts">Shirts & T-Shirts</button>
+                <button class="filter-btn px-6 py-2.5 rounded-full border border-dark-600 bg-dark-800 text-gray-300 hover:border-gold-400/50 font-medium text-xs tracking-wider uppercase transition-all" data-category="trousers">Trousers</button>
+                <button class="filter-btn px-6 py-2.5 rounded-full border border-dark-600 bg-dark-800 text-gray-300 hover:border-gold-400/50 font-medium text-xs tracking-wider uppercase transition-all" data-category="shoes">Shoes</button>
+                <button class="filter-btn px-6 py-2.5 rounded-full border border-dark-600 bg-dark-800 text-gray-300 hover:border-gold-400/50 font-medium text-xs tracking-wider uppercase transition-all" data-category="accessories">Accessories</button>
+            </div>
+
+            <!-- Products Grid -->
+            <div id="products-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- JavaScript rendered items will appear here -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive Size & Style Advisor Section -->
+    <section id="advisor" class="py-20 bg-dark-800 border-y border-gold-400/20 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-12">
+                <h2 class="text-xs uppercase tracking-[0.3em] text-gold-400 font-semibold mb-2">Instant Availability Check</h2>
+                <p class="font-serif text-4xl sm:text-5xl text-white font-bold">Ready-to-Wear Size & Style Advisor</p>
+                <p class="text-gray-400 mt-2 text-sm">Select your fit parameters to immediately inquire about stock and sizing on WhatsApp.</p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+                <!-- Form Inputs (8 Columns) -->
+                <div class="lg:col-span-7 bg-dark-900/80 p-6 sm:p-8 rounded-2xl border border-dark-600 space-y-8">
+                    <!-- Step 1: Preferred Fit -->
+                    <div>
+                        <label class="block text-xs uppercase tracking-widest text-gold-400 font-semibold mb-3">Step 1: Preferred Fit</label>
+                        <div class="grid grid-cols-3 gap-3">
+                            <button type="button" onclick="selectAdvisor('fit', 'Slim Fit', this)" class="advisor-fit-btn p-3 rounded-xl border border-gold-400 bg-gold-400/10 text-gold-400 text-xs font-semibold text-center hover:border-gold-400 transition">
+                                Slim Fit
+                            </button>
+                            <button type="button" onclick="selectAdvisor('fit', 'Modern Cut', this)" class="advisor-fit-btn p-3 rounded-xl border border-dark-600 bg-dark-800 text-gray-300 text-xs font-semibold text-center hover:border-gold-400 transition">
+                                Modern Cut
+                            </button>
+                            <button type="button" onclick="selectAdvisor('fit', 'Classic Regular', this)" class="advisor-fit-btn p-3 rounded-xl border border-dark-600 bg-dark-800 text-gray-300 text-xs font-semibold text-center hover:border-gold-400 transition">
+                                Classic Regular
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Step 2: Suit Category -->
+                    <div>
+                        <label class="block text-xs uppercase tracking-widest text-gold-400 font-semibold mb-3">Step 2: Category / Fabric</label>
+                        <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
+                            <button type="button" onclick="selectAdvisor('category', 'Executive 2-Piece', this)" class="advisor-cat-btn p-3 rounded-xl border border-gold-400 bg-gold-400/10 text-gold-400 text-xs font-semibold text-center hover:border-gold-400 transition">
+                                Executive 2-Piece
+                            </button>
+                            <button type="button" onclick="selectAdvisor('category', '3-Piece Ceremony', this)" class="advisor-cat-btn p-3 rounded-xl border border-dark-600 bg-dark-800 text-gray-300 text-xs font-semibold text-center hover:border-gold-400 transition">
+                                3-Piece Ceremony
+                            </button>
+                            <button type="button" onclick="selectAdvisor('category', '100% Superfine Wool', this)" class="advisor-cat-btn p-3 rounded-xl border border-dark-600 bg-dark-800 text-gray-300 text-xs font-semibold text-center hover:border-gold-400 transition">
+                                100% Superfine Wool
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Step 3: Size Selection -->
+                    <div>
+                        <label class="block text-xs uppercase tracking-widest text-gold-400 font-semibold mb-3">Step 3: Size Selection</label>
+                        <div class="grid grid-cols-2 sm:grid-cols-3 gap-3">
+                            <button type="button" onclick="selectAdvisor('size', 'EU 46 / US 36R', this)" class="advisor-size-btn p-3 rounded-xl border border-dark-600 bg-dark-800 text-gray-300 text-xs font-semibold text-center hover:border-gold-400 transition">
+                                EU 46 / US 36R
+                            </button>
+                            <button type="button" onclick="selectAdvisor('size', 'EU 48 / US 38R', this)" class="advisor-size-btn p-3 rounded-xl border border-gold-400 bg-gold-400/10 text-gold-400 text-xs font-semibold text-center hover:border-gold-400 transition">
+                                EU 48 / US 38R
+                            </button>
+                            <button type="button" onclick="selectAdvisor('size', 'EU 50 / US 40R', this)" class="advisor-size-btn p-3 rounded-xl border border-dark-600 bg-dark-800 text-gray-300 text-xs font-semibold text-center hover:border-gold-400 transition">
+                                EU 50 / US 40R
+                            </button>
+                            <button type="button" onclick="selectAdvisor('size', 'EU 52 / US 42R', this)" class="advisor-size-btn p-3 rounded-xl border border-dark-600 bg-dark-800 text-gray-300 text-xs font-semibold text-center hover:border-gold-400 transition">
+                                EU 52 / US 42R
+                            </button>
+                            <button type="button" onclick="selectAdvisor('size', 'EU 54 / US 44R', this)" class="advisor-size-btn p-3 rounded-xl border border-dark-600 bg-dark-800 text-gray-300 text-xs font-semibold text-center hover:border-gold-400 transition">
+                                EU 54 / US 44R
+                            </button>
+                            <button type="button" onclick="selectAdvisor('size', 'EU 56+ / US 46R+', this)" class="advisor-size-btn p-3 rounded-xl border border-dark-600 bg-dark-800 text-gray-300 text-xs font-semibold text-center hover:border-gold-400 transition">
+                                EU 56+ / US 46R+
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Summary Box (5 Columns) -->
+                <div class="lg:col-span-5 bg-gradient-to-b from-dark-700 to-dark-900 p-8 rounded-2xl border border-gold-400/30 gold-border-glow">
+                    <div class="flex items-center gap-3 pb-4 border-b border-gray-700">
+                        <i class="fa-solid fa-sliders text-gold-400 text-xl"></i>
+                        <h3 class="font-serif text-2xl text-white font-bold">Your Selection</h3>
+                    </div>
+
+                    <div class="py-6 space-y-4 text-sm">
+                        <div class="flex justify-between items-center">
+                            <span class="text-gray-400">Fit Cut:</span>
+                            <span id="summary-fit" class="font-semibold text-gold-400">Slim Fit</span>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <span class="text-gray-400">Category:</span>
+                            <span id="summary-category" class="font-semibold text-gold-400">Executive 2-Piece</span>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <span class="text-gray-400">Requested Size:</span>
+                            <span id="summary-size" class="font-semibold text-gold-400">EU 48 / US 38R</span>
+                        </div>
+                        <div class="flex justify-between items-center pt-2 border-t border-gray-800">
+                            <span class="text-gray-400">Availability Status:</span>
+                            <span class="inline-flex items-center gap-1.5 text-xs text-emerald-400 font-medium">
+                                <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span> In Stock / Direct Import
+                            </span>
+                        </div>
+                    </div>
+
+                    <div class="pt-4">
+                        <a id="advisor-whatsapp-btn" href="#" target="_blank" class="w-full py-4 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-center text-sm tracking-widest uppercase transition flex items-center justify-center gap-3 shadow-lg shadow-emerald-900/30">
+                            <i class="fa-brands fa-whatsapp text-lg"></i> Check Size Availability on WhatsApp
+                        </a>
+                        <p class="text-[11px] text-gray-500 text-center mt-3">
+                            Connects directly to our menswear consultant with your pre-selected measurements.
+                        </p>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- About Section -->
-    <section id="about" class="py-20 px-4 lg:px-8 max-w-7xl mx-auto border-t border-gold-500/10">
-        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div class="relative">
-                <div class="aspect-[4/5] rounded-xl overflow-hidden glass-card p-2">
-                    <img src="assets/suits.PNG" alt="ELLA Imported Quality" class="w-full h-full object-cover rounded-lg" onerror="this.onerror=null; this.src='assets/suits.jpg';">
+    <!-- Contact & Store Information Footer -->
+    <footer id="contact" class="bg-dark-900 text-gray-400 pt-16 pb-12 border-t border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
+                <!-- Brand Info -->
+                <div class="space-y-4">
+                    <div class="flex items-center gap-3">
+                        <img src="assets/logo.png" alt="ELLA Logo" class="h-8 w-auto" onerror="this.onerror=null; this.src='https://placehold.co/80x80/12141C/D4AF37?text=ELLA';">
+                        <span class="font-serif text-2xl font-bold tracking-widest text-white">ELLA</span>
+                    </div>
+                    <p class="text-xs text-gray-400 leading-relaxed">
+                        ELLA Suit Store brings you fine imported luxury menswear directly from international fashion capitals: Turkey, Italy, England, and the US.
+                    </p>
+                    <div class="pt-2">
+                        <p class="text-xs text-gold-400 font-semibold uppercase tracking-wider">Store Location</p>
+                        <p class="text-xs text-gray-300 mt-1">Addis Ababa, Ethiopia</p>
+                    </div>
                 </div>
-                <div class="absolute -bottom-6 -right-6 glass-card p-6 rounded-lg border border-gold-500/30 hidden sm:block">
-                    <p class="heading-font text-3xl font-bold text-gold-400">100%</p>
-                    <p class="text-xs uppercase tracking-widest text-gray-400">Guaranteed Original Imports</p>
-                </div>
-            </div>
-            
-            <div class="space-y-6">
-                <p class="text-xs uppercase tracking-widest text-gold-400 font-bold">Uncompromising Quality</p>
-                <h2 class="heading-font text-3xl sm:text-4xl font-bold text-white">Handpicked Menswear From Global Fashion Capitals</h2>
-                <p class="text-gray-300 leading-relaxed">
-                    At ELLA Suit Store, we eliminate the compromise between accessibility and world-class luxury. Each garment in our showroom is personally selected and imported directly from renowned manufacturers in Turkey, Italy, England, and the United States.
-                </p>
-                <p class="text-gray-300 leading-relaxed">
-                    From 100% fine Italian Superfine wool suits to handcrafted European leather shoes, we bring authentic international style and precision fit to Addis Ababa.
-                </p>
-            </div>
-        </div>
-    </section>
 
-    <!-- Collection Grid -->
-    <section id="collection" class="py-24 px-4 lg:px-8 max-w-7xl mx-auto border-t border-gold-500/10">
-        <div class="text-center max-w-3xl mx-auto mb-16 space-y-4">
-            <p class="text-xs uppercase tracking-widest text-gold-400 font-bold">Showroom Catalog</p>
-            <h2 class="heading-font text-3xl sm:text-5xl font-bold text-white">Import Collection & Pricing</h2>
-            <p class="text-gray-400 text-sm sm:text-base">Discover our current range of ready-to-wear menswear imports. Contact us via WhatsApp for instant sizing, stock availability, and store reservation.</p>
-        </div>
+                <!-- Verified Contact Info -->
+                <div class="space-y-4">
+                    <h3 class="font-serif text-lg text-white font-semibold tracking-wider">Direct Contact</h3>
+                    <ul class="space-y-3 text-xs">
+                        <li>
+                            <a href="https://wa.me/251975338888" target="_blank" class="flex items-center gap-3 hover:text-gold-400 transition">
+                                <div class="w-8 h-8 rounded-full bg-dark-800 border border-gray-700 flex items-center justify-center text-emerald-400">
+                                    <i class="fa-brands fa-whatsapp"></i>
+                                </div>
+                                <div>
+                                    <span class="block text-[10px] text-gray-500 uppercase">Phone & WhatsApp</span>
+                                    <span class="text-gray-200 font-medium">+251 975 338 888</span>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://t.me/Ellasuits" target="_blank" class="flex items-center gap-3 hover:text-gold-400 transition">
+                                <div class="w-8 h-8 rounded-full bg-dark-800 border border-gray-700 flex items-center justify-center text-sky-400">
+                                    <i class="fa-brands fa-telegram"></i>
+                                </div>
+                                <div>
+                                    <span class="block text-[10px] text-gray-500 uppercase">Telegram Channel</span>
+                                    <span class="text-gray-200 font-medium">t.me/Ellasuits</span>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
 
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            
-            <!-- 1. Executive 2-Piece Suit -->
-            <div class="glass-card rounded-xl overflow-hidden group flex flex-col justify-between">
-                <div>
-                    <div class="relative aspect-[3/4] overflow-hidden">
-                        <img src="assets/suits-2piece.jpg" alt="Executive 2-Piece Suit" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1594938298603-c8148c4dae35?auto=format&fit=crop&w=600&q=80';">
-                        <span class="absolute top-3 right-3 bg-navy-950/90 border border-gold-500/30 text-gold-400 font-semibold text-xs px-3 py-1 rounded-full shadow-lg">
-                            Starting 28,500 ETB
-                        </span>
-                    </div>
-                    <div class="p-5">
-                        <h3 class="text-lg font-bold text-white mb-2">Executive 2-Piece Suit</h3>
-                        <p class="text-gray-400 text-xs leading-relaxed mb-4">Fine European cut, lightweight structured canvas, tailored for sharp business wear. Imported from Turkey & Europe.</p>
+                <!-- Verified Social Media -->
+                <div class="space-y-4">
+                    <h3 class="font-serif text-lg text-white font-semibold tracking-wider">Follow Our Socials</h3>
+                    <div class="flex flex-col gap-2.5 text-xs">
+                        <a href="https://www.instagram.com/ellasuitstore?stkn=a3p3Y2syYnVhbGZ5&utm_source=qr" target="_blank" class="p-2.5 rounded-lg bg-dark-800 border border-gray-800 hover:border-gold-400/50 text-gray-300 hover:text-white transition flex items-center gap-3">
+                            <i class="fa-brands fa-instagram text-pink-400 text-base"></i> Instagram Profile
+                        </a>
+                        <a href="https://web.facebook.com/profile.php?id=61592446601829" target="_blank" class="p-2.5 rounded-lg bg-dark-800 border border-gray-800 hover:border-gold-400/50 text-gray-300 hover:text-white transition flex items-center gap-3">
+                            <i class="fa-brands fa-facebook text-blue-500 text-base"></i> Facebook Page
+                        </a>
+                        <a href="http://tiktok.com/@ella.suit?_t=ZM-8xmTSIXtRJ8&_r=1" target="_blank" class="p-2.5 rounded-lg bg-dark-800 border border-gray-800 hover:border-gold-400/50 text-gray-300 hover:text-white transition flex items-center gap-3">
+                            <i class="fa-brands fa-tiktok text-gray-200 text-base"></i> TikTok Channel
+                        </a>
                     </div>
                 </div>
-                <div class="p-5 pt-0">
-                    <a href="https://wa.me/251975338888?text=Hello%20ELLA%20Suit%20Store%2C%20I%20am%20interested%20in%20the%20Executive%202-Piece%20Suit%20(28%2C500%20ETB)." target="_blank" class="w-full py-2.5 bg-gold-500/10 hover:bg-gold-500 text-gold-400 hover:text-navy-950 border border-gold-500/30 rounded-lg transition text-xs font-semibold flex items-center justify-center gap-2">
-                        <i class="fab fa-whatsapp"></i> Inquire on WhatsApp
-                    </a>
-                </div>
-            </div>
 
-            <!-- 2. 3-Piece Suit Collection -->
-            <div class="glass-card rounded-xl overflow-hidden group flex flex-col justify-between">
-                <div>
-                    <div class="relative aspect-[3/4] overflow-hidden">
-                        <img src="assets/suits 3 .jpg" alt="3-Piece Suit Collection" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&w=600&q=80';">
-                        <span class="absolute top-3 right-3 bg-navy-950/90 border border-gold-500/30 text-gold-400 font-semibold text-xs px-3 py-1 rounded-full shadow-lg">
-                            Starting 32,000 ETB
-                        </span>
+                <!-- Business Hours & Guarantee -->
+                <div class="space-y-4">
+                    <h3 class="font-serif text-lg text-white font-semibold tracking-wider">Quality Promise</h3>
+                    <p class="text-xs text-gray-400 leading-relaxed">
+                        Every suit is inspected for perfection. Experience unmatched tailoring fit, luxury linings, and premium imported fabric standard.
+                    </p>
+                    <div class="p-3 rounded-lg bg-dark-800 border border-gold-400/20 text-xs space-y-1">
+                        <span class="text-gold-400 font-semibold block">Store Hours:</span>
+                        <span class="text-gray-300">Mon - Sat: 9:00 AM - 8:00 PM</span>
                     </div>
-                    <div class="p-5">
-                        <h3 class="text-lg font-bold text-white mb-2">3-Piece Suit Collection</h3>
-                        <p class="text-gray-400 text-xs leading-relaxed mb-4">Classic jacket, trousers, and matching waistcoat. Perfect for weddings, galas, and executive ceremonies.</p>
-                    </div>
-                </div>
-                <div class="p-5 pt-0">
-                    <a href="https://wa.me/251975338888?text=Hello%20ELLA%20Suit%20Store%2C%20I%20am%20interested%20in%20the%203-Piece%20Suit%20Collection%20(32%2C000%20ETB)." target="_blank" class="w-full py-2.5 bg-gold-500/10 hover:bg-gold-500 text-gold-400 hover:text-navy-950 border border-gold-500/30 rounded-lg transition text-xs font-semibold flex items-center justify-center gap-2">
-                        <i class="fab fa-whatsapp"></i> Inquire on WhatsApp
-                    </a>
-                </div>
-            </div>
-
-            <!-- 3. 100% Wool Luxury Suit -->
-            <div class="glass-card rounded-xl overflow-hidden group flex flex-col justify-between border-gold-500/40">
-                <div>
-                    <div class="relative aspect-[3/4] overflow-hidden">
-                        <img src="assets/suits.PNG" alt="100% Wool Luxury Suit" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" onerror="this.onerror=null; this.src='assets/suits.jpg';">
-                        <span class="absolute top-3 right-3 bg-gold-500 text-navy-950 font-bold text-xs px-3 py-1 rounded-full shadow-lg">
-                            Starting 55,000 ETB
-                        </span>
-                    </div>
-                    <div class="p-5">
-                        <h3 class="text-lg font-bold text-white mb-2">100% Wool Luxury Suit</h3>
-                        <p class="text-gray-400 text-xs leading-relaxed mb-4">Premium 100% Superfine Italian & English wool. Unmatched breathability, drape, and luxury craftsmanship.</p>
-                    </div>
-                </div>
-                <div class="p-5 pt-0">
-                    <a href="https://wa.me/251975338888?text=Hello%20ELLA%20Suit%20Store%2C%20I%20am%20interested%20in%20the%20100%25%20Wool%20Luxury%20Suit%20(55%2C000%20ETB)." target="_blank" class="w-full py-2.5 bg-gold-500 hover:bg-gold-600 text-navy-950 rounded-lg transition text-xs font-bold flex items-center justify-center gap-2">
-                        <i class="fab fa-whatsapp"></i> Inquire on WhatsApp
-                    </a>
                 </div>
             </div>
 
-            <!-- 4. Tailored Trousers -->
-            <div class="glass-card rounded-xl overflow-hidden group flex flex-col justify-between">
-                <div>
-                    <div class="relative aspect-[3/4] overflow-hidden">
-                        <img src="assets/trousers.PNG" alt="Tailored Trousers" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" onerror="this.onerror=null; this.src='assets/trousers 2 .PNG';">
-                        <span class="absolute top-3 right-3 bg-navy-950/90 border border-gold-500/30 text-gold-400 font-semibold text-xs px-3 py-1 rounded-full shadow-lg">
-                            Starting 5,500 ETB
-                        </span>
-                    </div>
-                    <div class="p-5">
-                        <h3 class="text-lg font-bold text-white mb-2">Tailored Trousers</h3>
-                        <p class="text-gray-400 text-xs leading-relaxed mb-4">Precision-cut trousers crafted from high-grade cotton-wool blends for everyday office and casual elegance.</p>
-                    </div>
-                </div>
-                <div class="p-5 pt-0">
-                    <a href="https://wa.me/251975338888?text=Hello%20ELLA%20Suit%20Store%2C%20I%20am%20interested%20in%20Tailored%20Trousers%20(5%2C500%20ETB)." target="_blank" class="w-full py-2.5 bg-gold-500/10 hover:bg-gold-500 text-gold-400 hover:text-navy-950 border border-gold-500/30 rounded-lg transition text-xs font-semibold flex items-center justify-center gap-2">
-                        <i class="fab fa-whatsapp"></i> Inquire on WhatsApp
-                    </a>
+            <div class="pt-8 border-t border-gray-800/80 text-center text-xs text-gray-500 flex flex-col sm:flex-row justify-between items-center gap-4">
+                <p>&copy; 2026 ELLA Suit Store. All rights reserved. Confidence Tailored.</p>
+                <div class="flex space-x-6 text-gray-400">
+                    <span>Imported Menswear</span>
+                    <span>•</span>
+                    <span>Ready To Wear</span>
+                    <span>•</span>
+                    <span>Addis Ababa</span>
                 </div>
             </div>
-
-            <!-- 5. Formal & Casual Shirts -->
-            <div class="glass-card rounded-xl overflow-hidden group flex flex-col justify-between">
-                <div>
-                    <div class="relative aspect-[3/4] overflow-hidden">
-                        <img src="assets/shirts.PNG" alt="Formal & Casual Shirts" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
-                        <span class="absolute top-3 right-3 bg-navy-950/90 border border-gold-500/30 text-gold-400 font-semibold text-xs px-3 py-1 rounded-full shadow-lg">
-                            Starting 4,500 ETB
-                        </span>
-                    </div>
-                    <div class="p-5">
-                        <h3 class="text-lg font-bold text-white mb-2">Formal & Casual Shirts</h3>
-                        <p class="text-gray-400 text-xs leading-relaxed mb-4">100% Egyptian and Turkish cotton shirts with wrinkle-resistant finish and crisp collar retention.</p>
-                    </div>
-                </div>
-                <div class="p-5 pt-0">
-                    <a href="https://wa.me/251975338888?text=Hello%20ELLA%20Suit%20Store%2C%20I%20am%20interested%20in%20Formal%20%26%20Casual%20Shirts%20(4%2C500%20ETB)." target="_blank" class="w-full py-2.5 bg-gold-500/10 hover:bg-gold-500 text-gold-400 hover:text-navy-950 border border-gold-500/30 rounded-lg transition text-xs font-semibold flex items-center justify-center gap-2">
-                        <i class="fab fa-whatsapp"></i> Inquire on WhatsApp
-                    </a>
-                </div>
-            </div>
-
-            <!-- 6. Luxury T-Shirts -->
-            <div class="glass-card rounded-xl overflow-hidden group flex flex-col justify-between">
-                <div>
-                    <div class="relative aspect-[3/4] overflow-hidden">
-                        <img src="assets/shirts.PNG" alt="Luxury T-Shirts" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
-                        <span class="absolute top-3 right-3 bg-navy-950/90 border border-gold-500/30 text-gold-400 font-semibold text-xs px-3 py-1 rounded-full shadow-lg">
-                            Starting 3,500 ETB
-                        </span>
-                    </div>
-                    <div class="p-5">
-                        <h3 class="text-lg font-bold text-white mb-2">Luxury T-Shirts</h3>
-                        <p class="text-gray-400 text-xs leading-relaxed mb-4">High-density Mercerized cotton T-shirts designed for modern smart-casual layering under blazers.</p>
-                    </div>
-                </div>
-                <div class="p-5 pt-0">
-                    <a href="https://wa.me/251975338888?text=Hello%20ELLA%20Suit%20Store%2C%20I%20am%20interested%20in%20Luxury%20T-Shirts%20(3%2C500%20ETB)." target="_blank" class="w-full py-2.5 bg-gold-500/10 hover:bg-gold-500 text-gold-400 hover:text-navy-950 border border-gold-500/30 rounded-lg transition text-xs font-semibold flex items-center justify-center gap-2">
-                        <i class="fab fa-whatsapp"></i> Inquire on WhatsApp
-                    </a>
-                </div>
-            </div>
-
-            <!-- 7. Leather Shoes (Oxfords & Loafers) -->
-            <div class="glass-card rounded-xl overflow-hidden group flex flex-col justify-between">
-                <div>
-                    <div class="relative aspect-[3/4] overflow-hidden">
-                        <img src="assets/shoes.jpg" alt="Leather Shoes" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
-                        <span class="absolute top-3 right-3 bg-navy-950/90 border border-gold-500/30 text-gold-400 font-semibold text-xs px-3 py-1 rounded-full shadow-lg">
-                            Starting 22,500 ETB
-                        </span>
-                    </div>
-                    <div class="p-5">
-                        <h3 class="text-lg font-bold text-white mb-2">Leather Shoes</h3>
-                        <p class="text-gray-400 text-xs leading-relaxed mb-4">Handcrafted genuine leather shoes imported from European artisans. Superior comfort and classic silhouette.</p>
-                    </div>
-                </div>
-                <div class="p-5 pt-0">
-                    <a href="https://wa.me/251975338888?text=Hello%20ELLA%20Suit%20Store%2C%20I%20am%20interested%20in%20Leather%20Shoes%20(22%2C500%20ETB)." target="_blank" class="w-full py-2.5 bg-gold-500/10 hover:bg-gold-500 text-gold-400 hover:text-navy-950 border border-gold-500/30 rounded-lg transition text-xs font-semibold flex items-center justify-center gap-2">
-                        <i class="fab fa-whatsapp"></i> Inquire on WhatsApp
-                    </a>
-                </div>
-            </div>
-
-            <!-- 8. Silk Ties & Accessories -->
-            <div class="glass-card rounded-xl overflow-hidden group flex flex-col justify-between">
-                <div>
-                    <div class="relative aspect-[3/4] overflow-hidden">
-                        <img src="assets/accessories.PNG" alt="Silk Ties & Accessories" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" onerror="this.onerror=null; this.src='assets/accessories.jpg';">
-                        <span class="absolute top-3 right-3 bg-navy-950/90 border border-gold-500/30 text-gold-400 font-semibold text-xs px-3 py-1 rounded-full shadow-lg">
-                            Starting 1,800 ETB
-                        </span>
-                    </div>
-                    <div class="p-5">
-                        <h3 class="text-lg font-bold text-white mb-2">Silk Ties & Accessories</h3>
-                        <p class="text-gray-400 text-xs leading-relaxed mb-4">100% woven silk ties, pocket squares, leather belts, and cufflinks to complete your suit look.</p>
-                    </div>
-                </div>
-                <div class="p-5 pt-0">
-                    <a href="https://wa.me/251975338888?text=Hello%20ELLA%20Suit%20Store%2C%20I%20am%20interested%20in%20Silk%20Ties%20%26%20Accessories%20(1%2C800%20ETB)." target="_blank" class="w-full py-2.5 bg-gold-500/10 hover:bg-gold-500 text-gold-400 hover:text-navy-950 border border-gold-500/30 rounded-lg transition text-xs font-semibold flex items-center justify-center gap-2">
-                        <i class="fab fa-whatsapp"></i> Inquire on WhatsApp
-                    </a>
-                </div>
-            </div>
-
-        </div>
-    </section>
-
-    <!-- Footer / Contact Section -->
-    <footer id="contact" class="bg-navy-900 border-t border-gold-500/20 pt-16 pb-12 px-4 lg:px-8">
-        <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
-            
-            <!-- Brand & Tagline -->
-            <div class="space-y-4">
-                <img src="assets/logo.png" alt="ELLA Suit Store" class="h-12 w-auto object-contain">
-                <p class="text-gray-400 text-xs leading-relaxed">
-                    Addis Ababa's premiere destination for imported European & Turkish luxury menswear. Confidence Tailored.
-                </p>
-            </div>
-
-            <!-- Direct Contact -->
-            <div class="space-y-3">
-                <h4 class="text-white font-bold text-sm uppercase tracking-wider">Contact & Inquiries</h4>
-                <p class="text-gray-400 text-xs flex items-center gap-3">
-                    <i class="fas fa-phone text-gold-400"></i> +251 97 533 8888
-                </p>
-                <p class="text-gray-400 text-xs flex items-center gap-3">
-                    <i class="fab fa-whatsapp text-gold-400"></i> +251 97 533 8888
-                </p>
-                <p class="text-gray-400 text-xs flex items-center gap-3">
-                    <i class="fas fa-map-marker-alt text-gold-400"></i> Addis Ababa, Ethiopia
-                </p>
-            </div>
-
-            <!-- Social Media Channels -->
-            <div class="space-y-4">
-                <h4 class="text-white font-bold text-sm uppercase tracking-wider">Follow Our Socials</h4>
-                <div class="flex items-center gap-3">
-                    <a href="https://t.me/Ellasuits" target="_blank" class="w-10 h-10 rounded-full bg-navy-800 border border-gold-500/20 flex items-center justify-center text-gold-400 hover:bg-gold-500 hover:text-navy-950 transition">
-                        <i class="fab fa-telegram-plane"></i>
-                    </a>
-                    <a href="https://www.instagram.com/ellasuitstore?stkn=a3p3Y2syYnVhbGZ5&utm_source=qr" target="_blank" class="w-10 h-10 rounded-full bg-navy-800 border border-gold-500/20 flex items-center justify-center text-gold-400 hover:bg-gold-500 hover:text-navy-950 transition">
-                        <i class="fab fa-instagram"></i>
-                    </a>
-                    <a href="https://web.facebook.com/profile.php?id=61592446601829" target="_blank" class="w-10 h-10 rounded-full bg-navy-800 border border-gold-500/20 flex items-center justify-center text-gold-400 hover:bg-gold-500 hover:text-navy-950 transition">
-                        <i class="fab fa-facebook-f"></i>
-                    </a>
-                    <a href="http://tiktok.com/@ella.suit?_t=ZM-8xmTSIXtRJ8&_r=1" target="_blank" class="w-10 h-10 rounded-full bg-navy-800 border border-gold-500/20 flex items-center justify-center text-gold-400 hover:bg-gold-500 hover:text-navy-950 transition">
-                        <i class="fab fa-tiktok"></i>
-                    </a>
-                </div>
-            </div>
-
-        </div>
-
-        <div class="max-w-7xl mx-auto pt-8 border-t border-gold-500/10 text-center text-gray-500 text-xs">
-            &copy; 2026 ELLA Suit Store. All rights reserved.
         </div>
     </footer>
 
+    <script>
+        // Product Data Array
+        const products = [
+            {
+                name: 'Executive 2-Piece Suit',
+                price: '28,500 ETB',
+                category: 'suits',
+                image: 'assets/suits-2piece.jpg',
+                fallback: 'https://images.unsplash.com/photo-1594938298603-c8148c4dae35?q=80&w=600&auto=format&fit=crop',
+                origin: 'Turkey / Italy'
+            },
+            {
+                name: '3-Piece Suit Collection',
+                price: '32,000 ETB',
+                category: 'suits',
+                image: 'assets/suits 3 .jpg',
+                fallback: 'https://images.unsplash.com/photo-1593032465175-481ac7f401a0?q=80&w=600&auto=format&fit=crop',
+                origin: 'Turkey / UK'
+            },
+            {
+                name: '100% Wool Luxury Suit',
+                price: '55,000 ETB',
+                category: 'suits',
+                image: 'assets/suits.PNG',
+                fallback: 'https://images.unsplash.com/photo-1507679799987-c73779587ccf?q=80&w=600&auto=format&fit=crop',
+                origin: 'Italy Superfine'
+            },
+            {
+                name: 'Formal & Casual Shirts',
+                price: '4,500 ETB',
+                category: 'shirts',
+                image: 'assets/shirts.PNG',
+                fallback: 'https://images.unsplash.com/photo-1620012253295-c15cc3e65df4?q=80&w=600&auto=format&fit=crop',
+                origin: '100% Cotton Import'
+            },
+            {
+                name: 'Luxury T-Shirts',
+                price: '3,500 ETB',
+                category: 'shirts',
+                image: 'assets/shirts.PNG',
+                fallback: 'https://images.unsplash.com/photo-1521572267360-ee0c2909d518?q=80&w=600&auto=format&fit=crop',
+                origin: 'US / European Cotton'
+            },
+            {
+                name: 'Tailored Trousers',
+                price: '5,500 ETB',
+                category: 'trousers',
+                image: 'assets/trousers.PNG',
+                fallback: 'https://images.unsplash.com/photo-1624378439575-d8705ad7ae80?q=80&w=600&auto=format&fit=crop',
+                origin: 'Custom Cut Fit'
+            },
+            {
+                name: 'Leather Shoes',
+                price: '22,500 ETB',
+                category: 'shoes',
+                image: 'assets/shoes.jpg',
+                fallback: 'https://images.unsplash.com/photo-1614252235316-8c857d38b5f4?q=80&w=600&auto=format&fit=crop',
+                origin: 'Genuine Imported Leather'
+            },
+            {
+                name: 'Silk Ties & Accessories',
+                price: '1,800 ETB',
+                category: 'accessories',
+                image: 'assets/accessories.PNG',
+                fallback: 'https://images.unsplash.com/photo-1598554747436-c9293d6a588f?q=80&w=600&auto=format&fit=crop',
+                origin: 'Pure Silk & Metals'
+            }
+        ];
+
+        // Render Product Grid
+        function renderProducts(categoryFilter = 'all') {
+            const grid = document.getElementById('products-grid');
+            grid.innerHTML = '';
+
+            const filtered = categoryFilter === 'all' ? products : products.filter(p => p.category === categoryFilter);
+
+            filtered.forEach(p => {
+                const waMessage = encodeURIComponent(`Hello ELLA Suit Store, I am interested in inquiring about the "${p.name}" priced at ${p.price}. Please confirm size and stock availability.`);
+                const waUrl = `https://wa.me/251975338888?text=${waMessage}`;
+
+                const card = document.createElement('div');
+                card.className = "bg-dark-800 rounded-2xl overflow-hidden border border-gray-800 hover:border-gold-400/50 transition-all duration-300 group flex flex-col gold-border-glow";
+                card.innerHTML = `
+                    <div class="relative overflow-hidden aspect-[4/5] bg-dark-700">
+                        <img src="${p.image}" alt="${p.name}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" onerror="this.onerror=null; this.src='${p.fallback}';">
+                        <div class="absolute top-3 left-3 bg-dark-900/80 backdrop-blur-md px-2.5 py-1 rounded-full text-[10px] uppercase font-semibold text-gold-400 border border-gold-400/30">
+                            ${p.origin}
+                        </div>
+                    </div>
+                    <div class="p-5 flex flex-col flex-grow justify-between space-y-4">
+                        <div>
+                            <h3 class="font-serif text-xl font-bold text-white group-hover:text-gold-400 transition">${p.name}</h3>
+                            <p class="text-gold-400 font-semibold text-lg mt-1">${p.price}</p>
+                        </div>
+                        <a href="${waUrl}" target="_blank" class="w-full py-2.5 rounded-xl border border-gold-400/40 hover:bg-gold-400 hover:text-dark-900 text-gold-400 font-semibold text-xs uppercase tracking-wider text-center transition flex items-center justify-center gap-2">
+                            <i class="fa-brands fa-whatsapp"></i> Inquire via WhatsApp
+                        </a>
+                    </div>
+                `;
+                grid.appendChild(card);
+            });
+        }
+
+        // Filter Buttons Functionality
+        document.querySelectorAll('.filter-btn').forEach(btn => {
+            btn.addEventListener('click', (e) => {
+                document.querySelectorAll('.filter-btn').forEach(b => {
+                    b.classList.remove('bg-gold-400', 'text-dark-900', 'border-gold-400');
+                    b.classList.add('bg-dark-800', 'text-gray-300', 'border-dark-600');
+                });
+                btn.classList.remove('bg-dark-800', 'text-gray-300', 'border-dark-600');
+                btn.classList.add('bg-gold-400', 'text-dark-900', 'border-gold-400');
+
+                const cat = btn.getAttribute('data-category');
+                renderProducts(cat);
+            });
+        });
+
+        // Mobile Menu Toggle
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Size & Style Advisor State
+        const advisorState = {
+            fit: 'Slim Fit',
+            category: 'Executive 2-Piece',
+            size: 'EU 48 / US 38R'
+        };
+
+        function selectAdvisor(type, value, btnElement) {
+            advisorState[type] = value;
+            
+            // Update button styles
+            const parent = btnElement.parentElement;
+            parent.querySelectorAll('button').forEach(b => {
+                b.className = b.className.replace('border-gold-400 bg-gold-400/10 text-gold-400', 'border-dark-600 bg-dark-800 text-gray-300');
+            });
+            btnElement.className = btnElement.className.replace('border-dark-600 bg-dark-800 text-gray-300', 'border-gold-400 bg-gold-400/10 text-gold-400');
+
+            // Update Summary Text
+            document.getElementById('summary-fit').innerText = advisorState.fit;
+            document.getElementById('summary-category').innerText = advisorState.category;
+            document.getElementById('summary-size').innerText = advisorState.size;
+
+            updateAdvisorWhatsAppUrl();
+        }
+
+        function updateAdvisorWhatsAppUrl() {
+            const message = `Hello ELLA Suit Store, I used your Size & Style Advisor:\n\n- Preferred Fit: ${advisorState.fit}\n- Category: ${advisorState.category}\n- Size: ${advisorState.size}\n\nPlease let me know if this cut and size is currently in stock at the store.`;
+            const waBtn = document.getElementById('advisor-whatsapp-btn');
+            waBtn.href = `https://wa.me/251975338888?text=${encodeURIComponent(message)}`;
+        }
+
+        // Initialize App
+        window.addEventListener('DOMContentLoaded', () => {
+            renderProducts();
+            updateAdvisorWhatsAppUrl();
+        });
+    </script>
 </body>
 </html>
