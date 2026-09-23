@@ -3,559 +3,918 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ELLA | Confidence Tailored - Imported Luxury Menswear</title>
-    <!-- Fonts -->
+    <title>ELLA | Confidence Tailored - Premium Menswear & Custom Suits</title>
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts: Cormorant Garamond (Editorial Serif) & Inter (Modern Sans) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    
-    <!-- Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <!-- FontAwesome Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
+
     <script>
         tailwind.config = {
             theme: {
                 extend: {
                     colors: {
-                        gold: {
-                            100: '#FAF4E6',
-                            300: '#E6C887',
-                            400: '#D4AF37',
-                            500: '#AA820A',
-                            600: '#8A6805',
-                        },
-                        dark: {
-                            900: '#0B0C10',
-                            800: '#12141C',
-                            700: '#1F2330',
-                            600: '#2A2E3D'
-                        }
+                        obsidian: '#121212',
+                        charcoal: '#1E1E1E',
+                        darkslate: '#2A2A2A',
+                        gold: '#D4AF37',
+                        goldhover: '#B59226',
+                        lightgold: '#F4E8C1',
+                        cream: '#F9F9F6',
+                        softgrey: '#8E8E8E'
                     },
                     fontFamily: {
-                        serif: ['"Cormorant Garamond"', 'serif'],
-                        sans: ['Inter', 'sans-serif']
+                        serif: ['Cormorant Garamond', 'serif'],
+                        sans: ['Inter', 'sans-serif'],
                     }
                 }
             }
         }
     </script>
+
     <style>
-        .gold-gradient-text {
-            background: linear-gradient(135deg, #FFF0CA 0%, #D4AF37 50%, #AA820A 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
+        /* Custom scrollbar for modern sleek aesthetic */
+        ::-webkit-scrollbar {
+            width: 8px;
         }
-        .gold-border-glow {
-            box-shadow: 0 0 15px rgba(212, 175, 55, 0.15);
+        ::-webkit-scrollbar-track {
+            background: #121212;
         }
-        .gold-border-glow:hover {
-            box-shadow: 0 0 25px rgba(212, 175, 55, 0.3);
+        ::-webkit-scrollbar-thumb {
+            background: #2A2A2A;
+            border-radius: 4px;
         }
-        .hero-bg {
-            background: linear-gradient(to right, rgba(11, 12, 16, 0.95), rgba(11, 12, 16, 0.7)), url('assets/hero.png'), url('https://images.unsplash.com/photo-1594938298603-c8148c4dae35?q=80&w=1920&auto=format&fit=crop');
-            background-size: cover;
-            background-position: center;
+        ::-webkit-scrollbar-thumb:hover {
+            background: #D4AF37;
+        }
+        
+        /* Subtle metallic gradient border effect */
+        .gold-gradient-border {
+            border-image: linear-gradient(135deg, #D4AF37, #8A7322, #F4E8C1) 1;
+        }
+        
+        .gold-glow {
+            box-shadow: 0 0 25px rgba(212, 175, 55, 0.15);
         }
     </style>
 </head>
-<body class="bg-dark-900 text-gray-200 font-sans antialiased selection:bg-gold-400 selection:text-dark-900">
+<body class="bg-obsidian text-cream font-sans antialiased selection:bg-gold selection:text-obsidian flex flex-col min-h-screen">
 
-    <!-- Top Announcement Bar -->
-    <div class="bg-gradient-to-r from-gold-600 via-gold-400 to-gold-600 text-dark-900 text-xs py-2 px-4 font-semibold text-center tracking-wider">
-        <i class="fa-solid fa-plane-arrival mr-2"></i> DIRECTLY IMPORTED LUXURY MENSWEAR FROM TURKEY, ITALY, ENGLAND & THE US
-    </div>
-
-    <!-- Navigation Bar -->
-    <nav class="sticky top-0 z-50 bg-dark-900/90 backdrop-blur-md border-b border-gold-400/20">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex items-center justify-between h-20">
-                <!-- Logo -->
-                <a href="#" class="flex items-center gap-3 group">
-                    <img src="assets/logo.png" alt="ELLA Logo" class="h-10 w-auto object-contain" onerror="this.onerror=null; this.src='https://placehold.co/100x100/12141C/D4AF37?text=ELLA';">
-                    <div class="flex flex-col">
-                        <span class="font-serif text-2xl font-bold tracking-widest text-white group-hover:text-gold-400 transition">ELLA</span>
-                        <span class="text-[9px] tracking-[0.25em] text-gold-400 uppercase -mt-1">Confidence Tailored</span>
-                    </div>
-                </a>
-
-                <!-- Desktop Navigation Links -->
-                <div class="hidden md:flex items-center space-x-8 text-sm uppercase tracking-widest font-medium">
-                    <a href="#collections" class="hover:text-gold-400 transition">Collections</a>
-                    <a href="#origin" class="hover:text-gold-400 transition">Imported Luxury</a>
-                    <a href="#advisor" class="hover:text-gold-400 transition">Size Advisor</a>
-                    <a href="#contact" class="hover:text-gold-400 transition">Visit Store</a>
+    <!-- HEADER / NAVIGATION -->
+    <header class="sticky top-0 z-40 bg-obsidian/95 backdrop-blur-md border-b border-darkslate/60 transition-all duration-300" id="main-header">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            
+            <!-- Brand Logo -->
+            <a href="#home" class="flex items-center gap-3 group">
+                <div class="w-10 h-10 border border-gold/60 flex items-center justify-center bg-charcoal group-hover:border-gold transition-colors duration-300">
+                    <span class="font-serif font-bold text-2xl text-gold tracking-widest">E</span>
                 </div>
-
-                <!-- Right Actions -->
-                <div class="hidden md:flex items-center space-x-4">
-                    <a href="https://wa.me/251975338888" target="_blank" class="px-5 py-2.5 rounded-full border border-gold-400 text-gold-400 hover:bg-gold-400 hover:text-dark-900 font-semibold text-xs tracking-wider uppercase transition-all duration-300 flex items-center gap-2">
-                        <i class="fa-brands fa-whatsapp text-base"></i> VIP Inquiry
-                    </a>
+                <div class="flex flex-col">
+                    <span class="font-serif text-2xl tracking-[0.25em] font-bold text-cream group-hover:text-gold transition-colors duration-300">ELLA</span>
+                    <span class="text-[9px] tracking-[0.35em] text-gold uppercase -mt-1 font-medium">TAILORED</span>
                 </div>
-
-                <!-- Mobile Menu Button -->
-                <div class="md:hidden flex items-center">
-                    <button id="mobile-menu-btn" class="text-gray-300 hover:text-gold-400 focus:outline-none p-2">
-                        <i class="fa-solid fa-bars text-2xl"></i>
-                    </button>
-                </div>
-            </div>
-        </div>
-
-        <!-- Mobile Menu Dropdown -->
-        <div id="mobile-menu" class="hidden md:hidden bg-dark-800 border-b border-gold-400/20 px-4 pt-2 pb-6 space-y-4">
-            <a href="#collections" class="block py-2 text-sm uppercase tracking-widest hover:text-gold-400 border-b border-gray-800">Collections</a>
-            <a href="#origin" class="block py-2 text-sm uppercase tracking-widest hover:text-gold-400 border-b border-gray-800">Imported Luxury</a>
-            <a href="#advisor" class="block py-2 text-sm uppercase tracking-widest hover:text-gold-400 border-b border-gray-800">Size Advisor</a>
-            <a href="#contact" class="block py-2 text-sm uppercase tracking-widest hover:text-gold-400">Visit Store</a>
-            <a href="https://wa.me/251975338888" target="_blank" class="block text-center py-3 rounded-md bg-gold-400 text-dark-900 font-bold text-sm tracking-wider uppercase mt-4">
-                <i class="fa-brands fa-whatsapp mr-2"></i> WhatsApp Order (+251 975 338 888)
             </a>
-        </div>
-    </nav>
 
-    <!-- Hero Section -->
-    <header class="relative hero-bg min-h-[85vh] flex items-center border-b border-gold-400/20">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
-            <div class="max-w-2xl space-y-6">
-                <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-gold-400/10 border border-gold-400/30 text-gold-400 text-xs uppercase tracking-widest">
-                    <i class="fa-solid fa-gem"></i> Premium Ready-To-Wear
-                </div>
-                <h1 class="font-serif text-5xl sm:text-6xl md:text-7xl font-bold leading-tight text-white">
-                    Confidence Tailored.<br>
-                    <span class="gold-gradient-text">Imported Luxury Menswear.</span>
-                </h1>
-                <p class="text-gray-300 text-base sm:text-lg leading-relaxed font-light">
-                    Directly imported fine mens fashion from Turkey, Italy, England, and the US. Hand-selected suit garments, 100% superfine wools, premium footwear, and refined accessories crafted for the modern executive.
-                </p>
-                <div class="pt-4 flex flex-wrap gap-4">
-                    <a href="#collections" class="px-8 py-4 rounded-full bg-gradient-to-r from-gold-400 to-gold-500 text-dark-900 font-bold text-sm tracking-widest uppercase hover:shadow-lg hover:shadow-gold-400/20 transition-all duration-300 transform hover:-translate-y-0.5">
-                        Explore Catalog
-                    </a>
-                    <a href="#advisor" class="px-8 py-4 rounded-full border border-gray-600 hover:border-gold-400 text-white hover:text-gold-400 font-semibold text-sm tracking-widest uppercase transition-all duration-300">
-                        Size & Style Advisor
-                    </a>
-                </div>
-                <!-- Origin Flags Banner -->
-                <div class="pt-8 border-t border-gray-800/80 flex items-center gap-6 text-xs text-gray-400 uppercase tracking-widest">
-                    <span>Direct Imports From:</span>
-                    <div class="flex gap-4 font-semibold text-gray-200">
-                        <span>🇹🇷 Turkey</span>
-                        <span>🇮🇹 Italy</span>
-                        <span>🏴󠁧󠁢󠁥󠁮󠁧󠁿 England</span>
-                        <span>🇺🇸 US</span>
-                    </div>
-                </div>
+            <!-- Desktop Navigation Links -->
+            <nav class="hidden md:flex items-center gap-8">
+                <a href="#home" class="text-sm font-medium tracking-wider text-cream/80 hover:text-gold transition-colors uppercase">Home</a>
+                <a href="#showcase" class="text-sm font-medium tracking-wider text-cream/80 hover:text-gold transition-colors uppercase">Collection</a>
+                <a href="#visualizer" class="text-sm font-medium tracking-wider text-cream/80 hover:text-gold transition-colors uppercase">Custom Studio</a>
+                <a href="#about" class="text-sm font-medium tracking-wider text-cream/80 hover:text-gold transition-colors uppercase">About ELLA</a>
+                <a href="#contact" class="text-sm font-medium tracking-wider text-cream/80 hover:text-gold transition-colors uppercase">Contact</a>
+            </nav>
+
+            <!-- Action CTA Button -->
+            <div class="hidden md:flex items-center gap-4">
+                <a href="https://wa.me/15550192834?text=Hello%20ELLA%20Suit%20Store%2C%20I%20would%20like%20to%20inquire%20about%20a%20fitting%20appointment." 
+                   target="_blank" 
+                   rel="noopener noreferrer"
+                   class="inline-flex items-center gap-2 px-5 py-2.5 text-xs tracking-widest font-semibold text-obsidian bg-gold hover:bg-goldhover transition-all duration-300 uppercase rounded-sm shadow-md">
+                    <i class="fa-brands fa-whatsapp text-sm">active</i> Book Fitting
+                </a>
             </div>
+
+            <!-- Mobile Hamburger Toggle -->
+            <button id="mobile-menu-btn" type="button" class="md:hidden text-cream hover:text-gold focus:outline-none p-2" aria-label="Toggle menu">
+                <i class="fa-solid fa-bars text-xl" id="menu-icon"></i>
+            </button>
+        </div>
+
+        <!-- Mobile Navigation Menu Dropdown -->
+        <div id="mobile-menu" class="hidden md:hidden bg-charcoal border-b border-darkslate px-4 pt-4 pb-6 space-y-4">
+            <a href="#home" class="mobile-link block text-sm tracking-wider text-cream hover:text-gold py-2 border-b border-darkslate/40">Home</a>
+            <a href="#showcase" class="mobile-link block text-sm tracking-wider text-cream hover:text-gold py-2 border-b border-darkslate/40">Collection</a>
+            <a href="#visualizer" class="mobile-link block text-sm tracking-wider text-cream hover:text-gold py-2 border-b border-darkslate/40">Custom Studio</a>
+            <a href="#about" class="mobile-link block text-sm tracking-wider text-cream hover:text-gold py-2 border-b border-darkslate/40">About ELLA</a>
+            <a href="#contact" class="mobile-link block text-sm tracking-wider text-cream hover:text-gold py-2">Contact & Fitting</a>
+            <a href="https://wa.me/15550192834?text=Hello%20ELLA%20Suit%20Store%2C%20I%20would%20like%20to%20inquire%20about%20a%20fitting." 
+               target="_blank" 
+               class="mt-4 flex items-center justify-center gap-2 w-full py-3 text-xs tracking-widest font-semibold text-obsidian bg-gold uppercase rounded-sm">
+                <i class="fa-brands fa-whatsapp text-base"></i> Book Fitting on WhatsApp
+            </a>
         </div>
     </header>
 
-    <!-- Product Catalog Section -->
-    <section id="collections" class="py-20 bg-dark-900">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center max-w-3xl mx-auto mb-12">
-                <h2 class="text-xs uppercase tracking-[0.3em] text-gold-400 font-semibold mb-2">Curated Menswear Collection</h2>
-                <p class="font-serif text-4xl sm:text-5xl text-white font-bold">Imported Luxury Ready-to-Wear</p>
-                <div class="w-16 h-0.5 bg-gold-400 mx-auto mt-4"></div>
+    <!-- HERO SECTION -->
+    <section id="home" class="relative min-h-[88vh] flex items-center justify-center bg-obsidian overflow-hidden py-16">
+        <!-- Background Overlay Image with Vignette -->
+        <div class="absolute inset-0 z-0">
+            <img src="https://images.unsplash.com/photo-1594938298603-c8148c4dae35?q=80&w=2000&auto=format&fit=crop" 
+                 alt="ELLA Tailored Suit Background" 
+                 class="w-full h-full object-cover object-top opacity-30 scale-105 transition-transform duration-10000"
+                 id="hero-bg"
+                 onerror="this.src='https://placehold.co/1920x1080/121212/D4AF37?text=ELLA+TAILORED'">
+            <div class="absolute inset-0 bg-gradient-to-t from-obsidian via-obsidian/70 to-transparent"></div>
+            <div class="absolute inset-0 bg-gradient-to-r from-obsidian via-transparent to-obsidian"></div>
+        </div>
+
+        <!-- Hero Content Box -->
+        <div class="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 text-center space-y-8">
+            <div class="inline-flex items-center gap-2 px-4 py-1.5 border border-gold/40 bg-charcoal/80 backdrop-blur-sm rounded-full text-gold text-xs tracking-[0.25em] uppercase font-medium">
+                <span class="w-1.5 h-1.5 rounded-full bg-gold animate-pulse"></span>
+                The Autumn / Winter Bespoke Line
             </div>
 
-            <!-- Category Filter Buttons -->
-            <div class="flex flex-wrap justify-center gap-2 sm:gap-4 mb-12">
-                <button class="filter-btn active px-6 py-2.5 rounded-full border border-gold-400 bg-gold-400 text-dark-900 font-medium text-xs tracking-wider uppercase transition-all" data-category="all">All Items</button>
-                <button class="filter-btn px-6 py-2.5 rounded-full border border-dark-600 bg-dark-800 text-gray-300 hover:border-gold-400/50 font-medium text-xs tracking-wider uppercase transition-all" data-category="suits">Suits</button>
-                <button class="filter-btn px-6 py-2.5 rounded-full border border-dark-600 bg-dark-800 text-gray-300 hover:border-gold-400/50 font-medium text-xs tracking-wider uppercase transition-all" data-category="shirts">Shirts & T-Shirts</button>
-                <button class="filter-btn px-6 py-2.5 rounded-full border border-dark-600 bg-dark-800 text-gray-300 hover:border-gold-400/50 font-medium text-xs tracking-wider uppercase transition-all" data-category="trousers">Trousers</button>
-                <button class="filter-btn px-6 py-2.5 rounded-full border border-dark-600 bg-dark-800 text-gray-300 hover:border-gold-400/50 font-medium text-xs tracking-wider uppercase transition-all" data-category="shoes">Shoes</button>
-                <button class="filter-btn px-6 py-2.5 rounded-full border border-dark-600 bg-dark-800 text-gray-300 hover:border-gold-400/50 font-medium text-xs tracking-wider uppercase transition-all" data-category="accessories">Accessories</button>
+            <h1 class="font-serif text-4xl sm:text-6xl md:text-7xl font-bold tracking-tight text-cream leading-tight">
+                Confidence <span class="italic font-normal text-gold">Tailored.</span>
+            </h1>
+
+            <p class="max-w-2xl mx-auto text-base sm:text-lg text-cream/70 font-light tracking-wide leading-relaxed">
+                Precision cut silhouettes, Italian milled fabrics, and handcrafted menswear designed to command respect in every room.
+            </p>
+
+            <!-- CTA Buttons -->
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4">
+                <a href="#showcase" 
+                   class="w-full sm:w-auto px-8 py-4 bg-gold hover:bg-goldhover text-obsidian text-xs font-bold tracking-[0.2em] uppercase transition-all duration-300 rounded-sm shadow-lg hover:shadow-gold/20">
+                    Explore Collection
+                </a>
+                <a href="#visualizer" 
+                   class="w-full sm:w-auto px-8 py-4 border border-cream/30 hover:border-gold text-cream hover:text-gold text-xs font-bold tracking-[0.2em] uppercase bg-charcoal/50 backdrop-blur-sm transition-all duration-300 rounded-sm">
+                    Interactive Suit Studio
+                </a>
             </div>
 
-            <!-- Products Grid -->
-            <div id="products-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-                <!-- JavaScript rendered items will appear here -->
+            <!-- Highlights Banner -->
+            <div class="pt-12 grid grid-cols-2 md:grid-cols-4 gap-6 border-t border-darkslate/60 text-left max-w-4xl mx-auto">
+                <div class="space-y-1">
+                    <p class="font-serif text-gold text-2xl font-bold">100%</p>
+                    <p class="text-xs text-softgrey uppercase tracking-wider">Virgin Wool & Silk</p>
+                </div>
+                <div class="space-y-1">
+                    <p class="font-serif text-gold text-2xl font-bold">Handcrafted</p>
+                    <p class="text-xs text-softgrey uppercase tracking-wider">Master Tailoring</p>
+                </div>
+                <div class="space-y-1">
+                    <p class="font-serif text-gold text-2xl font-bold">Perfect Fit</p>
+                    <p class="text-xs text-softgrey uppercase tracking-wider">Guarantee</p>
+                </div>
+                <div class="space-y-1">
+                    <p class="font-serif text-gold text-2xl font-bold">Express</p>
+                    <p class="text-xs text-softgrey uppercase tracking-wider">Fitting & Delivery</p>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- Interactive Size & Style Advisor Section -->
-    <section id="advisor" class="py-20 bg-dark-800 border-y border-gold-400/20 relative">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center max-w-3xl mx-auto mb-12">
-                <h2 class="text-xs uppercase tracking-[0.3em] text-gold-400 font-semibold mb-2">Instant Availability Check</h2>
-                <p class="font-serif text-4xl sm:text-5xl text-white font-bold">Ready-to-Wear Size & Style Advisor</p>
-                <p class="text-gray-400 mt-2 text-sm">Select your fit parameters to immediately inquire about stock and sizing on WhatsApp.</p>
+    <!-- PRODUCT SHOWCASE & CATEGORIES -->
+    <section id="showcase" class="py-20 bg-charcoal relative border-t border-darkslate/40">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+            
+            <!-- Section Header -->
+            <div class="text-center space-y-3 max-w-2xl mx-auto">
+                <span class="text-xs font-semibold uppercase tracking-[0.3em] text-gold">Curated Wardrobe</span>
+                <h2 class="font-serif text-3xl sm:text-4xl md:text-5xl font-bold text-cream">Signature Categories</h2>
+                <div class="w-12 h-0.5 bg-gold mx-auto"></div>
+                <p class="text-sm text-softgrey">Select a category to browse our current stock and iconic tailored menswear pieces.</p>
             </div>
 
+            <!-- Filter Categories Navigation -->
+            <div class="flex flex-wrap items-center justify-center gap-2 sm:gap-3" id="category-filters">
+                <button data-filter="all" class="filter-btn active-filter px-5 py-2.5 text-xs font-semibold tracking-wider uppercase transition-all duration-300 rounded-sm border border-gold bg-gold text-obsidian">
+                    All
+                </button>
+                <button data-filter="suits" class="filter-btn px-5 py-2.5 text-xs font-semibold tracking-wider uppercase transition-all duration-300 rounded-sm border border-darkslate bg-obsidian text-cream/70 hover:text-gold hover:border-gold/50">
+                    Suits
+                </button>
+                <button data-filter="shirts" class="filter-btn px-5 py-2.5 text-xs font-semibold tracking-wider uppercase transition-all duration-300 rounded-sm border border-darkslate bg-obsidian text-cream/70 hover:text-gold hover:border-gold/50">
+                    Shirts
+                </button>
+                <button data-filter="trousers" class="filter-btn px-5 py-2.5 text-xs font-semibold tracking-wider uppercase transition-all duration-300 rounded-sm border border-darkslate bg-obsidian text-cream/70 hover:text-gold hover:border-gold/50">
+                    Trousers
+                </button>
+                <button data-filter="shoes" class="filter-btn px-5 py-2.5 text-xs font-semibold tracking-wider uppercase transition-all duration-300 rounded-sm border border-darkslate bg-obsidian text-cream/70 hover:text-gold hover:border-gold/50">
+                    Shoes
+                </button>
+                <button data-filter="accessories" class="filter-btn px-5 py-2.5 text-xs font-semibold tracking-wider uppercase transition-all duration-300 rounded-sm border border-darkslate bg-obsidian text-cream/70 hover:text-gold hover:border-gold/50">
+                    Accessories
+                </button>
+            </div>
+
+            <!-- Product Grid -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8" id="product-grid">
+                <!-- JavaScript will dynamically render products here -->
+            </div>
+
+        </div>
+    </section>
+
+    <!-- INTERACTIVE CUSTOM SUIT VISUALIZER STUDIO -->
+    <section id="visualizer" class="py-20 bg-obsidian relative border-t border-darkslate/60">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+            
+            <div class="text-center space-y-3 max-w-2xl mx-auto">
+                <span class="text-xs font-semibold uppercase tracking-[0.3em] text-gold">Tailor-Made Experience</span>
+                <h2 class="font-serif text-3xl sm:text-4xl md:text-5xl font-bold text-cream">Custom Fitting Studio</h2>
+                <div class="w-12 h-0.5 bg-gold mx-auto"></div>
+                <p class="text-sm text-softgrey">Configure your ideal suit specifications below to request a tailored consultation with our master draper.</p>
+            </div>
+
+            <!-- Visualizer Tool Grid -->
             <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
-                <!-- Form Inputs (8 Columns) -->
-                <div class="lg:col-span-7 bg-dark-900/80 p-6 sm:p-8 rounded-2xl border border-dark-600 space-y-8">
-                    <!-- Step 1: Preferred Fit -->
+                
+                <!-- Options Panel (Left) -->
+                <div class="lg:col-span-7 bg-charcoal p-6 sm:p-8 rounded-sm border border-darkslate space-y-8">
+                    
+                    <!-- Step 1: Fit Selection -->
                     <div>
-                        <label class="block text-xs uppercase tracking-widest text-gold-400 font-semibold mb-3">Step 1: Preferred Fit</label>
-                        <div class="grid grid-cols-3 gap-3">
-                            <button type="button" onclick="selectAdvisor('fit', 'Slim Fit', this)" class="advisor-fit-btn p-3 rounded-xl border border-gold-400 bg-gold-400/10 text-gold-400 text-xs font-semibold text-center hover:border-gold-400 transition">
+                        <label class="block text-xs font-semibold text-gold uppercase tracking-widest mb-3">1. Select Silhouette / Fit</label>
+                        <div class="grid grid-cols-3 gap-3" id="fit-options">
+                            <button data-value="Slim Fit" class="fit-btn active-opt p-3 text-center border border-gold bg-obsidian text-gold text-xs uppercase font-medium rounded-sm">
                                 Slim Fit
                             </button>
-                            <button type="button" onclick="selectAdvisor('fit', 'Modern Cut', this)" class="advisor-fit-btn p-3 rounded-xl border border-dark-600 bg-dark-800 text-gray-300 text-xs font-semibold text-center hover:border-gold-400 transition">
-                                Modern Cut
+                            <button data-value="Modern Fit" class="fit-btn p-3 text-center border border-darkslate bg-obsidian text-cream/70 hover:border-gold/50 text-xs uppercase font-medium rounded-sm">
+                                Modern Fit
                             </button>
-                            <button type="button" onclick="selectAdvisor('fit', 'Classic Regular', this)" class="advisor-fit-btn p-3 rounded-xl border border-dark-600 bg-dark-800 text-gray-300 text-xs font-semibold text-center hover:border-gold-400 transition">
-                                Classic Regular
-                            </button>
-                        </div>
-                    </div>
-
-                    <!-- Step 2: Suit Category -->
-                    <div>
-                        <label class="block text-xs uppercase tracking-widest text-gold-400 font-semibold mb-3">Step 2: Category / Fabric</label>
-                        <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
-                            <button type="button" onclick="selectAdvisor('category', 'Executive 2-Piece', this)" class="advisor-cat-btn p-3 rounded-xl border border-gold-400 bg-gold-400/10 text-gold-400 text-xs font-semibold text-center hover:border-gold-400 transition">
-                                Executive 2-Piece
-                            </button>
-                            <button type="button" onclick="selectAdvisor('category', '3-Piece Ceremony', this)" class="advisor-cat-btn p-3 rounded-xl border border-dark-600 bg-dark-800 text-gray-300 text-xs font-semibold text-center hover:border-gold-400 transition">
-                                3-Piece Ceremony
-                            </button>
-                            <button type="button" onclick="selectAdvisor('category', '100% Superfine Wool', this)" class="advisor-cat-btn p-3 rounded-xl border border-dark-600 bg-dark-800 text-gray-300 text-xs font-semibold text-center hover:border-gold-400 transition">
-                                100% Superfine Wool
+                            <button data-value="Classic Tailored" class="fit-btn p-3 text-center border border-darkslate bg-obsidian text-cream/70 hover:border-gold/50 text-xs uppercase font-medium rounded-sm">
+                                Classic
                             </button>
                         </div>
                     </div>
 
-                    <!-- Step 3: Size Selection -->
+                    <!-- Step 2: Fabric & Color Selection -->
                     <div>
-                        <label class="block text-xs uppercase tracking-widest text-gold-400 font-semibold mb-3">Step 3: Size Selection</label>
-                        <div class="grid grid-cols-2 sm:grid-cols-3 gap-3">
-                            <button type="button" onclick="selectAdvisor('size', 'EU 46 / US 36R', this)" class="advisor-size-btn p-3 rounded-xl border border-dark-600 bg-dark-800 text-gray-300 text-xs font-semibold text-center hover:border-gold-400 transition">
-                                EU 46 / US 36R
+                        <label class="block text-xs font-semibold text-gold uppercase tracking-widest mb-3">2. Select Fabric & Tone</label>
+                        <div class="grid grid-cols-2 sm:grid-cols-3 gap-3" id="color-options">
+                            <button data-value="Midnight Navy" data-color="#0F172A" class="color-btn active-opt flex items-center gap-3 p-3 border border-gold bg-obsidian text-xs text-cream uppercase rounded-sm">
+                                <span class="w-4 h-4 rounded-full bg-[#0F172A] border border-white/20"></span>
+                                Navy Blue
                             </button>
-                            <button type="button" onclick="selectAdvisor('size', 'EU 48 / US 38R', this)" class="advisor-size-btn p-3 rounded-xl border border-gold-400 bg-gold-400/10 text-gold-400 text-xs font-semibold text-center hover:border-gold-400 transition">
-                                EU 48 / US 38R
+                            <button data-value="Charcoal Wool" data-color="#334155" class="color-btn flex items-center gap-3 p-3 border border-darkslate bg-obsidian text-xs text-cream/70 hover:border-gold/50 uppercase rounded-sm">
+                                <span class="w-4 h-4 rounded-full bg-[#334155] border border-white/20"></span>
+                                Charcoal
                             </button>
-                            <button type="button" onclick="selectAdvisor('size', 'EU 50 / US 40R', this)" class="advisor-size-btn p-3 rounded-xl border border-dark-600 bg-dark-800 text-gray-300 text-xs font-semibold text-center hover:border-gold-400 transition">
-                                EU 50 / US 40R
+                            <button data-value="Obsidian Black" data-color="#000000" class="color-btn flex items-center gap-3 p-3 border border-darkslate bg-obsidian text-xs text-cream/70 hover:border-gold/50 uppercase rounded-sm">
+                                <span class="w-4 h-4 rounded-full bg-[#000000] border border-white/20"></span>
+                                Jet Black
                             </button>
-                            <button type="button" onclick="selectAdvisor('size', 'EU 52 / US 42R', this)" class="advisor-size-btn p-3 rounded-xl border border-dark-600 bg-dark-800 text-gray-300 text-xs font-semibold text-center hover:border-gold-400 transition">
-                                EU 52 / US 42R
+                            <button data-value="Burgundy Silk Blend" data-color="#4C0519" class="color-btn flex items-center gap-3 p-3 border border-darkslate bg-obsidian text-xs text-cream/70 hover:border-gold/50 uppercase rounded-sm">
+                                <span class="w-4 h-4 rounded-full bg-[#4C0519] border border-white/20"></span>
+                                Burgundy
                             </button>
-                            <button type="button" onclick="selectAdvisor('size', 'EU 54 / US 44R', this)" class="advisor-size-btn p-3 rounded-xl border border-dark-600 bg-dark-800 text-gray-300 text-xs font-semibold text-center hover:border-gold-400 transition">
-                                EU 54 / US 44R
+                            <button data-value="Pinstripe Navy" data-color="#1E293B" class="color-btn flex items-center gap-3 p-3 border border-darkslate bg-obsidian text-xs text-cream/70 hover:border-gold/50 uppercase rounded-sm">
+                                <span class="w-4 h-4 rounded-full bg-[#1E293B] border border-white/20"></span>
+                                Pinstripe
                             </button>
-                            <button type="button" onclick="selectAdvisor('size', 'EU 56+ / US 46R+', this)" class="advisor-size-btn p-3 rounded-xl border border-dark-600 bg-dark-800 text-gray-300 text-xs font-semibold text-center hover:border-gold-400 transition">
-                                EU 56+ / US 46R+
+                            <button data-value="Champagne Beige" data-color="#78716C" class="color-btn flex items-center gap-3 p-3 border border-darkslate bg-obsidian text-xs text-cream/70 hover:border-gold/50 uppercase rounded-sm">
+                                <span class="w-4 h-4 rounded-full bg-[#78716C] border border-white/20"></span>
+                                Stone
                             </button>
                         </div>
                     </div>
+
+                    <!-- Step 3: Lapel Type -->
+                    <div>
+                        <label class="block text-xs font-semibold text-gold uppercase tracking-widest mb-3">3. Lapel Style</label>
+                        <div class="grid grid-cols-3 gap-3" id="lapel-options">
+                            <button data-value="Notch Lapel" class="lapel-btn active-opt p-3 text-center border border-gold bg-obsidian text-gold text-xs uppercase font-medium rounded-sm">
+                                Notch Lapel
+                            </button>
+                            <button data-value="Peak Lapel" class="lapel-btn p-3 text-center border border-darkslate bg-obsidian text-cream/70 hover:border-gold/50 text-xs uppercase font-medium rounded-sm">
+                                Peak Lapel
+                            </button>
+                            <button data-value="Shawl Collar" class="lapel-btn p-3 text-center border border-darkslate bg-obsidian text-cream/70 hover:border-gold/50 text-xs uppercase font-medium rounded-sm">
+                                Shawl Collar
+                            </button>
+                        </div>
+                    </div>
+
                 </div>
 
-                <!-- Summary Box (5 Columns) -->
-                <div class="lg:col-span-5 bg-gradient-to-b from-dark-700 to-dark-900 p-8 rounded-2xl border border-gold-400/30 gold-border-glow">
-                    <div class="flex items-center gap-3 pb-4 border-b border-gray-700">
-                        <i class="fa-solid fa-sliders text-gold-400 text-xl"></i>
-                        <h3 class="font-serif text-2xl text-white font-bold">Your Selection</h3>
+                <!-- Preview & Summary Box (Right) -->
+                <div class="lg:col-span-5 bg-charcoal p-6 sm:p-8 rounded-sm border border-gold/40 flex flex-col justify-between space-y-6">
+                    
+                    <div>
+                        <div class="flex items-center justify-between border-b border-darkslate pb-4 mb-6">
+                            <h3 class="font-serif text-2xl font-bold text-cream">Order Specification</h3>
+                            <span class="text-xs bg-gold/10 text-gold px-2.5 py-1 border border-gold/30 rounded-sm">Custom Fitting</span>
+                        </div>
+
+                        <!-- Dynamic Visual Suit Badge Preview -->
+                        <div class="bg-obsidian p-6 rounded-sm border border-darkslate text-center space-y-4 mb-6 relative overflow-hidden">
+                            <div class="w-20 h-20 mx-auto rounded-full flex items-center justify-center border-2 border-gold transition-all duration-300" id="preview-color-circle" style="background-color: #0F172A;">
+                                <i class="fa-solid fa-user-tie text-3xl text-gold"></i>
+                            </div>
+                            <div>
+                                <p id="preview-title" class="font-serif text-xl font-bold text-cream">Midnight Navy Slim Fit</p>
+                                <p id="preview-subtitle" class="text-xs text-softgrey mt-1">Notch Lapel • Premium Italian Finish</p>
+                            </div>
+                        </div>
+
+                        <!-- Specification Summary List -->
+                        <ul class="space-y-3 text-xs tracking-wider uppercase text-cream/80">
+                            <li class="flex justify-between border-b border-darkslate/60 pb-2">
+                                <span class="text-softgrey">Fit Style:</span>
+                                <span id="summary-fit" class="font-semibold text-gold">Slim Fit</span>
+                            </li>
+                            <li class="flex justify-between border-b border-darkslate/60 pb-2">
+                                <span class="text-softgrey">Fabric / Color:</span>
+                                <span id="summary-color" class="font-semibold text-gold">Midnight Navy</span>
+                            </li>
+                            <li class="flex justify-between border-b border-darkslate/60 pb-2">
+                                <span class="text-softgrey">Lapel Cut:</span>
+                                <span id="summary-lapel" class="font-semibold text-gold">Notch Lapel</span>
+                            </li>
+                            <li class="flex justify-between pb-2">
+                                <span class="text-softgrey">Estimated Crafting:</span>
+                                <span class="font-semibold text-cream">5 - 7 Days</span>
+                            </li>
+                        </ul>
                     </div>
 
-                    <div class="py-6 space-y-4 text-sm">
-                        <div class="flex justify-between items-center">
-                            <span class="text-gray-400">Fit Cut:</span>
-                            <span id="summary-fit" class="font-semibold text-gold-400">Slim Fit</span>
-                        </div>
-                        <div class="flex justify-between items-center">
-                            <span class="text-gray-400">Category:</span>
-                            <span id="summary-category" class="font-semibold text-gold-400">Executive 2-Piece</span>
-                        </div>
-                        <div class="flex justify-between items-center">
-                            <span class="text-gray-400">Requested Size:</span>
-                            <span id="summary-size" class="font-semibold text-gold-400">EU 48 / US 38R</span>
-                        </div>
-                        <div class="flex justify-between items-center pt-2 border-t border-gray-800">
-                            <span class="text-gray-400">Availability Status:</span>
-                            <span class="inline-flex items-center gap-1.5 text-xs text-emerald-400 font-medium">
-                                <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span> In Stock / Direct Import
-                            </span>
-                        </div>
+                    <!-- Direct Order CTA -->
+                    <div class="space-y-3 pt-4 border-t border-darkslate">
+                        <button id="whatsapp-custom-order-btn" class="w-full py-4 bg-gold hover:bg-goldhover text-obsidian font-bold text-xs uppercase tracking-[0.2em] flex items-center justify-center gap-2 transition-all duration-300 rounded-sm shadow-md">
+                            <i class="fa-brands fa-whatsapp text-base"></i> Order via WhatsApp
+                        </button>
+                        <p class="text-[11px] text-center text-softgrey">Sends your configured choices directly to ELLA's master tailor.</p>
                     </div>
 
-                    <div class="pt-4">
-                        <a id="advisor-whatsapp-btn" href="#" target="_blank" class="w-full py-4 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-center text-sm tracking-widest uppercase transition flex items-center justify-center gap-3 shadow-lg shadow-emerald-900/30">
-                            <i class="fa-brands fa-whatsapp text-lg"></i> Check Size Availability on WhatsApp
-                        </a>
-                        <p class="text-[11px] text-gray-500 text-center mt-3">
-                            Connects directly to our menswear consultant with your pre-selected measurements.
-                        </p>
-                    </div>
                 </div>
+
             </div>
+
         </div>
     </section>
 
-    <!-- Contact & Store Information Footer -->
-    <footer id="contact" class="bg-dark-900 text-gray-400 pt-16 pb-12 border-t border-gray-800">
+    <!-- ABOUT ELLA SECTION -->
+    <section id="about" class="py-20 bg-charcoal border-t border-darkslate/60 relative">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
-                <!-- Brand Info -->
-                <div class="space-y-4">
-                    <div class="flex items-center gap-3">
-                        <img src="assets/logo.png" alt="ELLA Logo" class="h-8 w-auto" onerror="this.onerror=null; this.src='https://placehold.co/80x80/12141C/D4AF37?text=ELLA';">
-                        <span class="font-serif text-2xl font-bold tracking-widest text-white">ELLA</span>
+            
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                
+                <!-- Left Editorial Image Grid -->
+                <div class="lg:col-span-6 grid grid-cols-2 gap-4 relative">
+                    <div class="space-y-4">
+                        <img src="https://images.unsplash.com/photo-1507679799987-c73779587ccf?q=80&w=800&auto=format&fit=crop" 
+                             alt="Tailoring craftsmanship" 
+                             class="w-full h-64 object-cover rounded-sm border border-darkslate shadow-md"
+                             onerror="this.src='https://placehold.co/600x800/1E1E1E/D4AF37?text=Craftsmanship'">
+                        <img src="https://images.unsplash.com/photo-1617137984095-74e4e5e3613f?q=80&w=800&auto=format&fit=crop" 
+                             alt="Menswear details" 
+                             class="w-full h-48 object-cover rounded-sm border border-darkslate shadow-md"
+                             onerror="this.src='https://placehold.co/600x600/1E1E1E/D4AF37?text=Detail'">
                     </div>
-                    <p class="text-xs text-gray-400 leading-relaxed">
-                        ELLA Suit Store brings you fine imported luxury menswear directly from international fashion capitals: Turkey, Italy, England, and the US.
+                    <div class="space-y-4 pt-8">
+                        <img src="https://images.unsplash.com/photo-1598808503746-f34c53b9323e?q=80&w=800&auto=format&fit=crop" 
+                             alt="Sharp suit silhouette" 
+                             class="w-full h-48 object-cover rounded-sm border border-darkslate shadow-md"
+                             onerror="this.src='https://placehold.co/600x600/1E1E1E/D4AF37?text=Silhouette'">
+                        <img src="https://images.unsplash.com/photo-1593032465175-481ac7f401a0?q=80&w=800&auto=format&fit=crop" 
+                             alt="Premium Oxford shoes" 
+                             class="w-full h-64 object-cover rounded-sm border border-darkslate shadow-md"
+                             onerror="this.src='https://placehold.co/600x800/1E1E1E/D4AF37?text=Leather'">
+                    </div>
+                    
+                    <!-- Decorative Badge -->
+                    <div class="absolute -bottom-6 -right-6 bg-gold text-obsidian p-6 hidden sm:block border-2 border-obsidian shadow-2xl">
+                        <p class="font-serif font-bold text-3xl">EST. 2018</p>
+                        <p class="text-[10px] tracking-widest uppercase font-semibold">Bespoke Excellence</p>
+                    </div>
+                </div>
+
+                <!-- Right Copy Text -->
+                <div class="lg:col-span-6 space-y-6">
+                    <span class="text-xs font-semibold uppercase tracking-[0.3em] text-gold">The House of ELLA</span>
+                    <h2 class="font-serif text-3xl sm:text-4xl md:text-5xl font-bold text-cream leading-tight">
+                        Crafting Sharp Silhouettes for the Modern Gentleman
+                    </h2>
+                    <p class="text-sm text-cream/80 leading-relaxed font-light">
+                        At <strong class="text-gold font-semibold">ELLA</strong>, clothing is more than just fabric—it is an armor of confidence. Founded on the principles of immaculate drape, refined proportions, and uncompromised textiles, ELLA caters to gentlemen who appreciate the finer subtleties of bespoke sartorial craft.
                     </p>
-                    <div class="pt-2">
-                        <p class="text-xs text-gold-400 font-semibold uppercase tracking-wider">Store Location</p>
-                        <p class="text-xs text-gray-300 mt-1">Addis Ababa, Ethiopia</p>
-                    </div>
-                </div>
-
-                <!-- Verified Contact Info -->
-                <div class="space-y-4">
-                    <h3 class="font-serif text-lg text-white font-semibold tracking-wider">Direct Contact</h3>
-                    <ul class="space-y-3 text-xs">
-                        <li>
-                            <a href="https://wa.me/251975338888" target="_blank" class="flex items-center gap-3 hover:text-gold-400 transition">
-                                <div class="w-8 h-8 rounded-full bg-dark-800 border border-gray-700 flex items-center justify-center text-emerald-400">
-                                    <i class="fa-brands fa-whatsapp"></i>
-                                </div>
-                                <div>
-                                    <span class="block text-[10px] text-gray-500 uppercase">Phone & WhatsApp</span>
-                                    <span class="text-gray-200 font-medium">+251 975 338 888</span>
-                                </div>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="https://t.me/Ellasuits" target="_blank" class="flex items-center gap-3 hover:text-gold-400 transition">
-                                <div class="w-8 h-8 rounded-full bg-dark-800 border border-gray-700 flex items-center justify-center text-sky-400">
-                                    <i class="fa-brands fa-telegram"></i>
-                                </div>
-                                <div>
-                                    <span class="block text-[10px] text-gray-500 uppercase">Telegram Channel</span>
-                                    <span class="text-gray-200 font-medium">t.me/Ellasuits</span>
-                                </div>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-
-                <!-- Verified Social Media -->
-                <div class="space-y-4">
-                    <h3 class="font-serif text-lg text-white font-semibold tracking-wider">Follow Our Socials</h3>
-                    <div class="flex flex-col gap-2.5 text-xs">
-                        <a href="https://www.instagram.com/ellasuitstore?stkn=a3p3Y2syYnVhbGZ5&utm_source=qr" target="_blank" class="p-2.5 rounded-lg bg-dark-800 border border-gray-800 hover:border-gold-400/50 text-gray-300 hover:text-white transition flex items-center gap-3">
-                            <i class="fa-brands fa-instagram text-pink-400 text-base"></i> Instagram Profile
-                        </a>
-                        <a href="https://web.facebook.com/profile.php?id=61592446601829" target="_blank" class="p-2.5 rounded-lg bg-dark-800 border border-gray-800 hover:border-gold-400/50 text-gray-300 hover:text-white transition flex items-center gap-3">
-                            <i class="fa-brands fa-facebook text-blue-500 text-base"></i> Facebook Page
-                        </a>
-                        <a href="http://tiktok.com/@ella.suit?_t=ZM-8xmTSIXtRJ8&_r=1" target="_blank" class="p-2.5 rounded-lg bg-dark-800 border border-gray-800 hover:border-gold-400/50 text-gray-300 hover:text-white transition flex items-center gap-3">
-                            <i class="fa-brands fa-tiktok text-gray-200 text-base"></i> TikTok Channel
-                        </a>
-                    </div>
-                </div>
-
-                <!-- Business Hours & Guarantee -->
-                <div class="space-y-4">
-                    <h3 class="font-serif text-lg text-white font-semibold tracking-wider">Quality Promise</h3>
-                    <p class="text-xs text-gray-400 leading-relaxed">
-                        Every suit is inspected for perfection. Experience unmatched tailoring fit, luxury linings, and premium imported fabric standard.
+                    <p class="text-sm text-cream/70 leading-relaxed font-light">
+                        From high-stakes boardroom meetings and black-tie galas to sharp everyday business casual attire, our collections integrate timeless European tailoring with modern comfort.
                     </p>
-                    <div class="p-3 rounded-lg bg-dark-800 border border-gold-400/20 text-xs space-y-1">
-                        <span class="text-gold-400 font-semibold block">Store Hours:</span>
-                        <span class="text-gray-300">Mon - Sat: 9:00 AM - 8:00 PM</span>
+
+                    <!-- Feature Bullet Points -->
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-4 border-t border-darkslate">
+                        <div class="flex items-start gap-3">
+                            <i class="fa-solid fa-scissors text-gold mt-1"></i>
+                            <div>
+                                <h4 class="text-xs font-bold uppercase tracking-wider text-cream">Precision Cut</h4>
+                                <p class="text-xs text-softgrey">Tailored specifically to accentuate natural shoulder lines.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-3">
+                            <i class="fa-solid fa-gem text-gold mt-1"></i>
+                            <div>
+                                <h4 class="text-xs font-bold uppercase tracking-wider text-cream">Luxury Textiles</h4>
+                                <p class="text-xs text-softgrey">Pure Italian wool, Egyptian cotton, and genuine calfskin.</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
+
             </div>
 
-            <div class="pt-8 border-t border-gray-800/80 text-center text-xs text-gray-500 flex flex-col sm:flex-row justify-between items-center gap-4">
-                <p>&copy; 2026 ELLA Suit Store. All rights reserved. Confidence Tailored.</p>
-                <div class="flex space-x-6 text-gray-400">
-                    <span>Imported Menswear</span>
-                    <span>•</span>
-                    <span>Ready To Wear</span>
-                    <span>•</span>
-                    <span>Addis Ababa</span>
-                </div>
+        </div>
+    </section>
+
+    <!-- LOCATION & CONTACT SECTION -->
+    <section id="contact" class="py-20 bg-obsidian relative border-t border-darkslate/60">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+            
+            <div class="text-center space-y-3 max-w-2xl mx-auto">
+                <span class="text-xs font-semibold uppercase tracking-[0.3em] text-gold">Visit Our Boutique</span>
+                <h2 class="font-serif text-3xl sm:text-4xl md:text-5xl font-bold text-cream">Location & Fitting Requests</h2>
+                <div class="w-12 h-0.5 bg-gold mx-auto"></div>
+                <p class="text-sm text-softgrey">Schedule a private consultation or reach out directly to our store representative.</p>
             </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
+                
+                <!-- Business Info & Store Details (Left) -->
+                <div class="lg:col-span-5 bg-charcoal p-8 rounded-sm border border-darkslate space-y-6">
+                    <h3 class="font-serif text-2xl font-bold text-cream border-b border-darkslate pb-4">Boutique Information</h3>
+                    
+                    <div class="space-y-4 text-sm text-cream/80">
+                        <div class="flex items-start gap-4">
+                            <div class="w-10 h-10 rounded-sm bg-obsidian border border-gold/30 flex items-center justify-center shrink-0">
+                                <i class="fa-solid fa-location-dot text-gold"></i>
+                            </div>
+                            <div>
+                                <p class="font-semibold text-cream text-xs uppercase tracking-wider">Store Address</p>
+                                <p class="text-xs text-softgrey mt-0.5">ELLA Flagship Store, Luxury Avenue 104, Fashion District</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-4">
+                            <div class="w-10 h-10 rounded-sm bg-obsidian border border-gold/30 flex items-center justify-center shrink-0">
+                                <i class="fa-solid fa-clock text-gold"></i>
+                            </div>
+                            <div>
+                                <p class="font-semibold text-cream text-xs uppercase tracking-wider">Business Hours</p>
+                                <p class="text-xs text-softgrey mt-0.5">Mon - Sat: 09:00 AM - 08:00 PM</p>
+                                <p class="text-xs text-softgrey">Sunday: By Appointment Only</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-4">
+                            <div class="w-10 h-10 rounded-sm bg-obsidian border border-gold/30 flex items-center justify-center shrink-0">
+                                <i class="fa-solid fa-phone text-gold"></i>
+                            </div>
+                            <div>
+                                <p class="font-semibold text-cream text-xs uppercase tracking-wider">Phone & Inquiries</p>
+                                <p class="text-xs text-softgrey mt-0.5">+1 (555) 019-2834</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-4">
+                            <div class="w-10 h-10 rounded-sm bg-obsidian border border-gold/30 flex items-center justify-center shrink-0">
+                                <i class="fa-brands fa-whatsapp text-gold text-lg"></i>
+                            </div>
+                            <div>
+                                <p class="font-semibold text-cream text-xs uppercase tracking-wider">WhatsApp Support</p>
+                                <p class="text-xs text-softgrey mt-0.5">+1 (555) 019-2834 (Instant Responses)</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Direct WhatsApp Call To Action Button -->
+                    <div class="pt-4 border-t border-darkslate">
+                        <a href="https://wa.me/15550192834?text=Hello%20ELLA%20Suit%20Store%2C%20I%20would%20like%20to%20get%20more%20information." 
+                           target="_blank" 
+                           class="w-full py-3.5 bg-green-700 hover:bg-green-600 text-white font-bold text-xs uppercase tracking-widest flex items-center justify-center gap-2 transition-all rounded-sm shadow-md">
+                            <i class="fa-brands fa-whatsapp text-lg"></i> Chat Live on WhatsApp
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Interactive Fitting Request Form (Right) -->
+                <div class="lg:col-span-7 bg-charcoal p-8 rounded-sm border border-darkslate">
+                    <h3 class="font-serif text-2xl font-bold text-cream border-b border-darkslate pb-4 mb-6">Book Fitting Appointment</h3>
+                    
+                    <form id="fitting-form" class="space-y-4">
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                            <div>
+                                <label class="block text-xs font-medium text-cream uppercase tracking-wider mb-2">Your Name *</label>
+                                <input type="text" required placeholder="John Doe" class="w-full bg-obsidian border border-darkslate focus:border-gold px-4 py-3 text-xs text-cream focus:outline-none rounded-sm transition-colors">
+                            </div>
+                            <div>
+                                <label class="block text-xs font-medium text-cream uppercase tracking-wider mb-2">Phone Number *</label>
+                                <input type="tel" required placeholder="+1 (555) 000-0000" class="w-full bg-obsidian border border-darkslate focus:border-gold px-4 py-3 text-xs text-cream focus:outline-none rounded-sm transition-colors">
+                            </div>
+                        </div>
+
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                            <div>
+                                <label class="block text-xs font-medium text-cream uppercase tracking-wider mb-2">Preferred Date</label>
+                                <input type="date" class="w-full bg-obsidian border border-darkslate focus:border-gold px-4 py-3 text-xs text-cream focus:outline-none rounded-sm transition-colors">
+                            </div>
+                            <div>
+                                <label class="block text-xs font-medium text-cream uppercase tracking-wider mb-2">Interested Category</label>
+                                <select class="w-full bg-obsidian border border-darkslate focus:border-gold px-4 py-3 text-xs text-cream focus:outline-none rounded-sm transition-colors">
+                                    <option>Custom Suit Fitting</option>
+                                    <option>Bespoke Shirts</option>
+                                    <option>Trousers & Chinos</option>
+                                    <option>Handcrafted Shoes</option>
+                                    <option>Wedding / Event Suit Package</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div>
+                            <label class="block text-xs font-medium text-cream uppercase tracking-wider mb-2">Additional Notes / Measurements</label>
+                            <textarea rows="4" placeholder="Tell us about your style preference, occasion date, or custom requests..." class="w-full bg-obsidian border border-darkslate focus:border-gold px-4 py-3 text-xs text-cream focus:outline-none rounded-sm transition-colors"></textarea>
+                        </div>
+
+                        <button type="submit" class="w-full py-4 bg-gold hover:bg-goldhover text-obsidian font-bold text-xs uppercase tracking-[0.2em] transition-all rounded-sm shadow-md">
+                            Submit Fitting Request
+                        </button>
+                    </form>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-obsidian border-t border-darkslate py-12 text-center sm:text-left text-xs text-softgrey">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-4 gap-8">
+            
+            <div class="space-y-4">
+                <div class="flex items-center gap-3 justify-center sm:justify-start">
+                    <div class="w-8 h-8 border border-gold flex items-center justify-center bg-charcoal">
+                        <span class="font-serif font-bold text-lg text-gold">E</span>
+                    </div>
+                    <span class="font-serif text-xl tracking-[0.2em] font-bold text-cream">ELLA</span>
+                </div>
+                <p class="text-xs leading-relaxed">
+                    Mastering the art of tailoring for discerning gentlemen. High fashion menswear and bespoke styling solutions.
+                </p>
+            </div>
+
+            <div>
+                <h4 class="text-cream uppercase font-semibold tracking-wider mb-4">Quick Navigation</h4>
+                <ul class="space-y-2">
+                    <li><a href="#home" class="hover:text-gold transition-colors">Home</a></li>
+                    <li><a href="#showcase" class="hover:text-gold transition-colors">Collection</a></li>
+                    <li><a href="#visualizer" class="hover:text-gold transition-colors">Custom Studio</a></li>
+                    <li><a href="#about" class="hover:text-gold transition-colors">About ELLA</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h4 class="text-cream uppercase font-semibold tracking-wider mb-4">Categories</h4>
+                <ul class="space-y-2">
+                    <li><a href="#showcase" class="hover:text-gold transition-colors">Bespoke Suits</a></li>
+                    <li><a href="#showcase" class="hover:text-gold transition-colors">Dress Shirts</a></li>
+                    <li><a href="#showcase" class="hover:text-gold transition-colors">Tailored Trousers</a></li>
+                    <li><a href="#showcase" class="hover:text-gold transition-colors">Oxford & Monk Shoes</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h4 class="text-cream uppercase font-semibold tracking-wider mb-4">Connect With ELLA</h4>
+                <div class="flex justify-center sm:justify-start gap-4 text-base text-cream/70">
+                    <a href="#" class="hover:text-gold"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#" class="hover:text-gold"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="https://wa.me/15550192834" target="_blank" class="hover:text-gold"><i class="fa-brands fa-whatsapp"></i></a>
+                </div>
+                <p class="mt-4 text-[11px]">&copy; 2026 ELLA Suit Store (ellasuit.com). All rights reserved.</p>
+            </div>
+
         </div>
     </footer>
 
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/15550192834?text=Hello%20ELLA%20Suit%20Store%2C%20I%20have%20an%20inquiry." 
+       target="_blank" 
+       rel="noopener noreferrer"
+       class="fixed bottom-6 right-6 z-50 bg-green-600 hover:bg-green-500 text-white w-14 h-14 rounded-full flex items-center justify-center shadow-2xl transition-transform hover:scale-110 group"
+       aria-label="Chat on WhatsApp">
+        <i class="fa-brands fa-whatsapp text-2xl"></i>
+        <span class="absolute right-16 bg-charcoal text-cream text-[11px] px-3 py-1.5 rounded border border-darkslate opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap shadow-md pointer-events-none">
+            Chat with Master Draper
+        </span>
+    </a>
+
+    <!-- PRODUCT DETAIL MODAL -->
+    <div id="product-modal" class="fixed inset-0 z-50 hidden bg-obsidian/90 backdrop-blur-md flex items-center justify-center p-4">
+        <div class="bg-charcoal border border-gold/40 rounded-sm max-w-2xl w-full p-6 sm:p-8 relative space-y-6 shadow-2xl">
+            <!-- Close Modal Button -->
+            <button id="close-modal-btn" class="absolute top-4 right-4 text-cream/60 hover:text-gold text-2xl">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 items-center">
+                <img id="modal-image" src="" alt="Product Image" class="w-full h-72 object-cover rounded-sm border border-darkslate">
+                <div class="space-y-4">
+                    <span id="modal-category" class="text-xs font-semibold text-gold uppercase tracking-widest">Category</span>
+                    <h3 id="modal-title" class="font-serif text-2xl font-bold text-cream">Product Title</h3>
+                    <p id="modal-price" class="text-xl font-serif text-gold font-bold">$0.00</p>
+                    <p id="modal-description" class="text-xs text-softgrey leading-relaxed">Product detailed description text goes here.</p>
+                    
+                    <div class="pt-4 border-t border-darkslate space-y-3">
+                        <a id="modal-whatsapp-link" href="#" target="_blank" class="w-full py-3 bg-gold hover:bg-goldhover text-obsidian text-center font-bold text-xs uppercase tracking-widest flex items-center justify-center gap-2 rounded-sm transition-all">
+                            <i class="fa-brands fa-whatsapp text-sm"></i> Inquire via WhatsApp
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <script>
-        // Product Data Array
+        // Sample Stock Data for ELLA Suit Store
         const products = [
             {
-                name: 'Executive 2-Piece Suit',
-                price: '28,500 ETB',
-                category: 'suits',
-                image: 'assets/suits-2piece.jpg',
-                fallback: 'https://images.unsplash.com/photo-1594938298603-c8148c4dae35?q=80&w=600&auto=format&fit=crop',
-                origin: 'Turkey / Italy'
+                id: 1,
+                name: "The Executive Italian Navy Suit",
+                category: "suits",
+                price: "$680",
+                image: "https://images.unsplash.com/photo-1594938298603-c8148c4dae35?q=80&w=800&auto=format&fit=crop",
+                description: "Crafted from 100% Super 130s Italian Merino Wool. Features a tapered modern fit with canvas shoulder construction for maximum elegance."
             },
             {
-                name: '3-Piece Suit Collection',
-                price: '32,000 ETB',
-                category: 'suits',
-                image: 'assets/suits 3 .jpg',
-                fallback: 'https://images.unsplash.com/photo-1593032465175-481ac7f401a0?q=80&w=600&auto=format&fit=crop',
-                origin: 'Turkey / UK'
+                id: 2,
+                name: "Black Tie Tuxedo Ensemble",
+                category: "suits",
+                price: "$750",
+                image: "https://images.unsplash.com/photo-1507679799987-c73779587ccf?q=80&w=800&auto=format&fit=crop",
+                description: "The classic obsidian tuxedo with silk satin lapels and matching silk side stripes on the trousers. Unmatched gala refinement."
             },
             {
-                name: '100% Wool Luxury Suit',
-                price: '55,000 ETB',
-                category: 'suits',
-                image: 'assets/suits.PNG',
-                fallback: 'https://images.unsplash.com/photo-1507679799987-c73779587ccf?q=80&w=600&auto=format&fit=crop',
-                origin: 'Italy Superfine'
+                id: 3,
+                name: "Crisp Egyptian Cotton Dress Shirt",
+                category: "shirts",
+                price: "$140",
+                image: "https://images.unsplash.com/photo-1620012253295-c15cc3e65df4?q=80&w=800&auto=format&fit=crop",
+                description: "High thread count, wrinkle-resistant double cuff shirt tailored to fit comfortably under slim-fit jacket armholes."
             },
             {
-                name: 'Formal & Casual Shirts',
-                price: '4,500 ETB',
-                category: 'shirts',
-                image: 'assets/shirts.PNG',
-                fallback: 'https://images.unsplash.com/photo-1620012253295-c15cc3e65df4?q=80&w=600&auto=format&fit=crop',
-                origin: '100% Cotton Import'
+                id: 4,
+                name: "Charcoal Pleated Dress Trousers",
+                category: "trousers",
+                price: "$190",
+                image: "https://images.unsplash.com/photo-1617137984095-74e4e5e3613f?q=80&w=800&auto=format&fit=crop",
+                description: "Clean front pleats with adjustable side tabs. Breathable wool weave suitable for all-day professional wear."
             },
             {
-                name: 'Luxury T-Shirts',
-                price: '3,500 ETB',
-                category: 'shirts',
-                image: 'assets/shirts.PNG',
-                fallback: 'https://images.unsplash.com/photo-1521572267360-ee0c2909d518?q=80&w=600&auto=format&fit=crop',
-                origin: 'US / European Cotton'
+                id: 5,
+                name: "Handcrafted Leather Oxford Shoes",
+                category: "shoes",
+                price: "$290",
+                image: "https://images.unsplash.com/photo-1614252235316-8c857d38b5f4?q=80&w=800&auto=format&fit=crop",
+                description: "Full-grain burnished calfskin Oxford shoes with Goodyear welted leather soles. Polished to perfection."
             },
             {
-                name: 'Tailored Trousers',
-                price: '5,500 ETB',
-                category: 'trousers',
-                image: 'assets/trousers.PNG',
-                fallback: 'https://images.unsplash.com/photo-1624378439575-d8705ad7ae80?q=80&w=600&auto=format&fit=crop',
-                origin: 'Custom Cut Fit'
-            },
-            {
-                name: 'Leather Shoes',
-                price: '22,500 ETB',
-                category: 'shoes',
-                image: 'assets/shoes.jpg',
-                fallback: 'https://images.unsplash.com/photo-1614252235316-8c857d38b5f4?q=80&w=600&auto=format&fit=crop',
-                origin: 'Genuine Imported Leather'
-            },
-            {
-                name: 'Silk Ties & Accessories',
-                price: '1,800 ETB',
-                category: 'accessories',
-                image: 'assets/accessories.PNG',
-                fallback: 'https://images.unsplash.com/photo-1598554747436-c9293d6a588f?q=80&w=600&auto=format&fit=crop',
-                origin: 'Pure Silk & Metals'
+                id: 6,
+                name: "Gold Embossed Silk Tie & Pocket Square",
+                category: "accessories",
+                price: "$85",
+                image: "https://images.unsplash.com/photo-1589756823695-278bc923f962?q=80&w=800&auto=format&fit=crop",
+                description: "100% woven silk tie matched with an edged pocket square to complete your tailored presentation."
             }
         ];
 
-        // Render Product Grid
-        function renderProducts(categoryFilter = 'all') {
-            const grid = document.getElementById('products-grid');
+        // State variables for Custom Visualizer
+        let customSuitConfig = {
+            fit: 'Slim Fit',
+            color: 'Midnight Navy',
+            colorHex: '#0F172A',
+            lapel: 'Notch Lapel'
+        };
+
+        // DOM Ready Initializer
+        window.addEventListener('DOMContentLoaded', () => {
+            renderProducts('all');
+            initMobileMenu();
+            initCategoryFilters();
+            initVisualizer();
+            initModal();
+            initFittingForm();
+        });
+
+        // Render Product Cards
+        function renderProducts(filter) {
+            const grid = document.getElementById('product-grid');
             grid.innerHTML = '';
 
-            const filtered = categoryFilter === 'all' ? products : products.filter(p => p.category === categoryFilter);
+            const filteredProducts = filter === 'all' 
+                ? products 
+                : products.filter(p => p.category === filter);
 
-            filtered.forEach(p => {
-                const waMessage = encodeURIComponent(`Hello ELLA Suit Store, I am interested in inquiring about the "${p.name}" priced at ${p.price}. Please confirm size and stock availability.`);
-                const waUrl = `https://wa.me/251975338888?text=${waMessage}`;
-
+            filteredProducts.forEach(product => {
                 const card = document.createElement('div');
-                card.className = "bg-dark-800 rounded-2xl overflow-hidden border border-gray-800 hover:border-gold-400/50 transition-all duration-300 group flex flex-col gold-border-glow";
+                card.className = "bg-obsidian border border-darkslate rounded-sm overflow-hidden group hover:border-gold/60 transition-all duration-300 flex flex-col justify-between";
+                
                 card.innerHTML = `
-                    <div class="relative overflow-hidden aspect-[4/5] bg-dark-700">
-                        <img src="${p.image}" alt="${p.name}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" onerror="this.onerror=null; this.src='${p.fallback}';">
-                        <div class="absolute top-3 left-3 bg-dark-900/80 backdrop-blur-md px-2.5 py-1 rounded-full text-[10px] uppercase font-semibold text-gold-400 border border-gold-400/30">
-                            ${p.origin}
-                        </div>
+                    <div class="relative overflow-hidden h-72">
+                        <img src="${product.image}" 
+                             alt="${product.name}" 
+                             class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                             onerror="this.src='https://placehold.co/600x600/121212/D4AF37?text=ELLA+Product'">
+                        <span class="absolute top-3 left-3 bg-obsidian/80 backdrop-blur-sm text-gold text-[10px] font-semibold uppercase tracking-widest px-2.5 py-1 border border-gold/30">
+                            ${product.category}
+                        </span>
                     </div>
-                    <div class="p-5 flex flex-col flex-grow justify-between space-y-4">
+                    <div class="p-6 space-y-3 flex-1 flex flex-col justify-between">
                         <div>
-                            <h3 class="font-serif text-xl font-bold text-white group-hover:text-gold-400 transition">${p.name}</h3>
-                            <p class="text-gold-400 font-semibold text-lg mt-1">${p.price}</p>
+                            <div class="flex justify-between items-start mb-2">
+                                <h3 class="font-serif text-lg font-bold text-cream group-hover:text-gold transition-colors">${product.name}</h3>
+                                <span class="font-serif text-lg text-gold font-bold">${product.price}</span>
+                            </div>
+                            <p class="text-xs text-softgrey line-clamp-2">${product.description}</p>
                         </div>
-                        <a href="${waUrl}" target="_blank" class="w-full py-2.5 rounded-xl border border-gold-400/40 hover:bg-gold-400 hover:text-dark-900 text-gold-400 font-semibold text-xs uppercase tracking-wider text-center transition flex items-center justify-center gap-2">
-                            <i class="fa-brands fa-whatsapp"></i> Inquire via WhatsApp
-                        </a>
+                        <div class="pt-4 border-t border-darkslate flex items-center justify-between gap-2">
+                            <button onclick="openModal(${product.id})" class="flex-1 py-2 border border-darkslate hover:border-gold text-cream hover:text-gold text-[11px] font-bold uppercase tracking-wider transition-colors rounded-sm">
+                                View Details
+                            </button>
+                            <a href="https://wa.me/15550192834?text=Hello%20ELLA%20Suit%20Store%2C%20I%20am%20interested%20in%20purchasing%20${encodeURIComponent(product.name)}%20(${product.price})." 
+                               target="_blank" 
+                               class="p-2.5 bg-green-700 hover:bg-green-600 text-white text-xs rounded-sm transition-colors" 
+                               title="Inquire via WhatsApp">
+                                <i class="fa-brands fa-whatsapp text-sm"></i>
+                            </a>
+                        </div>
                     </div>
                 `;
                 grid.appendChild(card);
             });
         }
 
-        // Filter Buttons Functionality
-        document.querySelectorAll('.filter-btn').forEach(btn => {
-            btn.addEventListener('click', (e) => {
-                document.querySelectorAll('.filter-btn').forEach(b => {
-                    b.classList.remove('bg-gold-400', 'text-dark-900', 'border-gold-400');
-                    b.classList.add('bg-dark-800', 'text-gray-300', 'border-dark-600');
-                });
-                btn.classList.remove('bg-dark-800', 'text-gray-300', 'border-dark-600');
-                btn.classList.add('bg-gold-400', 'text-dark-900', 'border-gold-400');
+        // Mobile Hamburger Menu Setup
+        function initMobileMenu() {
+            const btn = document.getElementById('mobile-menu-btn');
+            const menu = document.getElementById('mobile-menu');
+            const links = document.querySelectorAll('.mobile-link');
 
-                const cat = btn.getAttribute('data-category');
-                renderProducts(cat);
+            btn.addEventListener('click', () => {
+                menu.classList.toggle('hidden');
             });
-        });
 
-       <!-- Inline JavaScript App Logic -->
-    <script>
-        // Mobile Navigation Menu Toggle
-        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
-        const mobileMenu = document.getElementById('mobile-menu');
-        const menuIcon = document.getElementById('menu-icon');
+            links.forEach(link => {
+                link.addEventListener('click', () => {
+                    menu.classList.add('hidden');
+                });
+            });
+        }
 
-        if (mobileMenuBtn && mobileMenu && menuIcon) {
-            mobileMenuBtn.addEventListener('click', () => {
-                mobileMenu.classList.toggle('hidden');
-                if (mobileMenu.classList.contains('hidden')) {
-                    menuIcon.classList.remove('fa-xmark');
-                    menuIcon.classList.add('fa-bars');
-                } else {
-                    menuIcon.classList.remove('fa-bars');
-                    menuIcon.classList.add('fa-xmark');
+        // Category Filter Buttons Handler
+        function initCategoryFilters() {
+            const buttons = document.querySelectorAll('.filter-btn');
+            buttons.forEach(btn => {
+                btn.addEventListener('click', (e) => {
+                    buttons.forEach(b => {
+                        b.classList.remove('active-filter', 'bg-gold', 'text-obsidian', 'border-gold');
+                        b.classList.add('bg-obsidian', 'text-cream/70', 'border-darkslate');
+                    });
+
+                    e.target.classList.add('active-filter', 'bg-gold', 'text-obsidian', 'border-gold');
+                    e.target.classList.remove('bg-obsidian', 'text-cream/70', 'border-darkslate');
+
+                    const category = e.target.getAttribute('data-filter');
+                    renderProducts(category);
+                });
+            });
+        }
+
+        // Custom Suit Visualizer Interactive Logic
+        function initVisualizer() {
+            // Fit options
+            document.querySelectorAll('#fit-options .fit-btn').forEach(btn => {
+                btn.addEventListener('click', (e) => {
+                    document.querySelectorAll('#fit-options .fit-btn').forEach(b => {
+                        b.classList.remove('border-gold', 'text-gold');
+                        b.classList.add('border-darkslate', 'text-cream/70');
+                    });
+                    e.target.classList.add('border-gold', 'text-gold');
+                    e.target.classList.remove('border-darkslate', 'text-cream/70');
+                    customSuitConfig.fit = e.target.getAttribute('data-value');
+                    updateVisualizerSummary();
+                });
+            });
+
+            // Color options
+            document.querySelectorAll('#color-options .color-btn').forEach(btn => {
+                btn.addEventListener('click', (e) => {
+                    const target = e.currentTarget;
+                    document.querySelectorAll('#color-options .color-btn').forEach(b => {
+                        b.classList.remove('border-gold');
+                        b.classList.add('border-darkslate');
+                    });
+                    target.classList.add('border-gold');
+                    target.classList.remove('border-darkslate');
+                    customSuitConfig.color = target.getAttribute('data-value');
+                    customSuitConfig.colorHex = target.getAttribute('data-color');
+                    updateVisualizerSummary();
+                });
+            });
+
+            // Lapel options
+            document.querySelectorAll('#lapel-options .lapel-btn').forEach(btn => {
+                btn.addEventListener('click', (e) => {
+                    document.querySelectorAll('#lapel-options .lapel-btn').forEach(b => {
+                        b.classList.remove('border-gold', 'text-gold');
+                        b.classList.add('border-darkslate', 'text-cream/70');
+                    });
+                    e.target.classList.add('border-gold', 'text-gold');
+                    e.target.classList.remove('border-darkslate', 'text-cream/70');
+                    customSuitConfig.lapel = e.target.getAttribute('data-value');
+                    updateVisualizerSummary();
+                });
+            });
+
+            // Order via WhatsApp CTA Trigger
+            document.getElementById('whatsapp-custom-order-btn').addEventListener('click', () => {
+                const message = `Hello ELLA Suit Store, I would like to request a custom fitting order:\n- Fit: ${customSuitConfig.fit}\n- Fabric/Color: ${customSuitConfig.color}\n- Lapel Style: ${customSuitConfig.lapel}`;
+                const url = `https://wa.me/15550192834?text=${encodeURIComponent(message)}`;
+                window.open(url, '_blank');
+            });
+        }
+
+        function updateVisualizerSummary() {
+            document.getElementById('summary-fit').textContent = customSuitConfig.fit;
+            document.getElementById('summary-color').textContent = customSuitConfig.color;
+            document.getElementById('summary-lapel').textContent = customSuitConfig.lapel;
+            
+            document.getElementById('preview-title').textContent = `${customSuitConfig.color} ${customSuitConfig.fit}`;
+            document.getElementById('preview-subtitle').textContent = `${customSuitConfig.lapel} • Master Tailored`;
+            document.getElementById('preview-color-circle').style.backgroundColor = customSuitConfig.colorHex;
+        }
+
+        // Detail Modal Logic
+        function initModal() {
+            const modal = document.getElementById('product-modal');
+            const closeBtn = document.getElementById('close-modal-btn');
+
+            closeBtn.addEventListener('click', () => {
+                modal.classList.add('hidden');
+            });
+
+            modal.addEventListener('click', (e) => {
+                if (e.target === modal) {
+                    modal.classList.add('hidden');
                 }
             });
         }
-    </script>
-</body>
-</html>
 
-        // Size & Style Advisor State
-        const advisorState = {
-            fit: 'Slim Fit',
-            category: 'Executive 2-Piece',
-            size: 'EU 48 / US 38R'
-        };
+        function openModal(productId) {
+            const product = products.find(p => p.id === productId);
+            if (!product) return;
 
-        function selectAdvisor(type, value, btnElement) {
-            advisorState[type] = value;
-            
-            // Update button styles
-            const parent = btnElement.parentElement;
-            parent.querySelectorAll('button').forEach(b => {
-                b.className = b.className.replace('border-gold-400 bg-gold-400/10 text-gold-400', 'border-dark-600 bg-dark-800 text-gray-300');
+            document.getElementById('modal-title').textContent = product.name;
+            document.getElementById('modal-category').textContent = product.category;
+            document.getElementById('modal-price').textContent = product.price;
+            document.getElementById('modal-description').textContent = product.description;
+            document.getElementById('modal-image').src = product.image;
+
+            const waMsg = `Hello ELLA Suit Store, I would like to inquire about the ${product.name} priced at ${product.price}.`;
+            document.getElementById('modal-whatsapp-link').href = `https://wa.me/15550192834?text=${encodeURIComponent(waMsg)}`;
+
+            document.getElementById('product-modal').classList.remove('hidden');
+        }
+
+        // Form Submission Logic
+        function initFittingForm() {
+            const form = document.getElementById('fitting-form');
+            form.addEventListener('submit', (e) => {
+                e.preventDefault();
+                // Simple feedback without window alert
+                const submitBtn = form.querySelector('button[type="submit"]');
+                const originalText = submitBtn.textContent;
+                
+                submitBtn.textContent = "Request Sent Successfully!";
+                submitBtn.classList.remove('bg-gold', 'text-obsidian');
+                submitBtn.classList.add('bg-green-700', 'text-white');
+
+                setTimeout(() => {
+                    form.reset();
+                    submitBtn.textContent = originalText;
+                    submitBtn.classList.remove('bg-green-700', 'text-white');
+                    submitBtn.classList.add('bg-gold', 'text-obsidian');
+                }, 3000);
             });
-            btnElement.className = btnElement.className.replace('border-dark-600 bg-dark-800 text-gray-300', 'border-gold-400 bg-gold-400/10 text-gold-400');
-
-            // Update Summary Text
-            document.getElementById('summary-fit').innerText = advisorState.fit;
-            document.getElementById('summary-category').innerText = advisorState.category;
-            document.getElementById('summary-size').innerText = advisorState.size;
-
-            updateAdvisorWhatsAppUrl();
         }
-
-        function updateAdvisorWhatsAppUrl() {
-            const message = `Hello ELLA Suit Store, I used your Size & Style Advisor:\n\n- Preferred Fit: ${advisorState.fit}\n- Category: ${advisorState.category}\n- Size: ${advisorState.size}\n\nPlease let me know if this cut and size is currently in stock at the store.`;
-            const waBtn = document.getElementById('advisor-whatsapp-btn');
-            waBtn.href = `https://wa.me/251975338888?text=${encodeURIComponent(message)}`;
-        }
-
-        // Initialize App
-        window.addEventListener('DOMContentLoaded', () => {
-            renderProducts();
-            updateAdvisorWhatsAppUrl();
-        });
     </script>
 </body>
 </html>
