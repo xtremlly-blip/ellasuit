@@ -5,15 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ELLA | Confidence Tailored - Premium Imported Menswear</title>
     
-    <!-- Open Graph Meta Tags -->
-    <meta property="og:title" content="ELLA | Confidence Tailored - Imported Luxury Menswear">
-    <meta property="og:description" content=" Addis Ababa's premier boutique for curated, high-end imported suits, shoes, and luxury menswear from Italy, Turkey, the UK, Europe, and the US.">
-    <meta property="og:image" content="hero.png">
-    <meta property="og:type" content="website">
-
-    <!-- Favicon -->
-    <link rel="icon" href="logo.png" type="image/png">
-    
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     
@@ -62,9 +53,6 @@
         ::-webkit-scrollbar-thumb:hover {
             background: #D4AF37;
         }
-        .modal-blur {
-            backdrop-filter: blur(8px);
-        }
     </style>
 </head>
 <body class="bg-obsidian text-cream font-sans antialiased selection:bg-gold selection:text-obsidian flex flex-col min-h-screen">
@@ -74,7 +62,7 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
             
             <a href="#home" class="flex items-center gap-3 group">
-                <img src="logo.png" alt="ELLA Logo" class="w-10 h-10 object-contain" onerror="this.src='https://placehold.co/100x100/1E1E1E/D4AF37?text=ELLA'">
+                <img src="logo.png" alt="ELLA Logo" class="w-10 h-10 object-contain">
                 <div class="flex flex-col">
                     <span class="font-serif text-2xl tracking-[0.25em] font-bold text-cream group-hover:text-gold transition-colors duration-300">ELLA</span>
                     <span class="text-[9px] tracking-[0.35em] text-gold uppercase -mt-1 font-medium">SUIT STORE</span>
@@ -85,25 +73,25 @@
             <nav class="hidden md:flex items-center gap-8">
                 <a href="#home" class="text-sm font-medium tracking-wider text-cream/80 hover:text-gold transition-colors uppercase">Home</a>
                 <a href="#showcase" class="text-sm font-medium tracking-wider text-cream/80 hover:text-gold transition-colors uppercase">Collection</a>
-                <a href="#advisor" class="text-sm font-medium tracking-wider text-cream/80 hover:text-gold transition-colors uppercase">Size Advisor</a>
+                <a href="#advisor" class="text-sm font-medium tracking-wider text-cream/80 hover:text-gold transition-colors uppercase">Size & Fit Advisor</a>
                 <a href="#about" class="text-sm font-medium tracking-wider text-cream/80 hover:text-gold transition-colors uppercase">About ELLA</a>
                 <a href="#faq" class="text-sm font-medium tracking-wider text-cream/80 hover:text-gold transition-colors uppercase">FAQ</a>
                 <a href="#contact" class="text-sm font-medium tracking-wider text-cream/80 hover:text-gold transition-colors uppercase">Contact</a>
             </nav>
 
-            <!-- Header Social & Action CTA Buttons -->
+            <!-- Action CTA Buttons -->
             <div class="hidden md:flex items-center gap-3">
                 <a href="https://t.me/ellasuit" 
                    target="_blank" 
                    rel="noopener noreferrer"
-                   class="inline-flex items-center gap-2 px-3 py-2 text-xs tracking-wider font-semibold text-cream bg-charcoal border border-darkslate hover:border-gold hover:text-gold transition-all duration-300 uppercase rounded-sm">
-                    <i class="fa-brands fa-telegram text-sm text-[#229ED9]"></i> Telegram Channel
+                   class="inline-flex items-center gap-2 px-4 py-2.5 text-xs tracking-widest font-semibold text-cream bg-darkslate hover:bg-gold hover:text-obsidian transition-all duration-300 uppercase rounded-sm border border-gold/30">
+                    <i class="fa-brands fa-telegram text-sm"></i> Telegram
                 </a>
-                <a href="https://wa.me/251975338888?text=Hello%20ELLA%20Suit%20Store%2C%20I%20would%20like%20to%20inquire%20about%20your%20latest%20imported%20collection." 
+                <a href="https://wa.me/251975338888?text=Hello%20ELLA%20Suit%20Store%2C%20I%20would%20like%20to%20inquire%20about%20a%20fitting%20appointment." 
                    target="_blank" 
                    rel="noopener noreferrer"
-                   class="inline-flex items-center gap-2 px-4 py-2 text-xs tracking-widest font-semibold text-obsidian bg-gold hover:bg-goldhover transition-all duration-300 uppercase rounded-sm shadow-md">
-                    <i class="fa-brands fa-whatsapp text-sm"></i> WhatsApp Inquiry
+                   class="inline-flex items-center gap-2 px-5 py-2.5 text-xs tracking-widest font-semibold text-obsidian bg-gold hover:bg-goldhover transition-all duration-300 uppercase rounded-sm shadow-md">
+                    <i class="fa-brands fa-whatsapp text-sm"></i> WhatsApp
                 </a>
             </div>
 
@@ -113,34 +101,35 @@
             </button>
         </div>
 
-        <!-- Mobile Navigation Dropdown -->
-        <div id="mobile-menu" class="hidden md:hidden bg-charcoal border-b border-darkslate px-4 pt-4 pb-6 space-y-3">
+        <!-- Mobile Navigation Menu Dropdown -->
+        <div id="mobile-menu" class="hidden md:hidden bg-charcoal border-b border-darkslate px-4 pt-4 pb-6 space-y-4">
             <a href="#home" class="mobile-link block text-sm tracking-wider text-cream hover:text-gold py-2 border-b border-darkslate/40">Home</a>
-            <a href="#showcase" class="mobile-link block text-sm tracking-wider text-cream hover:text-gold py-2 border-b border-darkslate/40">Collection Catalog</a>
+            <a href="#showcase" class="mobile-link block text-sm tracking-wider text-cream hover:text-gold py-2 border-b border-darkslate/40">Collection</a>
             <a href="#advisor" class="mobile-link block text-sm tracking-wider text-cream hover:text-gold py-2 border-b border-darkslate/40">Size & Fit Advisor</a>
             <a href="#about" class="mobile-link block text-sm tracking-wider text-cream hover:text-gold py-2 border-b border-darkslate/40">About ELLA</a>
             <a href="#faq" class="mobile-link block text-sm tracking-wider text-cream hover:text-gold py-2 border-b border-darkslate/40">FAQ</a>
-            <a href="#contact" class="mobile-link block text-sm tracking-wider text-cream hover:text-gold py-2">Contact Boutique</a>
-            <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 pt-2">
+            <a href="#contact" class="mobile-link block text-sm tracking-wider text-cream hover:text-gold py-2">Contact</a>
+            
+            <div class="pt-2 space-y-2">
                 <a href="https://t.me/ellasuit" 
                    target="_blank" 
-                   class="flex items-center justify-center gap-2 w-full py-2.5 text-xs tracking-widest font-semibold text-cream bg-obsidian border border-darkslate hover:border-gold uppercase rounded-sm">
-                    <i class="fa-brands fa-telegram text-base text-[#229ED9]"></i> Telegram Channel
+                   class="flex items-center justify-center gap-2 w-full py-3 text-xs tracking-widest font-semibold text-cream bg-darkslate border border-gold/40 uppercase rounded-sm">
+                    <i class="fa-brands fa-telegram text-base"></i> Join Telegram Channel
                 </a>
-                <a href="https://wa.me/251975338888?text=Hello%20ELLA%20Suit%20Store%2C%20I%20would%20like%20to%20inquire%20about%20your%20imported%20menswear." 
+                <a href="https://wa.me/251975338888?text=Hello%20ELLA%20Suit%20Store%2C%20I%20would%20like%20to%20inquire%20about%20a%20fitting." 
                    target="_blank" 
-                   class="flex items-center justify-center gap-2 w-full py-2.5 text-xs tracking-widest font-semibold text-obsidian bg-gold uppercase rounded-sm">
-                    <i class="fa-brands fa-whatsapp text-base"></i> WhatsApp Us
+                   class="flex items-center justify-center gap-2 w-full py-3 text-xs tracking-widest font-semibold text-obsidian bg-gold uppercase rounded-sm">
+                    <i class="fa-brands fa-whatsapp text-base"></i> WhatsApp Inquiry
                 </a>
             </div>
         </div>
     </header>
 
-    <!-- HERO SECTION -->
+    <!-- SECTION 1: HERO SECTION -->
     <section id="home" class="relative min-h-[88vh] flex items-center justify-center bg-obsidian overflow-hidden py-16">
         <div class="absolute inset-0 z-0">
             <img src="hero.png" 
-                 alt="ELLA Imported Luxury Suits" 
+                 alt="ELLA Tailored Suit Background" 
                  class="w-full h-full object-cover object-top opacity-30 scale-105 transition-transform duration-1000"
                  id="hero-bg"
                  onerror="this.src='https://images.unsplash.com/photo-1594938298603-c8148c4dae35?q=80&w=2000&auto=format&fit=crop'">
@@ -151,15 +140,15 @@
         <div class="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 text-center space-y-8">
             <div class="inline-flex items-center gap-2 px-4 py-1.5 border border-gold/40 bg-charcoal/80 backdrop-blur-sm rounded-full text-gold text-xs tracking-[0.25em] uppercase font-medium">
                 <span class="w-1.5 h-1.5 rounded-full bg-gold animate-pulse"></span>
-                Curated Imported Luxury Menswear • Italy | Turkey | UK | US | Europe
+                Premier Imported Menswear & World Brands
             </div>
 
             <h1 class="font-serif text-4xl sm:text-6xl md:text-7xl font-bold tracking-tight text-cream leading-tight">
-                Confidence <span class="italic font-normal text-gold">Imported.</span>
+                Confidence <span class="italic font-normal text-gold">Tailored.</span>
             </h1>
 
             <p class="max-w-2xl mx-auto text-base sm:text-lg text-cream/70 font-light tracking-wide leading-relaxed">
-                Addis Ababa's premiere destination for world-class, globally renowned ready-to-wear menswear. Italian cut silhouettes, fine Turkish cottons, and master leather craftsmanship.
+                Addis Ababa's official destination for high-end ready-to-wear suits, footwear, and apparel imported directly from Italy, Turkey, the UK, Europe, and the US.
             </p>
 
             <div class="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4">
@@ -169,24 +158,23 @@
                 </a>
                 <a href="https://t.me/ellasuit" 
                    target="_blank"
-                   class="w-full sm:w-auto px-8 py-4 border border-cream/30 hover:border-gold text-cream hover:text-gold text-xs font-bold tracking-[0.2em] uppercase bg-charcoal/50 backdrop-blur-sm transition-all duration-300 rounded-sm flex items-center justify-center gap-2">
-                    <i class="fa-brands fa-telegram text-base text-[#229ED9]"></i> Join Telegram Channel
+                   class="w-full sm:w-auto px-8 py-4 border border-gold/50 hover:border-gold text-gold hover:bg-gold/10 text-xs font-bold tracking-[0.2em] uppercase bg-charcoal/50 backdrop-blur-sm transition-all duration-300 rounded-sm flex items-center justify-center gap-2">
+                    <i class="fa-brands fa-telegram text-sm"></i> Visit Telegram Channel
                 </a>
             </div>
 
-            <!-- Value Proposition Pillars -->
             <div class="pt-12 grid grid-cols-2 md:grid-cols-4 gap-6 border-t border-darkslate/60 text-left max-w-4xl mx-auto">
                 <div class="space-y-1">
-                    <p class="font-serif text-gold text-2xl font-bold">100%</p>
-                    <p class="text-xs text-softgrey uppercase tracking-wider">Authentic Imported Brands</p>
-                </div>
-                <div class="space-y-1">
-                    <p class="font-serif text-gold text-2xl font-bold">Origins</p>
+                    <p class="font-serif text-gold text-2xl font-bold">Global</p>
                     <p class="text-xs text-softgrey uppercase tracking-wider">Italy, Turkey, UK & US</p>
                 </div>
                 <div class="space-y-1">
-                    <p class="font-serif text-gold text-2xl font-bold">Ready-To-Wear</p>
-                    <p class="text-xs text-softgrey uppercase tracking-wider">Precision EU/US Sizing</p>
+                    <p class="font-serif text-gold text-2xl font-bold">Luxury</p>
+                    <p class="text-xs text-softgrey uppercase tracking-wider">Super Wool & Leather</p>
+                </div>
+                <div class="space-y-1">
+                    <p class="font-serif text-gold text-2xl font-bold">Ready Fit</p>
+                    <p class="text-xs text-softgrey uppercase tracking-wider">Smart Size Advisor</p>
                 </div>
                 <div class="space-y-1">
                     <p class="font-serif text-gold text-2xl font-bold">Express</p>
@@ -196,44 +184,44 @@
         </div>
     </section>
 
-    <!-- PRODUCT SHOWCASE & TWO-LEVEL SUB-CATEGORY SYSTEM -->
+    <!-- SECTION 2: PRODUCT SHOWCASE & SUB-CATEGORIES -->
     <section id="showcase" class="py-20 bg-charcoal relative border-t border-darkslate/40">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
             
             <div class="text-center space-y-3 max-w-2xl mx-auto">
                 <span class="text-xs font-semibold uppercase tracking-[0.3em] text-gold">Curated Wardrobe</span>
-                <h2 class="font-serif text-3xl sm:text-4xl md:text-5xl font-bold text-cream">Signature Ready-To-Wear Catalog</h2>
+                <h2 class="font-serif text-3xl sm:text-4xl md:text-5xl font-bold text-cream">Signature Catalog</h2>
                 <div class="w-12 h-0.5 bg-gold mx-auto"></div>
-                <p class="text-sm text-softgrey">Browse imported premium suits, fine shirts, formal trousers, designer leather footwear, and luxury accessories.</p>
+                <p class="text-sm text-softgrey">Select a category below to explore imported ready-to-wear collections and sub-categories.</p>
             </div>
 
-            <!-- Primary Category Filters -->
-            <div class="flex flex-wrap items-center justify-center gap-2 sm:gap-3" id="main-category-filters">
-                <button data-main="all" class="main-filter-btn active-main-filter px-5 py-2.5 text-xs font-semibold tracking-wider uppercase transition-all duration-300 rounded-sm border border-gold bg-gold text-obsidian shadow-md">
+            <!-- Main Categories Navigation -->
+            <div class="flex flex-wrap items-center justify-center gap-2 sm:gap-3" id="category-filters">
+                <button data-filter="all" class="filter-btn active-filter px-5 py-2.5 text-xs font-semibold tracking-wider uppercase transition-all duration-300 rounded-sm border border-gold bg-gold text-obsidian">
                     All Items
                 </button>
-                <button data-main="suits" class="main-filter-btn px-5 py-2.5 text-xs font-semibold tracking-wider uppercase transition-all duration-300 rounded-sm border border-darkslate bg-obsidian text-cream/70 hover:text-gold hover:border-gold/50">
+                <button data-filter="suits" class="filter-btn px-5 py-2.5 text-xs font-semibold tracking-wider uppercase transition-all duration-300 rounded-sm border border-darkslate bg-obsidian text-cream/70 hover:text-gold hover:border-gold/50">
                     Suits
                 </button>
-                <button data-main="shirts" class="main-filter-btn px-5 py-2.5 text-xs font-semibold tracking-wider uppercase transition-all duration-300 rounded-sm border border-darkslate bg-obsidian text-cream/70 hover:text-gold hover:border-gold/50">
+                <button data-filter="shirts" class="filter-btn px-5 py-2.5 text-xs font-semibold tracking-wider uppercase transition-all duration-300 rounded-sm border border-darkslate bg-obsidian text-cream/70 hover:text-gold hover:border-gold/50">
                     Shirts
                 </button>
-                <button data-main="trousers" class="main-filter-btn px-5 py-2.5 text-xs font-semibold tracking-wider uppercase transition-all duration-300 rounded-sm border border-darkslate bg-obsidian text-cream/70 hover:text-gold hover:border-gold/50">
+                <button data-filter="trousers" class="filter-btn px-5 py-2.5 text-xs font-semibold tracking-wider uppercase transition-all duration-300 rounded-sm border border-darkslate bg-obsidian text-cream/70 hover:text-gold hover:border-gold/50">
                     Trousers
                 </button>
-                <button data-main="shoes" class="main-filter-btn px-5 py-2.5 text-xs font-semibold tracking-wider uppercase transition-all duration-300 rounded-sm border border-darkslate bg-obsidian text-cream/70 hover:text-gold hover:border-gold/50">
+                <button data-filter="shoes" class="filter-btn px-5 py-2.5 text-xs font-semibold tracking-wider uppercase transition-all duration-300 rounded-sm border border-darkslate bg-obsidian text-cream/70 hover:text-gold hover:border-gold/50">
                     Shoes
                 </button>
-                <button data-main="accessories" class="main-filter-btn px-5 py-2.5 text-xs font-semibold tracking-wider uppercase transition-all duration-300 rounded-sm border border-darkslate bg-obsidian text-cream/70 hover:text-gold hover:border-gold/50">
+                <button data-filter="accessories" class="filter-btn px-5 py-2.5 text-xs font-semibold tracking-wider uppercase transition-all duration-300 rounded-sm border border-darkslate bg-obsidian text-cream/70 hover:text-gold hover:border-gold/50">
                     Accessories
                 </button>
             </div>
 
-            <!-- Dynamic Secondary Sub-Category Bar -->
-            <div id="sub-category-wrapper" class="hidden transition-all duration-300 bg-obsidian/80 p-4 rounded-sm border border-darkslate/60 text-center">
-                <p class="text-[10px] text-gold uppercase tracking-widest font-semibold mb-2" id="sub-category-title">Select Style Sub-Category:</p>
-                <div class="flex flex-wrap items-center justify-center gap-2" id="sub-category-filters">
-                    <!-- Sub-category buttons dynamically injected here -->
+            <!-- Dynamic Sub-category Ribbon -->
+            <div id="subcategory-wrapper" class="hidden text-center py-2 bg-obsidian/60 border-y border-darkslate/60">
+                <span class="text-[11px] uppercase tracking-widest text-softgrey mr-3 font-semibold">Sub-type:</span>
+                <div id="subcategory-buttons" class="inline-flex flex-wrap justify-center gap-2">
+                    <!-- Dynamic Subcategory buttons injected here -->
                 </div>
             </div>
 
@@ -245,15 +233,15 @@
         </div>
     </section>
 
-    <!-- READY-TO-WEAR SIZE & FIT ADVISOR -->
+    <!-- SECTION 3: READY-TO-WEAR SIZE & FIT ADVISOR -->
     <section id="advisor" class="py-20 bg-obsidian relative border-t border-darkslate/60">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
             
             <div class="text-center space-y-3 max-w-2xl mx-auto">
-                <span class="text-xs font-semibold uppercase tracking-[0.3em] text-gold">Precision Sizing</span>
-                <h2 class="font-serif text-3xl sm:text-4xl md:text-5xl font-bold text-cream">Ready-To-Wear Size & Fit Advisor</h2>
+                <span class="text-xs font-semibold uppercase tracking-[0.3em] text-gold">Precision Fitting</span>
+                <h2 class="font-serif text-3xl sm:text-4xl md:text-5xl font-bold text-cream">Ready-To-Wear Size Advisor</h2>
                 <div class="w-12 h-0.5 bg-gold mx-auto"></div>
-                <p class="text-sm text-softgrey">Enter your physical dimensions below to dynamically match with our imported European & US size chart.</p>
+                <p class="text-sm text-softgrey">Enter your physical build measurements below to dynamically determine your standard European & US suit sizing.</p>
             </div>
 
             <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
@@ -295,11 +283,11 @@
                         </div>
                     </div>
 
-                    <!-- Preferred Cut -->
+                    <!-- Preferred Silhouette / Cut -->
                     <div>
-                        <label class="block text-xs font-semibold text-gold uppercase tracking-widest mb-3">Preferred Fit Cut</label>
+                        <label class="block text-xs font-semibold text-gold uppercase tracking-widest mb-3">Preferred Ready-to-Wear Cut</label>
                         <div class="grid grid-cols-3 gap-3" id="cut-options">
-                            <button data-value="Slim Cut" class="cut-btn active-opt p-3 text-center border border-gold bg-obsidian text-gold text-xs uppercase font-medium rounded-sm">
+                            <button data-value="Slim Fit Cut" class="cut-btn active-opt p-3 text-center border border-gold bg-obsidian text-gold text-xs uppercase font-medium rounded-sm">
                                 Slim Cut
                             </button>
                             <button data-value="Modern Tailored Cut" class="cut-btn p-3 text-center border border-darkslate bg-obsidian text-cream/70 text-xs uppercase font-medium rounded-sm hover:border-gold/50">
@@ -317,8 +305,8 @@
                 <div class="lg:col-span-5 bg-charcoal p-6 sm:p-8 rounded-sm border border-gold/40 flex flex-col justify-between space-y-6">
                     <div>
                         <div class="flex items-center justify-between border-b border-darkslate pb-4 mb-6">
-                            <h3 class="font-serif text-2xl font-bold text-cream">Recommended Size</h3>
-                            <span class="text-xs bg-gold/10 text-gold px-2.5 py-1 border border-gold/30 rounded-sm">Ready-To-Wear Match</span>
+                            <h3 class="font-serif text-2xl font-bold text-cream">Recommended Fit</h3>
+                            <span class="text-xs bg-gold/10 text-gold px-2.5 py-1 border border-gold/30 rounded-sm">Instant Match</span>
                         </div>
 
                         <!-- Dynamic Visual Size Badge -->
@@ -336,8 +324,8 @@
                         <!-- Summary Specifications -->
                         <ul class="space-y-3 text-xs tracking-wider uppercase text-cream/80">
                             <li class="flex justify-between border-b border-darkslate/60 pb-2">
-                                <span class="text-softgrey">European Size:</span>
-                                <span id="summary-eu-size" class="font-semibold text-gold">EU 50 (40R US)</span>
+                                <span class="text-softgrey">Calculated EU Size:</span>
+                                <span id="summary-eu-size" class="font-semibold text-gold">50 (40R US)</span>
                             </li>
                             <li class="flex justify-between border-b border-darkslate/60 pb-2">
                                 <span class="text-softgrey">Height / Weight:</span>
@@ -358,7 +346,7 @@
                         <button id="whatsapp-advisor-btn" class="w-full py-4 bg-gold hover:bg-goldhover text-obsidian font-bold text-xs uppercase tracking-[0.2em] flex items-center justify-center gap-2 transition-all duration-300 rounded-sm shadow-md">
                             <i class="fa-brands fa-whatsapp text-base"></i> Reserve Size via WhatsApp
                         </button>
-                        <p class="text-[11px] text-center text-softgrey">Sends your calculated size directly to our boutique representatives.</p>
+                        <p class="text-[11px] text-center text-softgrey">Directly notifies our store staff with your exact size preference.</p>
                     </div>
                 </div>
 
@@ -367,7 +355,7 @@
         </div>
     </section>
 
-    <!-- ABOUT ELLA SECTION -->
+    <!-- SECTION 4: ABOUT ELLA SECTION -->
     <section id="about" class="py-20 bg-charcoal border-t border-darkslate/60 relative">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
@@ -375,56 +363,56 @@
                 <div class="lg:col-span-6 grid grid-cols-2 gap-4 relative">
                     <div class="space-y-4">
                         <img src="suits-2piece.jpg" 
-                             alt="Luxury imported suit" 
+                             alt="Tailoring craftsmanship" 
                              class="w-full h-64 object-cover rounded-sm border border-darkslate shadow-md"
                              onerror="this.src='https://images.unsplash.com/photo-1507679799987-c73779587ccf?q=80&w=800&auto=format&fit=crop'">
                         <img src="shirts.PNG" 
-                             alt="Fine imported dress shirts" 
+                             alt="Menswear details" 
                              class="w-full h-48 object-cover rounded-sm border border-darkslate shadow-md"
                              onerror="this.src='https://images.unsplash.com/photo-1617137984095-74e4e5e3613f?q=80&w=800&auto=format&fit=crop'">
                     </div>
                     <div class="space-y-4 pt-8">
                         <img src="suits-3piece.jpg" 
-                             alt="Executive imported tuxedos" 
+                             alt="Sharp suit silhouette" 
                              class="w-full h-48 object-cover rounded-sm border border-darkslate shadow-md"
                              onerror="this.src='https://images.unsplash.com/photo-1598808503746-f34c53b9323e?q=80&w=800&auto=format&fit=crop'">
                         <img src="shoes.jpg" 
-                             alt="Italian leather footwear" 
+                             alt="Premium Oxford shoes" 
                              class="w-full h-64 object-cover rounded-sm border border-darkslate shadow-md"
                              onerror="this.src='https://images.unsplash.com/photo-1593032465175-481ac7f401a0?q=80&w=800&auto=format&fit=crop'">
                     </div>
                     
                     <div class="absolute -bottom-6 -right-6 bg-gold text-obsidian p-6 hidden sm:block border-2 border-obsidian shadow-2xl">
                         <p class="font-serif font-bold text-3xl">EST. 2018</p>
-                        <p class="text-[10px] tracking-widest uppercase font-semibold">Global Menswear Importers</p>
+                        <p class="text-[10px] tracking-widest uppercase font-semibold">Premier Importers</p>
                     </div>
                 </div>
 
                 <div class="lg:col-span-6 space-y-6">
                     <span class="text-xs font-semibold uppercase tracking-[0.3em] text-gold">The House of ELLA</span>
                     <h2 class="font-serif text-3xl sm:text-4xl md:text-5xl font-bold text-cream leading-tight">
-                        Curating World-Class Menswear Brands for the Modern Gentleman
+                        Curating World-Class Menswear in Addis Ababa
                     </h2>
                     <p class="text-sm text-cream/80 leading-relaxed font-light">
-                        At <strong class="text-gold font-semibold">ELLA Suit Store</strong>, we believe every distinguished gentleman deserves access to world-renowned sartorial elegance. Rather than bespoke tailoring, we specialize as experienced suppliers of high-quality, pre-tailored, ready-to-wear luxury suits, fine shirts, and handcrafted leather footwear imported from global fashion capitals—including Italy, Turkey, the UK, Europe, and the US.
+                        At <strong class="text-gold font-semibold">ELLA Suit Store</strong>, we specialize in supplying handpicked, premium imported menswear. We are not a tailoring workshop; we are experienced purveyors of globally renowned ready-to-wear brands from fashion capitals including Italy, Turkey, England, Europe, and the US.
                     </p>
                     <p class="text-sm text-cream/70 leading-relaxed font-light">
-                        Each garment in our Addis Ababa boutique is hand-selected for its superior drape, rich fabric compositions (Super 150s virgin wool, Egyptian cotton, calfskin leather), and impeccable international sizing standards.
+                        Every piece in our store is selected for its superior fabric quality, refined Italian-cut proportions, and timeless aesthetic—offering immediate elegance and effortless fit for executive gentlemen.
                     </p>
 
                     <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-4 border-t border-darkslate">
                         <div class="flex items-start gap-3">
                             <i class="fa-solid fa-earth-americas text-gold mt-1"></i>
                             <div>
-                                <h4 class="text-xs font-bold uppercase tracking-wider text-cream">Global Sourcing</h4>
-                                <p class="text-xs text-softgrey">Hand-picked from leading fashion houses across Italy, Turkey, Europe & the US.</p>
+                                <h4 class="text-xs font-bold uppercase tracking-wider text-cream">Global Brands</h4>
+                                <p class="text-xs text-softgrey">Authentic garments from top international manufacturers.</p>
                             </div>
                         </div>
                         <div class="flex items-start gap-3">
                             <i class="fa-solid fa-gem text-gold mt-1"></i>
                             <div>
-                                <h4 class="text-xs font-bold uppercase tracking-wider text-cream">Unrivaled Fabrics</h4>
-                                <p class="text-xs text-softgrey">Superfine virgin wools, Egyptian cottons, and genuine Italian calfskin.</p>
+                                <h4 class="text-xs font-bold uppercase tracking-wider text-cream">Luxury Textiles</h4>
+                                <p class="text-xs text-softgrey">Super 150s wool, Italian calfskin, and Egyptian cotton.</p>
                             </div>
                         </div>
                     </div>
@@ -434,95 +422,87 @@
         </div>
     </section>
 
-    <!-- FREQUENTLY ASKED QUESTIONS (FAQ) -->
-    <section id="faq" class="py-20 bg-obsidian border-t border-darkslate/60 relative">
-        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10">
+    <!-- SECTION 5: FREQUENTLY ASKED QUESTIONS (FAQ) -->
+    <section id="faq" class="py-20 bg-obsidian relative border-t border-darkslate/60">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 space-y-12">
             <div class="text-center space-y-3">
-                <span class="text-xs font-semibold uppercase tracking-[0.3em] text-gold">Client Assistance</span>
+                <span class="text-xs font-semibold uppercase tracking-[0.3em] text-gold">Customer Information</span>
                 <h2 class="font-serif text-3xl sm:text-4xl font-bold text-cream">Frequently Asked Questions</h2>
                 <div class="w-12 h-0.5 bg-gold mx-auto"></div>
             </div>
 
             <div class="space-y-4" id="faq-accordion">
-                
-                <div class="bg-charcoal border border-darkslate rounded-sm overflow-hidden">
-                    <button class="faq-toggle w-full px-6 py-4 text-left flex justify-between items-center text-cream font-serif text-lg font-semibold hover:text-gold transition-colors">
-                        <span>Are ELLA suits ready-to-wear or custom made?</span>
-                        <i class="fa-solid fa-plus text-gold text-xs transition-transform duration-300"></i>
+                <!-- FAQ Item 1 -->
+                <div class="border border-darkslate bg-charcoal rounded-sm overflow-hidden">
+                    <button class="faq-toggle w-full px-6 py-4 text-left flex justify-between items-center text-cream font-medium text-sm hover:text-gold transition-colors">
+                        <span>Are ELLA suits custom-tailored or imported ready-to-wear?</span>
+                        <i class="fa-solid fa-chevron-down text-xs text-gold transition-transform duration-300"></i>
                     </button>
                     <div class="faq-content hidden px-6 pb-4 text-xs text-softgrey leading-relaxed border-t border-darkslate/40 pt-3">
-                        Our entire collection consists of premium, imported ready-to-wear garments carefully sourced from top international brands in Italy, Turkey, Europe, and the US. They are pre-cut to international standard European/US sizing, offering immediate elegance without waiting weeks for custom tailoring.
+                        We are premier suppliers of imported, high-quality ready-to-wear menswear. Our collections are sourced directly from top international brands and makers in Italy, Turkey, the UK, Europe, and the US.
                     </div>
                 </div>
 
-                <div class="bg-charcoal border border-darkslate rounded-sm overflow-hidden">
-                    <button class="faq-toggle w-full px-6 py-4 text-left flex justify-between items-center text-cream font-serif text-lg font-semibold hover:text-gold transition-colors">
-                        <span>Where is the ELLA Suit Store located in Addis Ababa?</span>
-                        <i class="fa-solid fa-plus text-gold text-xs transition-transform duration-300"></i>
+                <!-- FAQ Item 2 -->
+                <div class="border border-darkslate bg-charcoal rounded-sm overflow-hidden">
+                    <button class="faq-toggle w-full px-6 py-4 text-left flex justify-between items-center text-cream font-medium text-sm hover:text-gold transition-colors">
+                        <span>Where is your boutique located in Addis Ababa?</span>
+                        <i class="fa-solid fa-chevron-down text-xs text-gold transition-transform duration-300"></i>
                     </button>
                     <div class="faq-content hidden px-6 pb-4 text-xs text-softgrey leading-relaxed border-t border-darkslate/40 pt-3">
-                        Our main boutique is conveniently located along Bole Road in Addis Ababa, Ethiopia. You are welcome to visit our showroom to try on our imported collections or consult with our style advisors in person.
+                        Our flagship boutique is located on Bole Road, Addis Ababa. You can visit us Monday through Saturday from 9:00 AM to 8:00 PM to try on items in person.
                     </div>
                 </div>
 
-                <div class="bg-charcoal border border-darkslate rounded-sm overflow-hidden">
-                    <button class="faq-toggle w-full px-6 py-4 text-left flex justify-between items-center text-cream font-serif text-lg font-semibold hover:text-gold transition-colors">
-                        <span>What if a ready-to-wear suit requires minor fit alterations?</span>
-                        <i class="fa-solid fa-plus text-gold text-xs transition-transform duration-300"></i>
+                <!-- FAQ Item 3 -->
+                <div class="border border-darkslate bg-charcoal rounded-sm overflow-hidden">
+                    <button class="faq-toggle w-full px-6 py-4 text-left flex justify-between items-center text-cream font-medium text-sm hover:text-gold transition-colors">
+                        <span>What if a suit requires minor length adjustments?</span>
+                        <i class="fa-solid fa-chevron-down text-xs text-gold transition-transform duration-300"></i>
                     </button>
                     <div class="faq-content hidden px-6 pb-4 text-xs text-softgrey leading-relaxed border-t border-darkslate/40 pt-3">
-                        Because our suits are crafted according to precision European cuts, most clients find an ideal off-the-rack fit. Should you require minor adjustments (such as trouser hem length or sleeve tweaking), our store representatives can guide you to our trusted master alterers nearby.
+                        While our suits are ready-to-wear, our store staff can recommend expert local alteration specialists for hem length or sleeve adjustments if desired.
                     </div>
                 </div>
 
-                <div class="bg-charcoal border border-darkslate rounded-sm overflow-hidden">
-                    <button class="faq-toggle w-full px-6 py-4 text-left flex justify-between items-center text-cream font-serif text-lg font-semibold hover:text-gold transition-colors">
-                        <span>Do you offer delivery services within Ethiopia?</span>
-                        <i class="fa-solid fa-plus text-gold text-xs transition-transform duration-300"></i>
+                <!-- FAQ Item 4 -->
+                <div class="border border-darkslate bg-charcoal rounded-sm overflow-hidden">
+                    <button class="faq-toggle w-full px-6 py-4 text-left flex justify-between items-center text-cream font-medium text-sm hover:text-gold transition-colors">
+                        <span>How can I follow new stock arrivals?</span>
+                        <i class="fa-solid fa-chevron-down text-xs text-gold transition-transform duration-300"></i>
                     </button>
                     <div class="faq-content hidden px-6 pb-4 text-xs text-softgrey leading-relaxed border-t border-darkslate/40 pt-3">
-                        Yes! We provide same-day courier delivery within Addis Ababa and express shipping to major cities across Ethiopia. Contact us via WhatsApp (+251 97 533 8888) to arrange delivery.
+                        We update our official Telegram channel (@ellasuit) daily with photographs, size availability, and new stock arrivals from Europe and Turkey.
                     </div>
                 </div>
-
-                <div class="bg-charcoal border border-darkslate rounded-sm overflow-hidden">
-                    <button class="faq-toggle w-full px-6 py-4 text-left flex justify-between items-center text-cream font-serif text-lg font-semibold hover:text-gold transition-colors">
-                        <span>How can I stay updated on new imported arrivals?</span>
-                        <i class="fa-solid fa-plus text-gold text-xs transition-transform duration-300"></i>
-                    </button>
-                    <div class="faq-content hidden px-6 pb-4 text-xs text-softgrey leading-relaxed border-t border-darkslate/40 pt-3">
-                        The fastest way to view new shipments from Turkey, Italy, and Europe is by joining our official Telegram channel: <a href="https://t.me/ellasuit" target="_blank" class="text-gold underline font-semibold">@ellasuit</a>. We post daily stock additions, size availability, and style guides there.
-                    </div>
-                </div>
-
             </div>
         </div>
     </section>
 
-    <!-- LOCATION & CONTACT SECTION -->
+    <!-- SECTION 6: LOCATION & CONTACT SECTION -->
     <section id="contact" class="py-20 bg-charcoal relative border-t border-darkslate/60">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
             
             <div class="text-center space-y-3 max-w-2xl mx-auto">
-                <span class="text-xs font-semibold uppercase tracking-[0.3em] text-gold">Visit Our Boutique</span>
-                <h2 class="font-serif text-3xl sm:text-4xl md:text-5xl font-bold text-cream">Location & Official Contacts</h2>
+                <span class="text-xs font-semibold uppercase tracking-[0.3em] text-gold">Visit Our Store</span>
+                <h2 class="font-serif text-3xl sm:text-4xl md:text-5xl font-bold text-cream">Location & Contact</h2>
                 <div class="w-12 h-0.5 bg-gold mx-auto"></div>
-                <p class="text-sm text-softgrey">Reach out directly to our team or drop by our Bole boutique in Addis Ababa.</p>
+                <p class="text-sm text-softgrey">Reach out directly to our team or visit our boutique on Bole Road.</p>
             </div>
 
             <div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
                 
-                <!-- Boutique Information Panel -->
+                <!-- Boutique Info (Left) -->
                 <div class="lg:col-span-5 bg-obsidian p-8 rounded-sm border border-darkslate space-y-6">
                     <h3 class="font-serif text-2xl font-bold text-cream border-b border-darkslate pb-4">Boutique Information</h3>
                     
-                    <div class="space-y-5 text-sm text-cream/80">
+                    <div class="space-y-4 text-sm text-cream/80">
                         <div class="flex items-start gap-4">
                             <div class="w-10 h-10 rounded-sm bg-charcoal border border-gold/30 flex items-center justify-center shrink-0">
                                 <i class="fa-solid fa-location-dot text-gold"></i>
                             </div>
                             <div>
-                                <p class="font-semibold text-cream text-xs uppercase tracking-wider">Boutique Address</p>
+                                <p class="font-semibold text-cream text-xs uppercase tracking-wider">Store Address</p>
                                 <p class="text-xs text-softgrey mt-0.5">ELLA Suit Store, Bole Road, Addis Ababa, Ethiopia</p>
                             </div>
                         </div>
@@ -533,8 +513,8 @@
                             </div>
                             <div>
                                 <p class="font-semibold text-cream text-xs uppercase tracking-wider">Business Hours</p>
-                                <p class="text-xs text-softgrey mt-0.5">Monday - Saturday: 09:00 AM - 08:00 PM</p>
-                                <p class="text-xs text-softgrey">Sunday: 01:00 PM - 07:00 PM</p>
+                                <p class="text-xs text-softgrey mt-0.5">Mon - Sat: 09:00 AM - 08:00 PM</p>
+                                <p class="text-xs text-softgrey">Sunday: By Appointment Only</p>
                             </div>
                         </div>
 
@@ -553,49 +533,48 @@
                                 <i class="fa-solid fa-envelope text-gold"></i>
                             </div>
                             <div>
-                                <p class="font-semibold text-cream text-xs uppercase tracking-wider">Official Email Inboxes</p>
-                                <p class="text-xs text-softgrey mt-0.5">General: <a href="mailto:info@ellasuit.com" class="text-gold hover:underline">info@ellasuit.com</a></p>
-                                <p class="text-xs text-softgrey">Sales & Orders: <a href="mailto:sales@ellasuit.com" class="text-gold hover:underline">sales@ellasuit.com</a></p>
-                                <p class="text-xs text-softgrey">Support: <a href="mailto:support@ellasuit.com" class="text-gold hover:underline">support@ellasuit.com</a></p>
+                                <p class="font-semibold text-cream text-xs uppercase tracking-wider">Official Emails</p>
+                                <p class="text-xs text-softgrey mt-0.5">info@ellasuit.com</p>
+                                <p class="text-xs text-softgrey">sales@ellasuit.com | support@ellasuit.com</p>
                             </div>
                         </div>
                     </div>
 
                     <div class="pt-4 border-t border-darkslate space-y-3">
+                        <a href="https://wa.me/251975338888?text=Hello%20ELLA%20Suit%20Store%2C%20I%20would%20like%20to%20inquire%20about%20your%20collection." 
+                           target="_blank"
+                           class="w-full py-3 bg-gold hover:bg-goldhover text-obsidian font-bold text-xs uppercase tracking-[0.2em] flex items-center justify-center gap-2 transition-all duration-300 rounded-sm shadow-md">
+                            <i class="fa-brands fa-whatsapp text-base"></i> Direct Message on WhatsApp
+                        </a>
                         <a href="https://t.me/ellasuit" 
                            target="_blank"
-                           class="w-full py-3.5 bg-charcoal border border-darkslate hover:border-gold text-cream hover:text-gold font-bold text-xs uppercase tracking-[0.2em] flex items-center justify-center gap-2 transition-all duration-300 rounded-sm">
-                            <i class="fa-brands fa-telegram text-base text-[#229ED9]"></i> Visit Telegram Channel (@ellasuit)
-                        </a>
-                        <a href="https://wa.me/251975338888?text=Hello%20ELLA%20Suit%20Store%2C%20I%20would%20like%20to%20inquire%20about%20your%20imported%20collection." 
-                           target="_blank"
-                           class="w-full py-3.5 bg-gold hover:bg-goldhover text-obsidian font-bold text-xs uppercase tracking-[0.2em] flex items-center justify-center gap-2 transition-all duration-300 rounded-sm shadow-md">
-                            <i class="fa-brands fa-whatsapp text-base"></i> Direct WhatsApp Message
+                           class="w-full py-3 bg-darkslate hover:bg-gold hover:text-obsidian text-cream font-bold text-xs uppercase tracking-[0.2em] flex items-center justify-center gap-2 transition-all duration-300 rounded-sm border border-gold/30">
+                            <i class="fa-brands fa-telegram text-base"></i> Join Telegram Channel
                         </a>
                     </div>
                 </div>
 
-                <!-- Contact Form Panel -->
+                <!-- Inquiry Form (Right) -->
                 <div class="lg:col-span-7 bg-obsidian p-8 rounded-sm border border-darkslate flex flex-col justify-between space-y-6">
                     <div>
-                        <h3 class="font-serif text-2xl font-bold text-cream border-b border-darkslate pb-4 mb-6">Send an Online Inquiry</h3>
+                        <h3 class="font-serif text-2xl font-bold text-cream border-b border-darkslate pb-4 mb-6">Send an Inquiry</h3>
                         <form id="contact-form" class="space-y-4">
                             <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
                                 <div>
                                     <label class="block text-xs uppercase tracking-wider text-softgrey mb-1">Your Name</label>
-                                    <input type="text" required id="form-name" placeholder="Abebe Bikila" class="w-full bg-charcoal border border-darkslate p-3 text-xs text-cream focus:border-gold focus:outline-none rounded-sm">
+                                    <input type="text" required id="form-name" placeholder="John Doe" class="w-full bg-charcoal border border-darkslate p-3 text-xs text-cream focus:border-gold focus:outline-none rounded-sm">
                                 </div>
                                 <div>
                                     <label class="block text-xs uppercase tracking-wider text-softgrey mb-1">Phone Number</label>
-                                    <input type="tel" required id="form-phone" placeholder="+251 9..." class="w-full bg-charcoal border border-darkslate p-3 text-xs text-cream focus:border-gold focus:outline-none rounded-sm">
+                                    <input type="tel" required id="form-phone" placeholder="+251..." class="w-full bg-charcoal border border-darkslate p-3 text-xs text-cream focus:border-gold focus:outline-none rounded-sm">
                                 </div>
                             </div>
                             <div>
-                                <label class="block text-xs uppercase tracking-wider text-softgrey mb-1">Inquiry / Requested Item</label>
-                                <textarea id="form-message" rows="4" placeholder="I am interested in Italian Super Wool suits in size EU 50..." class="w-full bg-charcoal border border-darkslate p-3 text-xs text-cream focus:border-gold focus:outline-none rounded-sm"></textarea>
+                                <label class="block text-xs uppercase tracking-wider text-softgrey mb-1">Inquiry / Item Request</label>
+                                <textarea id="form-message" rows="4" placeholder="I am interested in..." class="w-full bg-charcoal border border-darkslate p-3 text-xs text-cream focus:border-gold focus:outline-none rounded-sm"></textarea>
                             </div>
-                            <button type="submit" class="w-full py-3.5 border border-gold text-gold hover:bg-gold hover:text-obsidian text-xs font-bold uppercase tracking-[0.2em] transition-all duration-300 rounded-sm flex items-center justify-center gap-2">
-                                <i class="fa-brands fa-whatsapp text-base"></i> Send Inquiry via WhatsApp
+                            <button type="submit" class="w-full py-3.5 border border-gold text-gold hover:bg-gold hover:text-obsidian text-xs font-bold uppercase tracking-[0.2em] transition-all duration-300 rounded-sm">
+                                Send via WhatsApp
                             </button>
                         </form>
                     </div>
@@ -605,95 +584,71 @@
         </div>
     </section>
 
-    <!-- FOOTER -->
-    <footer class="bg-obsidian border-t border-darkslate/80 py-12 text-xs text-softgrey">
+    <!-- SECTION 7: FOOTER / CLOSING -->
+    <footer class="bg-obsidian border-t border-darkslate mt-auto py-12">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
-            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+            <div class="flex flex-col md:flex-row items-center justify-between gap-6 pb-8 border-b border-darkslate">
                 
-                <div class="space-y-3 md:col-span-1">
-                    <div class="flex items-center gap-2">
-                        <img src="logo.png" alt="ELLA Logo" class="w-8 h-8 object-contain" onerror="this.src='https://placehold.co/80x80/1E1E1E/D4AF37?text=ELLA'">
-                        <span class="font-serif text-xl font-bold tracking-[0.2em] text-cream">ELLA</span>
+                <a href="#home" class="flex items-center gap-3">
+                    <img src="logo.png" alt="ELLA Logo" class="w-8 h-8 object-contain">
+                    <div class="flex flex-col">
+                        <span class="font-serif text-xl tracking-[0.25em] font-bold text-cream">ELLA</span>
+                        <span class="text-[8px] tracking-[0.3em] text-gold uppercase -mt-1 font-medium">SUIT STORE</span>
                     </div>
-                    <p class="text-xs text-softgrey leading-relaxed">
-                        Addis Ababa's premier boutique supplier of imported ready-to-wear suits, shirts, shoes, and luxury menswear from fashion capitals worldwide.
-                    </p>
+                </a>
+
+                <div class="flex flex-wrap justify-center gap-6 text-xs text-softgrey">
+                    <a href="#home" class="hover:text-gold transition-colors">Home</a>
+                    <a href="#showcase" class="hover:text-gold transition-colors">Collection</a>
+                    <a href="#advisor" class="hover:text-gold transition-colors">Size Advisor</a>
+                    <a href="#about" class="hover:text-gold transition-colors">About Us</a>
+                    <a href="#faq" class="hover:text-gold transition-colors">FAQ</a>
+                    <a href="#contact" class="hover:text-gold transition-colors">Contact</a>
                 </div>
 
-                <div class="space-y-3">
-                    <h4 class="font-serif text-cream text-sm font-bold uppercase tracking-wider">Navigation</h4>
-                    <ul class="space-y-2">
-                        <li><a href="#home" class="hover:text-gold transition-colors">Home</a></li>
-                        <li><a href="#showcase" class="hover:text-gold transition-colors">Collection Catalog</a></li>
-                        <li><a href="#advisor" class="hover:text-gold transition-colors">Size Advisor</a></li>
-                        <li><a href="#about" class="hover:text-gold transition-colors">About ELLA</a></li>
-                        <li><a href="#faq" class="hover:text-gold transition-colors">FAQ</a></li>
-                    </ul>
-                </div>
-
-                <div class="space-y-3">
-                    <h4 class="font-serif text-cream text-sm font-bold uppercase tracking-wider">Official Contact</h4>
-                    <p class="text-xs">Bole Road, Addis Ababa, Ethiopia</p>
-                    <p class="text-xs">Phone: +251 97 533 8888</p>
-                    <p class="text-xs text-gold">info@ellasuit.com</p>
-                    <p class="text-xs text-gold">sales@ellasuit.com</p>
-                </div>
-
-                <div class="space-y-3">
-                    <h4 class="font-serif text-cream text-sm font-bold uppercase tracking-wider">Join Channel & Social</h4>
-                    <p class="text-xs leading-relaxed">Join our Telegram channel for daily imported arrivals & style tips.</p>
-                    <div class="flex items-center gap-3 pt-1">
-                        <a href="https://t.me/ellasuit" target="_blank" class="w-9 h-9 rounded-sm bg-charcoal border border-darkslate hover:border-gold flex items-center justify-center text-cream hover:text-gold transition-colors">
-                            <i class="fa-brands fa-telegram text-base text-[#229ED9]"></i>
-                        </a>
-                        <a href="https://wa.me/251975338888" target="_blank" class="w-9 h-9 rounded-sm bg-charcoal border border-darkslate hover:border-gold flex items-center justify-center text-cream hover:text-gold transition-colors">
-                            <i class="fa-brands fa-whatsapp text-base text-emerald-400"></i>
-                        </a>
-                        <a href="https://instagram.com" target="_blank" class="w-9 h-9 rounded-sm bg-charcoal border border-darkslate hover:border-gold flex items-center justify-center text-cream hover:text-gold transition-colors">
-                            <i class="fa-brands fa-instagram text-base text-pink-400"></i>
-                        </a>
-                    </div>
+                <div class="flex items-center gap-4">
+                    <a href="https://t.me/ellasuit" target="_blank" class="w-9 h-9 rounded-full bg-charcoal border border-darkslate text-cream hover:text-gold hover:border-gold flex items-center justify-center transition-colors">
+                        <i class="fa-brands fa-telegram text-sm"></i>
+                    </a>
+                    <a href="https://wa.me/251975338888" target="_blank" class="w-9 h-9 rounded-full bg-charcoal border border-darkslate text-cream hover:text-gold hover:border-gold flex items-center justify-center transition-colors">
+                        <i class="fa-brands fa-whatsapp text-sm"></i>
+                    </a>
                 </div>
 
             </div>
 
-            <div class="border-t border-darkslate/60 pt-6 flex flex-col sm:flex-row justify-between items-center gap-4 text-[11px]">
-                <p>&copy; 2026 ELLA Suit Store. All Rights Reserved. Imported Ready-To-Wear Menswear.</p>
-                <p class="text-gold font-medium">Bole Road • Addis Ababa • Ethiopia</p>
+            <div class="flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-softgrey font-light">
+                <p>&copy; 2026 ELLA Suit Store. All rights reserved. Bole Road, Addis Ababa.</p>
+                <p>Email: <a href="mailto:info@ellasuit.com" class="text-gold hover:underline">info@ellasuit.com</a></p>
             </div>
         </div>
     </footer>
 
     <!-- PRODUCT QUICK VIEW MODAL -->
-    <div id="quick-view-modal" class="fixed inset-0 z-50 hidden flex items-center justify-center p-4 bg-obsidian/80 modal-blur">
-        <div class="relative bg-charcoal border border-gold/40 rounded-sm max-w-2xl w-full p-6 sm:p-8 overflow-hidden shadow-2xl">
-            <button id="close-modal-btn" class="absolute top-4 right-4 text-cream/60 hover:text-gold text-xl focus:outline-none p-1">
+    <div id="quickview-modal" class="fixed inset-0 z-50 bg-obsidian/80 backdrop-blur-md hidden flex items-center justify-center p-4">
+        <div class="bg-charcoal border border-gold/40 max-w-2xl w-full rounded-sm overflow-hidden shadow-2xl relative">
+            <button id="close-modal" class="absolute top-4 right-4 text-cream hover:text-gold text-xl z-10">
                 <i class="fa-solid fa-xmark"></i>
             </button>
-
-            <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 items-center">
-                <div class="h-64 sm:h-80 rounded-sm overflow-hidden border border-darkslate">
-                    <img id="modal-img" src="" alt="Product Preview" class="w-full h-full object-cover">
+            <div class="grid grid-cols-1 md:grid-cols-2">
+                <div class="h-64 md:h-full bg-obsidian relative">
+                    <img id="modal-img" src="" alt="Product Detail" class="w-full h-full object-cover">
                 </div>
-                <div class="space-y-4">
-                    <span id="modal-badge" class="inline-block px-2.5 py-1 bg-gold/10 border border-gold/30 text-gold text-[10px] uppercase font-semibold rounded-sm">Imported Ready-To-Wear</span>
-                    <h3 id="modal-title" class="font-serif text-2xl font-bold text-cream">Product Title</h3>
-                    <p id="modal-origin" class="text-xs text-gold uppercase tracking-wider font-semibold">Origin: Italian Craft</p>
-                    <p id="modal-desc" class="text-xs text-softgrey leading-relaxed">Product description details will appear here.</p>
-                    
-                    <div class="border-t border-darkslate pt-3 space-y-2">
-                        <div class="flex justify-between text-xs">
-                            <span class="text-softgrey">Available Sizing:</span>
-                            <span id="modal-sizes" class="text-cream font-mono">EU 46 - 56</span>
-                        </div>
-                        <div class="flex justify-between text-xs">
-                            <span class="text-softgrey">Price Range:</span>
-                            <span id="modal-price" class="text-gold font-bold font-serif text-lg">ETB 14,500</span>
+                <div class="p-6 space-y-4 flex flex-col justify-between">
+                    <div>
+                        <span id="modal-category" class="text-[10px] font-bold text-gold uppercase tracking-widest block mb-1">Category</span>
+                        <h3 id="modal-title" class="font-serif text-2xl font-bold text-cream">Product Title</h3>
+                        <p id="modal-price" class="text-lg font-serif font-semibold text-gold mt-1">ETB 0</p>
+                        
+                        <div class="mt-4 pt-4 border-t border-darkslate space-y-2 text-xs text-softgrey">
+                            <p><strong class="text-cream">Origin:</strong> <span id="modal-origin">Imported</span></p>
+                            <p><strong class="text-cream">Fabric:</strong> <span id="modal-fabric">Super Fine Wool / Cotton</span></p>
+                            <p><strong class="text-cream">Available Sizes:</strong> <span id="modal-sizes">48 - 56 EU</span></p>
                         </div>
                     </div>
 
-                    <a id="modal-whatsapp-link" href="#" target="_blank" class="w-full py-3 bg-gold hover:bg-goldhover text-obsidian font-bold text-xs uppercase tracking-widest flex items-center justify-center gap-2 transition-all rounded-sm shadow-md mt-2">
-                        <i class="fa-brands fa-whatsapp text-base"></i> Inquire Availability on WhatsApp
+                    <a id="modal-whatsapp-btn" href="#" target="_blank" class="w-full py-3 bg-gold hover:bg-goldhover text-obsidian text-center font-bold text-xs uppercase tracking-widest rounded-sm transition-colors flex items-center justify-center gap-2">
+                        <i class="fa-brands fa-whatsapp text-base"></i> Inquire via WhatsApp
                     </a>
                 </div>
             </div>
@@ -702,272 +657,89 @@
 
     <!-- JAVASCRIPT LOGIC -->
     <script>
-        // --- PRODUCT CATALOG DATA STRUCTURE (WITH SUB-CATEGORIES & BRAND ORIGINS) ---
-        const catalogProducts = [
-            // SUITS
-            {
-                id: 1,
-                mainCategory: 'suits',
-                subCategory: 'italian-super-wool',
-                subCategoryName: 'Italian Super Wool',
-                title: 'Italian Super 150s Midnight Navy Suit',
-                origin: 'Imported from Milan, Italy',
-                image: 'suits-wool.jpg',
-                fallback: 'https://images.unsplash.com/photo-1594938298603-c8148c4dae35?q=80&w=800&auto=format&fit=crop',
-                price: 'ETB 18,500',
-                sizes: 'EU 46, 48, 50, 52, 54, 56',
-                description: 'Tailored from 100% Italian Super 150s virgin wool. Features lightweight canvassing and natural shoulders for effortless sophistication.'
-            },
-            {
-                id: 2,
-                mainCategory: 'suits',
-                subCategory: 'executive-2piece',
-                subCategoryName: 'Executive 2-Piece',
-                title: 'Charcoal Executive 2-Piece Business Suit',
-                origin: 'Imported from Turkey',
-                image: 'suits-2piece.jpg',
-                fallback: 'https://images.unsplash.com/photo-1507679799987-c73779587ccf?q=80&w=800&auto=format&fit=crop',
-                price: 'ETB 15,200',
-                sizes: 'EU 48, 50, 52, 54, 56',
-                description: 'A crisp executive cut engineered for endurance in business meetings. High wrinkle resistance with modern narrow lapels.'
-            },
-            {
-                id: 3,
-                mainCategory: 'suits',
-                subCategory: 'tuxedos-3piece',
-                subCategoryName: 'Tuxedos & 3-Piece',
-                title: 'Royal Black Velvet 3-Piece Evening Tuxedo',
-                origin: 'Imported European Brand',
-                image: 'suits-3piece.jpg',
-                fallback: 'https://images.unsplash.com/photo-1598808503746-f34c53b9323e?q=80&w=800&auto=format&fit=crop',
-                price: 'ETB 22,000',
-                sizes: 'EU 48, 50, 52, 54',
-                description: 'Includes jacket, satin-collared vest, and trousers. Perfect for black-tie galas, weddings, and high-profile evenings.'
-            },
-            {
-                id: 4,
-                mainCategory: 'suits',
-                subCategory: 'modern-slim-fit',
-                subCategoryName: 'Modern Slim Fit',
-                title: 'Slim Fit Textured Grey Suit',
-                origin: 'Imported from UK',
-                image: 'suits-wool.jpg',
-                fallback: 'https://images.unsplash.com/photo-1593030761757-71fae45fa0e7?q=80&w=800&auto=format&fit=crop',
-                price: 'ETB 16,000',
-                sizes: 'EU 46, 48, 50, 52',
-                description: 'Contoured slim silhouette designed for younger executives. Crafted with subtle texture and soft shoulder padding.'
-            },
-
-            // SHIRTS
-            {
-                id: 5,
-                mainCategory: 'shirts',
-                subCategory: 'formal-french-cuff',
-                subCategoryName: 'Formal French Cuff',
-                title: 'Egyptian Cotton White French Cuff Dress Shirt',
-                origin: 'Imported Luxury Brand',
-                image: 'shirts.PNG',
-                fallback: 'https://images.unsplash.com/photo-1602810318383-e386cc2a3ccf?q=80&w=800&auto=format&fit=crop',
-                price: 'ETB 3,800',
-                sizes: 'S, M, L, XL, XXL (15.5 - 17.5)',
-                description: 'Woven from long-staple 100% Egyptian cotton with a stiff spread collar designed specifically to complement suit jackets.'
-            },
-            {
-                id: 6,
-                mainCategory: 'shirts',
-                subCategory: 'casual-oxford',
-                subCategoryName: 'Casual & Oxford',
-                title: 'Sky Blue Fine Oxford Cotton Shirt',
-                origin: 'Imported from Turkey',
-                image: 'shirts.PNG',
-                fallback: 'https://images.unsplash.com/photo-1617137984095-74e4e5e3613f?q=80&w=800&auto=format&fit=crop',
-                price: 'ETB 3,200',
-                sizes: 'M, L, XL, XXL',
-                description: 'Versatile smart-casual Oxford shirt. Smooth hand-feel, breathable weave, suitable under a blazer or worn untucked.'
-            },
-
-            // TROUSERS
-            {
-                id: 7,
-                mainCategory: 'trousers',
-                subCategory: 'tailored-formal-dress',
-                subCategoryName: 'Tailored Formal Dress',
-                title: 'Italian Cut Wool Blend Dress Trousers',
-                origin: 'Imported from Italy',
-                image: 'trouser.PNG',
-                fallback: 'https://images.unsplash.com/photo-1624378439575-d8705ad7ae80?q=80&w=800&auto=format&fit=crop',
-                price: 'ETB 4,500',
-                sizes: 'EU 46, 48, 50, 52, 54',
-                description: 'Flat-front formal dress pants with an internal grip waistband to keep dress shirts seamlessly tucked in all day.'
-            },
-            {
-                id: 8,
-                mainCategory: 'trousers',
-                subCategory: 'chinos-smart-casual',
-                subCategoryName: 'Chinos & Smart Casual',
-                title: 'Navy Stretch Smart Casual Chinos',
-                origin: 'Imported European Brand',
-                image: 'Trousers.png',
-                fallback: 'https://images.unsplash.com/photo-1473966968600-fa801b869a1a?q=80&w=800&auto=format&fit=crop',
-                price: 'ETB 3,900',
-                sizes: '30, 32, 34, 36, 38',
-                description: 'Cotton-elastane blend providing flexible stretch and comfort without sacrificing sharp silhouette structure.'
-            },
-
-            // SHOES
-            {
-                id: 9,
-                mainCategory: 'shoes',
-                subCategory: 'italian-leather-oxfords',
-                subCategoryName: 'Italian Leather Oxfords',
-                title: 'Hand-Burnished Cognac Leather Oxfords',
-                origin: 'Handcrafted in Italy',
-                image: 'shoes.jpg',
-                fallback: 'https://images.unsplash.com/photo-1593032465175-481ac7f401a0?q=80&w=800&auto=format&fit=crop',
-                price: 'ETB 8,900',
-                sizes: 'EU 40, 41, 42, 43, 44, 45',
-                description: 'Full-grain Italian calfskin with Goodyear-welted soles. Designed for timeless elegance and lasting durability.'
-            },
-            {
-                id: 10,
-                mainCategory: 'shoes',
-                subCategory: 'loafers-slip-ons',
-                subCategoryName: 'Loafers & Slip-Ons',
-                title: 'Suede Penny Loafers in Dark Espresso',
-                origin: 'Imported Brand',
-                image: 'shoes.jpg',
-                fallback: 'https://images.unsplash.com/photo-1533867617858-e7b97e060509?q=80&w=800&auto=format&fit=crop',
-                price: 'ETB 7,800',
-                sizes: 'EU 40, 41, 42, 43, 44',
-                description: 'Soft genuine suede upper with cushioned leather insoles. Easy slip-on style for smart business casual wear.'
-            },
-
-            // ACCESSORIES
-            {
-                id: 11,
-                mainCategory: 'accessories',
-                subCategory: 'silk-ties-bows',
-                subCategoryName: 'Silk Ties & Bows',
-                title: '100% Jacquard Silk Tie & Pocket Square Set',
-                origin: 'Imported from Turkey',
-                image: 'accessories.PNG',
-                fallback: 'https://images.unsplash.com/photo-1589756823695-278bc923f962?q=80&w=800&auto=format&fit=crop',
-                price: 'ETB 1,800',
-                sizes: 'One Size',
-                description: 'Woven pure silk with rich sheen and thick interlining for forming the perfect double-Windsor knot.'
-            },
-            {
-                id: 12,
-                mainCategory: 'accessories',
-                subCategory: 'leather-belts',
-                subCategoryName: 'Leather Belts',
-                title: 'Reversible Full-Grain Calfskin Leather Belt',
-                origin: 'Imported European Brand',
-                image: 'accessories.PNG',
-                fallback: 'https://images.unsplash.com/photo-1624222247344-550fb60583dc?q=80&w=800&auto=format&fit=crop',
-                price: 'ETB 2,400',
-                sizes: 'Adjustable (90cm - 115cm)',
-                description: 'Features a twistable alloy buckle allowing effortless switching between classic black and deep mahogany brown.'
-            }
+        // --- 1. Product Data & Sub-categories ---
+        const products = [
+            { id: 1, name: "Executive Italian 2-Piece", category: "suits", subcategory: "2-piece", price: "32,000 ETB", origin: "Italy", fabric: "Super 150s Pure Wool", sizes: "48, 50, 52, 54, 56", image: "suits-2piece.jpg", fallback: "https://images.unsplash.com/photo-1594938298603-c8148c4dae35?q=80&w=800" },
+            { id: 2, name: "Royal 3-Piece Tuxedo Suit", category: "suits", subcategory: "3-piece", price: "38,500 ETB", origin: "Turkey", fabric: "Virgin Wool & Satin Lapel", sizes: "46, 48, 50, 52", image: "suits-3piece.jpg", fallback: "https://images.unsplash.com/photo-1598808503746-f34c53b9323e?q=80&w=800" },
+            { id: 3, name: "Pure Super 150s Wool Suit", category: "suits", subcategory: "super-wool", price: "35,000 ETB", origin: "England / UK", fabric: "100% Fine Merino Wool", sizes: "48, 50, 52, 54", image: "suits-wool.jpg", fallback: "https://images.unsplash.com/photo-1507679799987-c73779587ccf?q=80&w=800" },
+            { id: 4, name: "Formal French Cuff Dress Shirt", category: "shirts", subcategory: "formal-shirts", price: "4,500 ETB", origin: "Turkey", fabric: "100% Egyptian Cotton", sizes: "39, 40, 41, 42, 43", image: "shirts.PNG", fallback: "https://images.unsplash.com/photo-1620012253295-c15cc3e65df4?q=80&w=800" },
+            { id: 5, name: "Smart Oxford Casual Shirt", category: "shirts", subcategory: "casual-shirts", price: "3,800 ETB", origin: "Italy", fabric: "Soft Oxford Weave Cotton", sizes: "M, L, XL, XXL", image: "shirts.PNG", fallback: "https://images.unsplash.com/photo-1596755094514-f87e34085b2c?q=80&w=800" },
+            { id: 6, name: "Italian Cut Dress Trousers", category: "trousers", subcategory: "formal-trousers", price: "6,200 ETB", origin: "Italy", fabric: "Wool Blend Stretch", sizes: "30, 32, 34, 36, 38", image: "trouser.PNG", fallback: "https://images.unsplash.com/photo-1479064555552-3ef4979f8908?q=80&w=800" },
+            { id: 7, name: "Tailored Smart Casual Chinos", category: "trousers", subcategory: "chinos", price: "5,400 ETB", origin: "Europe", fabric: "98% Cotton, 2% Elastane", sizes: "30, 32, 34, 36", image: "Trousers.png", fallback: "https://images.unsplash.com/photo-1624378439575-d8705ad7ae80?q=80&w=800" },
+            { id: 8, name: "Handcrafted Italian Leather Oxfords", category: "shoes", subcategory: "oxfords", price: "12,500 ETB", origin: "Italy", fabric: "Full-Grain Calf Leather", sizes: "40, 41, 42, 43, 44", image: "shoes.jpg", fallback: "https://images.unsplash.com/photo-1593032465175-481ac7f401a0?q=80&w=800" },
+            { id: 9, name: "Classic Leather Penny Loafers", category: "shoes", subcategory: "loafers", price: "11,000 ETB", origin: "Turkey", fabric: "Soft Genuine Leather", sizes: "40, 41, 42, 43, 44", image: "shoes.jpg", fallback: "https://images.unsplash.com/photo-1533867617858-e7b97e060509?q=80&w=800" },
+            { id: 10, name: "Silk Tie & Pocket Square Set", category: "accessories", subcategory: "ties", price: "2,200 ETB", origin: "Italy", fabric: "100% Woven Silk", sizes: "One Size", image: "accessories.PNG", fallback: "https://images.unsplash.com/photo-1589756823695-278bc923f962?q=80&w=800" }
         ];
 
-        // SUB-CATEGORY MAPPINGS PER MAIN CATEGORY
-        const subCategoriesMap = {
+        const subcategoryMap = {
             suits: [
-                { id: 'all-suits', name: 'All Suits' },
-                { id: 'italian-super-wool', name: 'Italian Super Wool' },
-                { id: 'executive-2piece', name: 'Executive 2-Piece' },
-                { id: 'tuxedos-3piece', name: 'Tuxedos & 3-Piece' },
-                { id: 'modern-slim-fit', name: 'Modern Slim Fit' }
+                { id: 'all-suits', name: 'All Suits', value: 'all' },
+                { id: '2-piece', name: '2-Piece Suits', value: '2-piece' },
+                { id: '3-piece', name: '3-Piece Tuxedos', value: '3-piece' },
+                { id: 'super-wool', name: 'Super Wool', value: 'super-wool' }
             ],
             shirts: [
-                { id: 'all-shirts', name: 'All Shirts' },
-                { id: 'formal-french-cuff', name: 'Formal French Cuff' },
-                { id: 'casual-oxford', name: 'Casual & Oxford' }
+                { id: 'all-shirts', name: 'All Shirts', value: 'all' },
+                { id: 'formal-shirts', name: 'Formal Dress Shirts', value: 'formal-shirts' },
+                { id: 'casual-shirts', name: 'Casual Oxford Shirts', value: 'casual-shirts' }
             ],
             trousers: [
-                { id: 'all-trousers', name: 'All Trousers' },
-                { id: 'tailored-formal-dress', name: 'Tailored Formal Dress' },
-                { id: 'chinos-smart-casual', name: 'Chinos & Smart Casual' }
+                { id: 'all-trousers', name: 'All Trousers', value: 'all' },
+                { id: 'formal-trousers', name: 'Formal Trousers', value: 'formal-trousers' },
+                { id: 'chinos', name: 'Smart Chinos', value: 'chinos' }
             ],
             shoes: [
-                { id: 'all-shoes', name: 'All Shoes' },
-                { id: 'italian-leather-oxfords', name: 'Italian Leather Oxfords' },
-                { id: 'loafers-slip-ons', name: 'Loafers & Slip-Ons' }
+                { id: 'all-shoes', name: 'All Shoes', value: 'all' },
+                { id: 'oxfords', name: 'Oxfords & Derbies', value: 'oxfords' },
+                { id: 'loafers', name: 'Loafers', value: 'loafers' }
             ],
             accessories: [
-                { id: 'all-accessories', name: 'All Accessories' },
-                { id: 'silk-ties-bows', name: 'Silk Ties & Bows' },
-                { id: 'leather-belts', name: 'Leather Belts' }
+                { id: 'all-acc', name: 'All Accessories', value: 'all' },
+                { id: 'ties', name: 'Silk Ties & Pocket Squares', value: 'ties' }
             ]
         };
 
-        let currentMainFilter = 'all';
-        let currentSubFilter = 'all';
+        let currentCategory = 'all';
+        let currentSubcategory = 'all';
 
-        document.addEventListener('DOMContentLoaded', function() {
-            renderProductGrid();
-            initHeaderAndMobileMenu();
-            initAdvisorLogic();
-            initFaqAccordion();
-            initContactForm();
-            initModalEvents();
-            setupFilterButtons();
-        });
-
-        // --- RENDER PRODUCTS GRID WITH SUB-CATEGORIES ---
-        function renderProductGrid() {
+        // Render Product Cards
+        function renderProducts() {
             const grid = document.getElementById('product-grid');
             grid.innerHTML = '';
 
-            let filtered = catalogProducts.filter(item => {
-                if (currentMainFilter === 'all') return true;
-                if (item.mainCategory !== currentMainFilter) return false;
-                if (currentSubFilter === 'all' || currentSubFilter.startsWith('all-')) return true;
-                return item.subCategory === currentSubFilter;
+            const filtered = products.filter(item => {
+                const matchCategory = (currentCategory === 'all' || item.category === currentCategory);
+                const matchSub = (currentSubcategory === 'all' || item.subcategory === currentSubcategory);
+                return matchCategory && matchSub;
             });
 
             if (filtered.length === 0) {
-                grid.innerHTML = `
-                    <div class="col-span-full text-center py-12 text-softgrey">
-                        <i class="fa-solid fa-box-open text-3xl mb-2 text-gold"></i>
-                        <p class="text-sm">No items match this specific sub-category currently.</p>
-                        <p class="text-xs mt-1">Join our <a href="https://t.me/ellasuit" target="_blank" class="text-gold underline">Telegram Channel</a> to inquire on incoming shipments.</p>
-                    </div>
-                `;
+                grid.innerHTML = `<div class="col-span-full text-center py-12 text-softgrey text-sm">No items found in this sub-category.</div>`;
                 return;
             }
 
             filtered.forEach(product => {
                 const card = document.createElement('div');
                 card.className = "bg-obsidian border border-darkslate rounded-sm overflow-hidden group hover:border-gold/60 transition-all duration-300 flex flex-col justify-between";
-                
                 card.innerHTML = `
-                    <div>
-                        <div class="relative h-64 overflow-hidden bg-charcoal">
-                            <img src="${product.image}" 
-                                 alt="${product.title}" 
-                                 class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                                 onerror="this.src='${product.fallback}'">
-                            <div class="absolute top-2 left-2 bg-obsidian/80 backdrop-blur-sm px-2 py-1 border border-gold/30 rounded-sm">
-                                <span class="text-[9px] text-gold uppercase tracking-widest font-semibold">${product.origin}</span>
-                            </div>
-                        </div>
-                        <div class="p-5 space-y-2">
-                            <span class="text-[10px] text-softgrey uppercase tracking-widest block">${product.subCategoryName}</span>
-                            <h3 class="font-serif text-lg font-bold text-cream group-hover:text-gold transition-colors line-clamp-1">${product.title}</h3>
-                            <p class="text-xs text-softgrey line-clamp-2 leading-relaxed">${product.description}</p>
+                    <div class="relative h-72 overflow-hidden bg-charcoal">
+                        <img src="${product.image}" alt="${product.name}" 
+                             class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                             onerror="this.src='${product.fallback}'">
+                        <div class="absolute top-3 left-3 bg-obsidian/80 backdrop-blur-sm px-2.5 py-1 rounded-sm border border-gold/30 text-[10px] uppercase font-bold text-gold tracking-widest">
+                            ${product.origin}
                         </div>
                     </div>
-                    <div class="p-5 pt-0 space-y-3">
-                        <div class="flex items-center justify-between border-t border-darkslate/60 pt-3">
-                            <span class="text-xs text-softgrey">EU Sizing:</span>
-                            <span class="text-xs font-mono text-cream">${product.sizes.split(',')[0]}...</span>
+                    <div class="p-5 space-y-3 flex-grow flex flex-col justify-between">
+                        <div>
+                            <span class="text-[10px] text-softgrey uppercase tracking-widest">${product.category}</span>
+                            <h3 class="font-serif text-lg font-bold text-cream group-hover:text-gold transition-colors">${product.name}</h3>
+                            <p class="text-xs text-softgrey mt-1 font-light">${product.fabric}</p>
                         </div>
-                        <div class="flex items-center justify-between">
-                            <span class="font-serif font-bold text-gold text-base">${product.price}</span>
-                            <button onclick="openQuickView(${product.id})" class="px-3 py-1.5 bg-charcoal border border-darkslate hover:border-gold text-cream hover:text-gold text-[11px] font-semibold uppercase tracking-wider transition-all rounded-sm flex items-center gap-1">
-                                <i class="fa-solid fa-eye text-[10px]"></i> Quick View
+                        <div class="pt-3 border-t border-darkslate/60 flex items-center justify-between">
+                            <span class="font-serif text-gold font-bold text-base">${product.price}</span>
+                            <button onclick="openQuickView(${product.id})" class="px-3 py-1.5 bg-darkslate hover:bg-gold hover:text-obsidian text-cream text-[11px] font-semibold tracking-wider uppercase transition-colors rounded-sm border border-gold/20">
+                                Quick View
                             </button>
                         </div>
                     </div>
@@ -976,42 +748,167 @@
             });
         }
 
-        // --- FILTER BUTTON CONTROLS ---
-        function setupFilterButtons() {
-            const mainBtns = document.querySelectorAll('.main-filter-btn');
-            const subWrapper = document.getElementById('sub-category-wrapper');
-            const subContainer = document.getElementById('sub-category-filters');
+        // Render Subcategory buttons
+        function updateSubcategoryRibbon(category) {
+            const wrapper = document.getElementById('subcategory-wrapper');
+            const container = document.getElementById('subcategory-buttons');
+            container.innerHTML = '';
+            currentSubcategory = 'all';
 
-            mainBtns.forEach(btn => {
-                btn.addEventListener('click', function() {
-                    mainBtns.forEach(b => {
-                        b.classList.remove('active-main-filter', 'bg-gold', 'text-obsidian', 'border-gold');
-                        b.classList.add('bg-obsidian', 'text-cream/70', 'border-darkslate');
+            if (category === 'all' || !subcategoryMap[category]) {
+                wrapper.classList.add('hidden');
+                return;
+            }
+
+            wrapper.classList.remove('hidden');
+            subcategoryMap[category].forEach(sub => {
+                const btn = document.createElement('button');
+                btn.className = `px-3 py-1 text-xs rounded-sm transition-all uppercase tracking-wider ${sub.value === 'all' ? 'bg-gold text-obsidian font-bold' : 'bg-charcoal text-cream/70 hover:text-gold border border-darkslate'}`;
+                btn.innerText = sub.name;
+                btn.onclick = () => {
+                    Array.from(container.children).forEach(b => {
+                        b.className = "px-3 py-1 text-xs rounded-sm transition-all uppercase tracking-wider bg-charcoal text-cream/70 hover:text-gold border border-darkslate";
                     });
-                    this.classList.add('active-main-filter', 'bg-gold', 'text-obsidian', 'border-gold');
-                    this.classList.remove('bg-obsidian', 'text-cream/70', 'border-darkslate');
-
-                    currentMainFilter = this.getAttribute('data-main');
-                    currentSubFilter = 'all';
-
-                    if (currentMainFilter === 'all') {
-                        subWrapper.classList.add('hidden');
-                    } else {
-                        subWrapper.classList.remove('hidden');
-                        renderSubCategories(currentMainFilter);
-                    }
-
-                    renderProductGrid();
-                });
+                    btn.className = "px-3 py-1 text-xs rounded-sm transition-all uppercase tracking-wider bg-gold text-obsidian font-bold";
+                    currentSubcategory = sub.value;
+                    renderProducts();
+                };
+                container.appendChild(btn);
             });
         }
 
-        function renderSubCategories(mainCat) {
-            const subContainer = document.getElementById('sub-category-filters');
-            subContainer.innerHTML = '';
-            const subs = subCategoriesMap[mainCat] || [];
+        // Category Filter Event Listeners
+        document.querySelectorAll('#category-filters .filter-btn').forEach(btn => {
+            btn.addEventListener('click', () => {
+                document.querySelectorAll('#category-filters .filter-btn').forEach(b => {
+                    b.className = "filter-btn px-5 py-2.5 text-xs font-semibold tracking-wider uppercase transition-all duration-300 rounded-sm border border-darkslate bg-obsidian text-cream/70 hover:text-gold hover:border-gold/50";
+                });
+                btn.className = "filter-btn active-filter px-5 py-2.5 text-xs font-semibold tracking-wider uppercase transition-all duration-300 rounded-sm border border-gold bg-gold text-obsidian";
+                
+                currentCategory = btn.getAttribute('data-filter');
+                updateSubcategoryRibbon(currentCategory);
+                renderProducts();
+            });
+        });
 
-            subs.forEach((sub, index) => {
-                const subBtn = document.createElement('button');
-                const isFirst = index === 0;
-                subBtn.className = `sub-filter-btn px-3
+        // Quick View Modal Controls
+        function openQuickView(id) {
+            const product = products.find(p => p.id === id);
+            if (!product) return;
+
+            document.getElementById('modal-img').src = product.image;
+            document.getElementById('modal-img').onerror = function() { this.src = product.fallback; };
+            document.getElementById('modal-category').innerText = product.category;
+            document.getElementById('modal-title').innerText = product.name;
+            document.getElementById('modal-price').innerText = product.price;
+            document.getElementById('modal-origin').innerText = product.origin;
+            document.getElementById('modal-fabric').innerText = product.fabric;
+            document.getElementById('modal-sizes').innerText = product.sizes;
+
+            const text = encodeURIComponent(`Hello ELLA Suit Store, I am interested in checking availability for: ${product.name} (${product.price}).`);
+            document.getElementById('modal-whatsapp-btn').href = `https://wa.me/251975338888?text=${text}`;
+
+            document.getElementById('quickview-modal').classList.remove('hidden');
+        }
+
+        document.getElementById('close-modal').addEventListener('click', () => {
+            document.getElementById('quickview-modal').classList.add('hidden');
+        });
+
+        // --- 2. Ready-To-Wear Size Advisor Logic ---
+        const heightInput = document.getElementById('height-input');
+        const weightInput = document.getElementById('weight-input');
+        let selectedBuild = "Regular";
+        let selectedCut = "Slim Fit Cut";
+
+        function calculateSize() {
+            const h = parseInt(heightInput.value);
+            const w = parseInt(weightInput.value);
+            
+            document.getElementById('height-val').innerText = `${h} cm`;
+            document.getElementById('weight-val').innerText = `${w} kg`;
+
+            let baseSize = Math.round(w * 0.65 + (h - 170) * 0.1);
+            if (baseSize % 2 !== 0) baseSize += 1;
+            if (baseSize < 44) baseSize = 44;
+            if (baseSize > 60) baseSize = 60;
+
+            const usSize = baseSize - 10;
+
+            document.getElementById('recommended-size').innerText = baseSize;
+            document.getElementById('recommended-us').innerText = `US ${usSize}R`;
+            document.getElementById('advisor-fit-title').innerText = `EUR ${baseSize} (${selectedBuild} / ${selectedCut})`;
+            
+            document.getElementById('summary-eu-size').innerText = `${baseSize} (${usSize}R US)`;
+            document.getElementById('summary-hw').innerText = `${h} cm / ${w} kg`;
+            document.getElementById('summary-build').innerText = selectedBuild;
+            document.getElementById('summary-cut').innerText = selectedCut;
+
+            const waText = encodeURIComponent(`Hello ELLA Suit Store, my size recommendation is EUR ${baseSize} (US ${usSize}R) based on ${h}cm / ${w}kg (${selectedBuild} build, ${selectedCut}). Please let me know what stock is available.`);
+            document.getElementById('whatsapp-advisor-btn').onclick = () => {
+                window.open(`https://wa.me/251975338888?text=${waText}`, '_blank');
+            };
+        }
+
+        heightInput.addEventListener('input', calculateSize);
+        weightInput.addEventListener('input', calculateSize);
+
+        document.querySelectorAll('#build-options .build-btn').forEach(btn => {
+            btn.addEventListener('click', () => {
+                document.querySelectorAll('#build-options .build-btn').forEach(b => b.className = "build-btn p-3 text-center border border-darkslate bg-obsidian text-cream/70 text-xs uppercase font-medium rounded-sm hover:border-gold/50");
+                btn.className = "build-btn active-opt p-3 text-center border border-gold bg-obsidian text-gold text-xs uppercase font-medium rounded-sm";
+                selectedBuild = btn.getAttribute('data-value');
+                calculateSize();
+            });
+        });
+
+        document.querySelectorAll('#cut-options .cut-btn').forEach(btn => {
+            btn.addEventListener('click', () => {
+                document.querySelectorAll('#cut-options .cut-btn').forEach(b => b.className = "cut-btn p-3 text-center border border-darkslate bg-obsidian text-cream/70 text-xs uppercase font-medium rounded-sm hover:border-gold/50");
+                btn.className = "cut-btn active-opt p-3 text-center border border-gold bg-obsidian text-gold text-xs uppercase font-medium rounded-sm";
+                selectedCut = btn.getAttribute('data-value');
+                calculateSize();
+            });
+        });
+
+        // --- 3. FAQ Accordion Logic ---
+        document.querySelectorAll('.faq-toggle').forEach(button => {
+            button.addEventListener('click', () => {
+                const content = button.nextElementSibling;
+                const icon = button.querySelector('i');
+                const isOpen = !content.classList.contains('hidden');
+
+                document.querySelectorAll('.faq-content').forEach(c => c.classList.add('hidden'));
+                document.querySelectorAll('.faq-toggle i').forEach(i => i.classList.remove('rotate-180'));
+
+                if (!isOpen) {
+                    content.classList.remove('hidden');
+                    icon.classList.add('rotate-180');
+                }
+            });
+        });
+
+        // --- 4. Mobile Menu Toggle ---
+        const mobileBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        mobileBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // --- 5. Contact Form Submission ---
+        document.getElementById('contact-form').addEventListener('submit', (e) => {
+            e.preventDefault();
+            const name = document.getElementById('form-name').value;
+            const phone = document.getElementById('form-phone').value;
+            const message = document.getElementById('form-message').value;
+
+            const text = encodeURIComponent(`Inquiry from ${name} (${phone}): ${message}`);
+            window.open(`https://wa.me/251975338888?text=${text}`, '_blank');
+        });
+
+        // Initial Render On Load
+        renderProducts();
+        calculateSize();
+    </script>
+</body>
+</html>
