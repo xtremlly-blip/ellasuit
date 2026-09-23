@@ -485,11 +485,92 @@
     </section>
 
     <!-- FOOTER -->
-    <footer class="bg-obsidian border-t border-darkslate py-8 text-center text-xs text-softgrey">
-        <p>&copy; 2026 ELLA Suit Store. All rights reserved.</p>
+    <footer class="bg-obsidian border-t border-darkslate py-12 text-center sm:text-left text-xs text-softgrey">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-4 gap-8">
+            
+            <div class="space-y-4">
+                <div class="flex items-center gap-3 justify-center sm:justify-start">
+                    <div class="w-8 h-8 border border-gold flex items-center justify-center bg-charcoal">
+                        <span class="font-serif font-bold text-lg text-gold">E</span>
+                    </div>
+                    <span class="font-serif text-xl tracking-[0.2em] font-bold text-cream">ELLA</span>
+                </div>
+                <p class="text-xs leading-relaxed">
+                    Mastering the art of tailoring for discerning gentlemen. High fashion menswear and bespoke styling solutions.
+                </p>
+            </div>
+
+            <div>
+                <h4 class="text-cream uppercase font-semibold tracking-wider mb-4">Quick Navigation</h4>
+                <ul class="space-y-2">
+                    <li><a href="#home" class="hover:text-gold transition-colors">Home</a></li>
+                    <li><a href="#showcase" class="hover:text-gold transition-colors">Collection</a></li>
+                    <li><a href="#visualizer" class="hover:text-gold transition-colors">Custom Studio</a></li>
+                    <li><a href="#about" class="hover:text-gold transition-colors">About ELLA</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h4 class="text-cream uppercase font-semibold tracking-wider mb-4">Categories</h4>
+                <ul class="space-y-2">
+                    <li><a href="#showcase" class="hover:text-gold transition-colors">Bespoke Suits</a></li>
+                    <li><a href="#showcase" class="hover:text-gold transition-colors">Dress Shirts</a></li>
+                    <li><a href="#showcase" class="hover:text-gold transition-colors">Tailored Trousers</a></li>
+                    <li><a href="#showcase" class="hover:text-gold transition-colors">Oxford & Monk Shoes</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h4 class="text-cream uppercase font-semibold tracking-wider mb-4">Connect With ELLA</h4>
+                <div class="flex justify-center sm:justify-start gap-4 text-base text-cream/70">
+                    <a href="#" class="hover:text-gold"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#" class="hover:text-gold"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="https://wa.me/15550192834" target="_blank" class="hover:text-gold"><i class="fa-brands fa-whatsapp"></i></a>
+                </div>
+                <p class="mt-4 text-[11px]">&copy; 2026 ELLA Suit Store (ellasuit.com). All rights reserved.</p>
+            </div>
+
+        </div>
     </footer>
 
-    <!-- JAVASCRIPT LOGIC -->
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/15550192834?text=Hello%20ELLA%20Suit%20Store%2C%20I%20have%20an%20inquiry." 
+       target="_blank" 
+       rel="noopener noreferrer"
+       class="fixed bottom-6 right-6 z-50 bg-green-600 hover:bg-green-500 text-white w-14 h-14 rounded-full flex items-center justify-center shadow-2xl transition-transform hover:scale-110 group"
+       aria-label="Chat on WhatsApp">
+        <i class="fa-brands fa-whatsapp text-2xl"></i>
+        <span class="absolute right-16 bg-charcoal text-cream text-[11px] px-3 py-1.5 rounded border border-darkslate opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap shadow-md pointer-events-none">
+            Chat with Master Draper
+        </span>
+    </a>
+
+    <!-- PRODUCT DETAIL MODAL -->
+    <div id="product-modal" class="fixed inset-0 z-50 hidden bg-obsidian/90 backdrop-blur-md flex items-center justify-center p-4">
+        <div class="bg-charcoal border border-gold/40 rounded-sm max-w-2xl w-full p-6 sm:p-8 relative space-y-6 shadow-2xl">
+            <!-- Close Modal Button -->
+            <button id="close-modal-btn" class="absolute top-4 right-4 text-cream/60 hover:text-gold text-2xl">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 items-center">
+                <img id="modal-image" src="" alt="Product Image" class="w-full h-72 object-cover rounded-sm border border-darkslate">
+                <div class="space-y-4">
+                    <span id="modal-category" class="text-xs font-semibold text-gold uppercase tracking-widest">Category</span>
+                    <h3 id="modal-title" class="font-serif text-2xl font-bold text-cream">Product Title</h3>
+                    <p id="modal-price" class="text-xl font-serif text-gold font-bold">$0.00</p>
+                    <p id="modal-description" class="text-xs text-softgrey leading-relaxed">Product detailed description text goes here.</p>
+                    
+                    <div class="pt-4 border-t border-darkslate space-y-3">
+                        <a id="modal-whatsapp-link" href="#" target="_blank" class="w-full py-3 bg-gold hover:bg-goldhover text-obsidian text-center font-bold text-xs uppercase tracking-widest flex items-center justify-center gap-2 rounded-sm transition-all">
+                            <i class="fa-brands fa-whatsapp text-sm"></i> Inquire via WhatsApp
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <script>
         const products = [
             {
