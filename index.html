@@ -70,12 +70,12 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
             
             <a href="#home" class="flex items-center gap-3 group">
-    <img src="assets/logo.png" alt="ELLA Logo" class="w-10 h-10 object-contain">
-    <div class="flex flex-col">
-        <span class="font-serif text-2xl tracking-[0.25em] font-bold text-cream group-hover:text-gold transition-colors duration-300">ELLA</span>
-        <span class="text-[9px] tracking-[0.35em] text-gold uppercase -mt-1 font-medium">TAILORED</span>
-    </div>
-</a>
+                <img src="assets/logo.png" alt="ELLA Logo" class="w-10 h-10 object-contain">
+                <div class="flex flex-col">
+                    <span class="font-serif text-2xl tracking-[0.25em] font-bold text-cream group-hover:text-gold transition-colors duration-300">ELLA</span>
+                    <span class="text-[9px] tracking-[0.35em] text-gold uppercase -mt-1 font-medium">TAILORED</span>
+                </div>
+            </a>
 
             <!-- Desktop Navigation Links -->
             <nav class="hidden md:flex items-center gap-8">
@@ -121,9 +121,9 @@
     <section id="home" class="relative min-h-[88vh] flex items-center justify-center bg-obsidian overflow-hidden py-16">
         <div class="absolute inset-0 z-0">
             <img src="assets/hero.png" 
-     alt="ELLA Tailored Suit Background" 
-     class="w-full h-full object-cover object-top opacity-30 scale-105 transition-transform duration-1000"
-     id="hero-bg">
+                 alt="ELLA Tailored Suit Background" 
+                 class="w-full h-full object-cover object-top opacity-30 scale-105 transition-transform duration-1000"
+                 id="hero-bg"
                  onerror="this.src='https://images.unsplash.com/photo-1594938298603-c8148c4dae35?q=80&w=2000&auto=format&fit=crop'">
             <div class="absolute inset-0 bg-gradient-to-t from-obsidian via-obsidian/70 to-transparent"></div>
             <div class="absolute inset-0 bg-gradient-to-r from-obsidian via-transparent to-obsidian"></div>
@@ -345,21 +345,21 @@
                 
                 <div class="lg:col-span-6 grid grid-cols-2 gap-4 relative">
                     <div class="space-y-4">
-                        <img src="2-piece-suit.jpg" 
+                        <img src="assets/suits-2piece.jpg" 
                              alt="Tailoring craftsmanship" 
                              class="w-full h-64 object-cover rounded-sm border border-darkslate shadow-md"
                              onerror="this.src='https://images.unsplash.com/photo-1507679799987-c73779587ccf?q=80&w=800&auto=format&fit=crop'">
-                        <img src="shirts.jpg" 
+                        <img src="assets/shirts.PNG" 
                              alt="Menswear details" 
                              class="w-full h-48 object-cover rounded-sm border border-darkslate shadow-md"
                              onerror="this.src='https://images.unsplash.com/photo-1617137984095-74e4e5e3613f?q=80&w=800&auto=format&fit=crop'">
                     </div>
                     <div class="space-y-4 pt-8">
-                        <img src="3-piece-suit.jpg" 
+                        <img src="assets/suits-3piece.jpg" 
                              alt="Sharp suit silhouette" 
                              class="w-full h-48 object-cover rounded-sm border border-darkslate shadow-md"
                              onerror="this.src='https://images.unsplash.com/photo-1598808503746-f34c53b9323e?q=80&w=800&auto=format&fit=crop'">
-                        <img src="shoes.jpg" 
+                        <img src="assets/shoes.jpg" 
                              alt="Premium Oxford shoes" 
                              class="w-full h-64 object-cover rounded-sm border border-darkslate shadow-md"
                              onerror="this.src='https://images.unsplash.com/photo-1593032465175-481ac7f401a0?q=80&w=800&auto=format&fit=crop'">
@@ -489,285 +489,147 @@
                 </div>
 
             </div>
-
         </div>
     </section>
 
     <!-- FOOTER -->
-    <footer class="bg-obsidian border-t border-darkslate/80 py-12 text-center text-xs text-softgrey">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-6">
-            <div class="flex items-center justify-center gap-3">
-                <div class="w-8 h-8 border border-gold/60 flex items-center justify-center bg-charcoal">
-                    <span class="font-serif font-bold text-lg text-gold">E</span>
-                </div>
-                <span class="font-serif text-xl tracking-[0.25em] font-bold text-cream">ELLA</span>
-            </div>
-
-            <!-- Social Media Links -->
-            <div class="flex justify-center items-center gap-6 text-base">
-                <a href="https://t.me/ellasuitstore" target="_blank" rel="noopener noreferrer" class="text-cream/60 hover:text-gold transition-colors" aria-label="Telegram">
-                    <i class="fa-brands fa-telegram"></i>
-                </a>
-                <a href="https://instagram.com/ellasuitstore" target="_blank" rel="noopener noreferrer" class="text-cream/60 hover:text-gold transition-colors" aria-label="Instagram">
-                    <i class="fa-brands fa-instagram"></i>
-                </a>
-                <a href="https://facebook.com/ellasuitstore" target="_blank" rel="noopener noreferrer" class="text-cream/60 hover:text-gold transition-colors" aria-label="Facebook">
-                    <i class="fa-brands fa-facebook-f"></i>
-                </a>
-                <a href="https://tiktok.com/@ellasuitstore" target="_blank" rel="noopener noreferrer" class="text-cream/60 hover:text-gold transition-colors" aria-label="TikTok">
-                    <i class="fa-brands fa-tiktok"></i>
-                </a>
-            </div>
-
-            <p class="tracking-wider">© 2026 ELLA Suit Store. Confidence Tailored. All rights reserved.</p>
-        </div>
+    <footer class="bg-obsidian border-t border-darkslate py-8 text-center text-xs text-softgrey">
+        <p>&copy; 2026 ELLA Suit Store. All rights reserved.</p>
     </footer>
 
-    <!-- INLINE JAVASCRIPT APP LOGIC -->
+    <!-- JAVASCRIPT LOGIC -->
     <script>
-        // --- PRODUCT CATALOG DATA (ROOT DIRECTORY IMAGE PATHS) ---
-       const products = [
-    {
-        id: 1,
-        title: "2-Piece Executive Suit",
-        category: "suits",
-        price: 28500,
-        image: "assets/suits-2piece.jpg",
-        badge: "Bestseller",
-        desc: "Single-breasted Italian wool suit with notched lapel and structured shoulder drape."
-    },
-    {
-        id: 2,
-        title: "3-Piece Master Cut Suit",
-        category: "suits",
-        price: 32000,
-        image: "assets/suits-3piece.jpg",
-        badge: "Signature",
-        desc: "Complete 3-piece ensemble featuring jacket, tailored vest, and flat-front trousers."
-    },
-    {
-        id: 3,
-        title: "100% Wool Premium Suit",
-        category: "suits",
-        price: 55000,
-        image: "assets/suits-wool.jpg",
-        badge: "Luxury Wool",
-        desc: "Handcrafted pure virgin Super 150s wool suit offering supreme comfort and drape."
-    },
-    {
-        id: 4,
-        title: "Tailored Trousers",
-        category: "trousers",
-        price: 5500,
-        image: "assets/trouser.PNG",
-        badge: "Essential",
-        desc: "Slim-fit trousers crafted with side adjusters and crease-resistant fabric."
-    },
-    {
-        id: 5,
-        title: "Executive Shirts",
-        category: "shirts",
-        price: 4500,
-        image: "assets/shirts.PNG",
-        badge: "Egyptian Cotton",
-        desc: "Crisp formal shirt with spread collar and French cuffs for cufflinks."
-    },
-    {
-        id: 6,
-        title: "Casual Denim & Chinos",
-        category: "trousers",
-        price: 4000,
-        image: "assets/Trousers.png",
-        badge: "Casual Wear",
-        desc: "Premium denim and tailored casual trousers for off-duty confidence."
-    },
-    {
-        id: 7,
-        title: "Oxford Leather Shoes",
-        category: "shoes",
-        price: 22500,
-        image: "assets/shoes.jpg",
-        badge: "Calfskin Leather",
-        desc: "Hand-burnished Italian calfskin Oxford shoes with Goodyear welt construction."
-    },
-    {
-        id: 8,
-        title: "Leather & Silk Accessories",
-        category: "accessories",
-        price: 1800,
-        image: "assets/accessories.PNG",
-        badge: "Silk & Leather",
-        desc: "Handmade 100% pure silk tie, belt, and pocket square sets."
-    }
-];
+        const products = [
+            {
+                id: 1,
+                title: "2-Piece Executive Suit",
+                category: "suits",
+                price: 28500,
+                image: "assets/suits-2piece.jpg",
+                badge: "Bestseller",
+                desc: "Single-breasted Italian wool suit with notched lapel and structured shoulder drape."
+            },
+            {
+                id: 2,
+                title: "3-Piece Master Cut Suit",
+                category: "suits",
+                price: 32000,
+                image: "assets/suits-3piece.jpg",
+                badge: "Signature",
+                desc: "Complete 3-piece ensemble featuring jacket, tailored vest, and flat-front trousers."
+            },
+            {
+                id: 3,
+                title: "100% Wool Premium Suit",
+                category: "suits",
+                price: 55000,
+                image: "assets/suits-wool.jpg",
+                badge: "Luxury Wool",
+                desc: "Handcrafted pure virgin Super 150s wool suit offering supreme comfort and drape."
+            },
+            {
+                id: 4,
+                title: "Tailored Trousers",
+                category: "trousers",
+                price: 5500,
+                image: "assets/trouser.PNG",
+                badge: "Essential",
+                desc: "Slim-fit trousers crafted with side adjusters and crease-resistant fabric."
+            },
+            {
+                id: 5,
+                title: "Executive Shirts",
+                category: "shirts",
+                price: 4500,
+                image: "assets/shirts.PNG",
+                badge: "Egyptian Cotton",
+                desc: "Crisp formal shirt with spread collar and French cuffs for cufflinks."
+            },
+            {
+                id: 6,
+                title: "Casual Denim & Chinos",
+                category: "trousers",
+                price: 4000,
+                image: "assets/Trousers.png",
+                badge: "Casual Wear",
+                desc: "Premium denim and tailored casual trousers for off-duty confidence."
+            },
+            {
+                id: 7,
+                title: "Oxford Leather Shoes",
+                category: "shoes",
+                price: 22500,
+                image: "assets/shoes.jpg",
+                badge: "Calfskin Leather",
+                desc: "Hand-burnished Italian calfskin Oxford shoes with Goodyear welt construction."
+            },
+            {
+                id: 8,
+                title: "Leather & Silk Accessories",
+                category: "accessories",
+                price: 1800,
+                image: "assets/accessories.PNG",
+                badge: "Silk & Leather",
+                desc: "Handmade 100% pure silk tie, belt, and pocket square sets."
+            }
+        ];
 
-        const WHATSAPP_PHONE = "251975338888";
+        // Mobile menu toggle
+        const menuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        menuBtn?.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
 
-        // --- DYNAMIC PRODUCT RENDERING ---
-        function renderProducts(filterCategory = "all") {
-            const container = document.getElementById('product-grid');
-            if (!container) return;
-
-            const filtered = filterCategory === "all" 
-                ? products 
-                : products.filter(p => p.category === filterCategory);
-
-            container.innerHTML = filtered.map(item => `
-                <div class="bg-obsidian border border-darkslate hover:border-gold/60 transition-all duration-300 rounded-sm overflow-hidden flex flex-col justify-between group">
-                    <div>
-                        <div class="relative overflow-hidden aspect-[3/4] bg-charcoal">
-                            <img src="${item.image}" 
-                                 alt="${item.title}" 
-                                 class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                                 onerror="this.src='https://placehold.co/600x800/121212/D4AF37?text=${encodeURIComponent(item.title)}'">
-                            <span class="absolute top-3 left-3 bg-gold text-obsidian text-[10px] font-bold uppercase tracking-widest px-2.5 py-1 rounded-sm">
-                                ${item.badge}
-                            </span>
-                        </div>
-                        <div class="p-5 space-y-2">
-                            <h3 class="font-serif text-lg font-bold text-cream group-hover:text-gold transition-colors">${item.title}</h3>
-                            <p class="text-xs text-softgrey line-clamp-2">${item.desc}</p>
-                        </div>
+        // Product Catalog Renderer
+        const productGrid = document.getElementById('product-grid');
+        function renderProducts(filter = 'all') {
+            if (!productGrid) return;
+            const filtered = filter === 'all' ? products : products.filter(p => p.category === filter);
+            productGrid.innerHTML = filtered.map(item => `
+                <div class="bg-obsidian border border-darkslate rounded-sm overflow-hidden group hover:border-gold/50 transition-all duration-300 flex flex-col justify-between">
+                    <div class="relative overflow-hidden aspect-[4/5] bg-charcoal">
+                        <img src="${item.image}" alt="${item.title}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        <span class="absolute top-3 left-3 bg-gold text-obsidian text-[10px] font-bold uppercase tracking-wider px-2 py-0.5 rounded-sm">${item.badge}</span>
                     </div>
-                    <div class="p-5 pt-0 space-y-4">
-                        <div class="flex items-baseline justify-between border-t border-darkslate/60 pt-3">
-                            <span class="text-[10px] text-softgrey uppercase tracking-wider">Price</span>
-                            <span class="font-serif text-lg font-bold text-gold">${item.price.toLocaleString()} ETB</span>
+                    <div class="p-5 flex flex-col flex-grow justify-between space-y-3">
+                        <div>
+                            <h3 class="font-serif text-lg font-bold text-cream group-hover:text-gold transition-colors">${item.title}</h3>
+                            <p class="text-xs text-softgrey mt-1 line-clamp-2">${item.desc}</p>
                         </div>
-                        <a href="https://wa.me/${WHATSAPP_PHONE}?text=${encodeURIComponent('Hello ELLA Suit Store, I am interested in ordering the ' + item.title + ' (' + item.price.toLocaleString() + ' ETB).')}" 
-                           target="_blank" 
-                           class="w-full py-2.5 bg-charcoal border border-darkslate hover:border-gold hover:bg-gold hover:text-obsidian text-cream text-xs font-bold uppercase tracking-wider flex items-center justify-center gap-2 transition-all duration-300 rounded-sm">
-                            <i class="fa-brands fa-whatsapp text-sm"></i> Order Item
-                        </a>
+                        <div class="pt-3 border-t border-darkslate/60 flex items-center justify-between">
+                            <span class="text-sm font-semibold text-gold font-mono">${item.price.toLocaleString()} ETB</span>
+                            <a href="https://wa.me/251975338888?text=Hello%2C%20I%20am%20interested%20in%20${encodeURIComponent(item.title)}" target="_blank" class="px-3 py-1.5 bg-gold/10 text-gold hover:bg-gold hover:text-obsidian text-[11px] font-bold uppercase tracking-wider transition-all rounded-sm">Inquire</a>
+                        </div>
                     </div>
                 </div>
             `).join('');
         }
 
-        // --- SIZE & FIT ADVISOR LOGIC ---
-        let selectedBuild = "Regular";
-        let selectedCut = "Slim Cut";
-
-        function calculateSuitSize() {
-            const height = parseInt(document.getElementById('height-input').value);
-            const weight = parseInt(document.getElementById('weight-input').value);
-
-            let baseSize = Math.round(weight * 0.6 + height * 0.05);
-            
-            if (selectedBuild === "Slim") baseSize -= 1;
-            if (selectedBuild === "Athletic") baseSize += 1;
-
-            let euSize = Math.max(44, Math.min(60, Math.round(baseSize / 2) * 2));
-            let usSize = (euSize - 10) + "R";
-
-            document.getElementById('recommended-size').textContent = euSize;
-            document.getElementById('recommended-us').textContent = `US ${usSize}`;
-            document.getElementById('advisor-fit-title').textContent = `EUR ${euSize} (${selectedBuild} / ${selectedCut})`;
-            document.getElementById('summary-eu-size').textContent = `${euSize} (${usSize} US)`;
-            document.getElementById('summary-hw').textContent = `${height} cm / ${weight} kg`;
-            document.getElementById('summary-build').textContent = selectedBuild;
-            document.getElementById('summary-cut').textContent = selectedCut;
-
-            const message = `Hello ELLA Suit Store! I used your Size & Fit Advisor:\n- Height: ${height} cm\n- Weight: ${weight} kg\n- Build: ${selectedBuild}\n- Cut: ${selectedCut}\nRecommended Size: EUR ${euSize} (${usSize} US). Please check availability for me!`;
-            
-            const btn = document.getElementById('whatsapp-advisor-btn');
-            if (btn) {
-                btn.onclick = () => {
-                    window.open(`https://wa.me/${WHATSAPP_PHONE}?text=${encodeURIComponent(message)}`, '_blank');
-                };
-            }
-        }
-
-        // --- EVENT LISTENERS INITIALIZATION ---
-        document.addEventListener('DOMContentLoaded', () => {
-            renderProducts('all');
-
-            const filterBtns = document.querySelectorAll('.filter-btn');
-            filterBtns.forEach(btn => {
-                btn.addEventListener('click', () => {
-                    filterBtns.forEach(b => {
-                        b.classList.remove('bg-gold', 'text-obsidian', 'border-gold');
-                        b.classList.add('bg-obsidian', 'text-cream/70', 'border-darkslate');
-                    });
-                    btn.classList.remove('bg-obsidian', 'text-cream/70', 'border-darkslate');
-                    btn.classList.add('bg-gold', 'text-obsidian', 'border-gold');
-                    renderProducts(btn.getAttribute('data-filter'));
+        // Initialize Filter Listeners
+        document.querySelectorAll('.filter-btn').forEach(btn => {
+            btn.addEventListener('click', (e) => {
+                document.querySelectorAll('.filter-btn').forEach(b => {
+                    b.classList.remove('bg-gold', 'text-obsidian', 'border-gold');
+                    b.classList.add('bg-obsidian', 'text-cream/70', 'border-darkslate');
                 });
+                btn.classList.remove('bg-obsidian', 'text-cream/70', 'border-darkslate');
+                btn.classList.add('bg-gold', 'text-obsidian', 'border-gold');
+                renderProducts(btn.dataset.filter);
             });
+        });
 
-            const hInput = document.getElementById('height-input');
-            const wInput = document.getElementById('weight-input');
+        // Initialize Catalog
+        renderProducts();
 
-            if (hInput && wInput) {
-                hInput.addEventListener('input', (e) => {
-                    document.getElementById('height-val').textContent = `${e.target.value} cm`;
-                    calculateSuitSize();
-                });
-                wInput.addEventListener('input', (e) => {
-                    document.getElementById('weight-val').textContent = `${e.target.value} kg`;
-                    calculateSuitSize();
-                });
-            }
-
-            const buildBtns = document.querySelectorAll('.build-btn');
-            buildBtns.forEach(btn => {
-                btn.addEventListener('click', () => {
-                    buildBtns.forEach(b => {
-                        b.classList.remove('border-gold', 'text-gold');
-                        b.classList.add('border-darkslate', 'text-cream/70');
-                    });
-                    btn.classList.remove('border-darkslate', 'text-cream/70');
-                    btn.classList.add('border-gold', 'text-gold');
-                    selectedBuild = btn.getAttribute('data-value');
-                    calculateSuitSize();
-                });
-            });
-
-            const cutBtns = document.querySelectorAll('.cut-btn');
-            cutBtns.forEach(btn => {
-                btn.addEventListener('click', () => {
-                    cutBtns.forEach(b => {
-                        b.classList.remove('border-gold', 'text-gold');
-                        b.classList.add('border-darkslate', 'text-cream/70');
-                    });
-                    btn.classList.remove('border-darkslate', 'text-cream/70');
-                    btn.classList.add('border-gold', 'text-gold');
-                    selectedCut = btn.getAttribute('data-value');
-                    calculateSuitSize();
-                });
-            });
-
-            const contactForm = document.getElementById('contact-form');
-            if (contactForm) {
-                contactForm.addEventListener('submit', (e) => {
-                    e.preventDefault();
-                    const name = document.getElementById('form-name').value;
-                    const phone = document.getElementById('form-phone').value;
-                    const msg = document.getElementById('form-message').value;
-
-                    const text = `Hello ELLA Suit Store,\nMy Name: ${name}\nPhone: ${phone}\nMessage: ${msg}`;
-                    window.open(`https://wa.me/${WHATSAPP_PHONE}?text=${encodeURIComponent(text)}`, '_blank');
-                });
-            }
-
-            const mobileBtn = document.getElementById('mobile-menu-btn');
-            const mobileMenu = document.getElementById('mobile-menu');
-            const menuIcon = document.getElementById('menu-icon');
-
-            if (mobileBtn && mobileMenu && menuIcon) {
-                mobileBtn.addEventListener('click', () => {
-                    mobileMenu.classList.toggle('hidden');
-                    if (mobileMenu.classList.contains('hidden')) {
-                        menuIcon.classList.remove('fa-xmark');
-                        menuIcon.classList.add('fa-bars');
-                    } else {
-                        menuIcon.classList.remove('fa-bars');
-                        menuIcon.classList.add('fa-xmark');
-                    }
-                });
-            }
-
-            calculateSuitSize();
+        // Contact Form WhatsApp Redirection
+        document.getElementById('contact-form')?.addEventListener('submit', (e) => {
+            e.preventDefault();
+            const name = document.getElementById('form-name').value;
+            const phone = document.getElementById('form-phone').value;
+            const msg = document.getElementById('form-message').value;
+            const text = `Hello ELLA Suit Store, my name is ${name} (${phone}). Inquiry: ${msg}`;
+            window.open(`https://wa.me/251975338888?text=${encodeURIComponent(text)}`, '_blank');
         });
     </script>
 </body>
