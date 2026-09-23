@@ -619,8 +619,103 @@
             });
         });
 
-        // Initialize Catalog
+        // Size & Fit Advisor Logic
+        const heightInput = document.getElementById('height-input');
+        const weightInput = document.getElementById('weight-input');
+        const heightVal = document.getElementById('height-val');
+        const weightVal = document.getElementById('weight-val');
+
+        let selectedBuild = 'Regular';
+        let selectedCut = 'Slim Fit Cut';
+
+        function calculateSize() {
+            if (!heightInput || !weightInput) return;
+            const height = parseInt(heightInput.value);
+            const weight = parseInt(weightInput.value);
+
+            heightVal.textContent = `${height} cm`;
+            weightVal.textContent = `${weight} kg`;
+
+            // Base EU Size Calculation Strategy based on BMI index approximation
+            let baseSize = 48; // Standard M
+            const bmi = weight / Math.pow(height / 100, 2);
+
+            if (bmi < 20) baseSize = 46;
+            else if (bmi >= 20 && bmi < 23) baseSize = 48;
+            else if (bmi >= 23 && bmi < 26) baseSize = 50;
+            else if (bmi >= 26 && bmi < 29) baseSize = 52;
+            else if (bmi >= 29 && bmi < 32) baseSize = 54;
+            else baseSize = 56;
+
+            // Adjustments based on build option
+            if (selectedBuild === 'Slim') baseSize -= 2;
+            if (selectedBuild === 'Athletic') baseSize += 0; // chest volume naturally handled
+
+            // Boundaries cap
+            baseSize = Math.max(44, Math.min(60, baseSize));
+            const usSize = baseSize - 10;
+
+            // UI Render update
+            const recSizeEl = document.getElementById('recommended-size');
+            const recUsEl = document.getElementById('recommended-us');
+            const fitTitleEl = document.getElementById('advisor-fit-title');
+            const sumEuEl = document.getElementById('summary-eu-size');
+            const sumHwEl = document.getElementById('summary-hw');
+            const sumBuildEl = document.getElementById('summary-build');
+            const sumCutEl = document.getElementById('summary-cut');
+
+            if (recSizeEl) recSizeEl.textContent = baseSize;
+            if (recUsEl) recUsEl.textContent = `US ${usSize}R`;
+            if (fitTitleEl) fitTitleEl.textContent = `EUR ${baseSize} (${selectedBuild} / ${selectedCut})`;
+            if (sumEuEl) sumEuEl.textContent = `${baseSize} (${usSize}R US)`;
+            if (sumHwEl) sumHwEl.textContent = `${height} cm / ${weight} kg`;
+            if (sumBuildEl) sumBuildEl.textContent = selectedBuild;
+            if (sumCutEl) sumCutEl.textContent = selectedCut;
+
+            // Update WhatsApp CTA button link
+            const waAdvisorBtn = document.getElementById('whatsapp-advisor-btn');
+            if (waAdvisorBtn) {
+                const message = `Hello ELLA Suit Store, my size recommendation is EU ${baseSize} (US ${usSize}R). Height: ${height}cm, Weight: ${weight}kg, Build: ${selectedBuild}, Preferred Cut: ${selectedCut}.`;
+                waAdvisorBtn.onclick = () => {
+                    window.open(`https://wa.me/251975338888?text=${encodeURIComponent(message)}`, '_blank');
+                };
+            }
+        }
+
+        heightInput?.addEventListener('input', calculateSize);
+        weightInput?.addEventListener('input', calculateSize);
+
+        // Build type buttons listener
+        document.querySelectorAll('#build-options .build-btn').forEach(btn => {
+            btn.addEventListener('click', () => {
+                document.querySelectorAll('#build-options .build-btn').forEach(b => {
+                    b.classList.remove('border-gold', 'text-gold');
+                    b.classList.add('border-darkslate', 'text-cream/70');
+                });
+                btn.classList.remove('border-darkslate', 'text-cream/70');
+                btn.classList.add('border-gold', 'text-gold');
+                selectedBuild = btn.dataset.value;
+                calculateSize();
+            });
+        });
+
+        // Cut options buttons listener
+        document.querySelectorAll('#cut-options .cut-btn').forEach(btn => {
+            btn.addEventListener('click', () => {
+                document.querySelectorAll('#cut-options .cut-btn').forEach(b => {
+                    b.classList.remove('border-gold', 'text-gold');
+                    b.classList.add('border-darkslate', 'text-cream/70');
+                });
+                btn.classList.remove('border-darkslate', 'text-cream/70');
+                btn.classList.add('border-gold', 'text-gold');
+                selectedCut = btn.dataset.value;
+                calculateSize();
+            });
+        });
+
+        // Initialize Catalog and Advisor Calculation
         renderProducts();
+        calculateSize();
 
         // Contact Form WhatsApp Redirection
         document.getElementById('contact-form')?.addEventListener('submit', (e) => {
