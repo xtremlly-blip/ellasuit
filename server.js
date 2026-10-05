@@ -24,16 +24,17 @@ app.get('/api/testimonials', (req, res) => {
 
 // POST Route: Submit a new testimonial
 app.post('/api/testimonials', (req, res) => {
-  const { name, rating, message } = req.body;
+  const { name, title, rating, message } = req.body;
 
   if (!name || !rating || !message) {
-    return res.status(400).json({ error: 'All fields are required.' });
+    return res.status(400).json({ error: 'Name, rating, and message are required.' });
   }
 
   const testimonials = getTestimonials();
   const newReview = {
     id: Date.now(),
     name,
+    title: title || '',
     rating: parseInt(rating),
     message,
     date: new Date().toLocaleDateString()
