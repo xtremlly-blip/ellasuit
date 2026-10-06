@@ -65,6 +65,16 @@
         .modal-blur {
             backdrop-filter: blur(8px);
         }
+
+        .category-card {
+            min-height: 360px;
+        }
+
+        @media (max-width: 640px) {
+            .category-card {
+                min-height: 300px;
+            }
+        }
     </style>
 </head>
 <body class="bg-obsidian text-cream font-sans antialiased selection:bg-gold selection:text-obsidian flex flex-col min-h-screen">
@@ -218,27 +228,80 @@
                 <p class="text-sm text-softgrey">Browse 100% Virgin Wool Suits, Fine Turkish Cotton Shirts, Tailored Trousers, US & UK Designer Leather Footwear, and Accessories.</p>
             </div>
 
-            <!-- Primary Category Filters -->
-            <div class="flex flex-wrap items-center justify-center gap-2 sm:gap-3" id="main-category-filters">
-                <button data-main="all" class="main-filter-btn active-main-filter px-5 py-2.5 text-xs font-semibold tracking-wider uppercase transition-all duration-300 rounded-sm border border-gold bg-gold text-obsidian shadow-md">
-                    All Items
+            <!-- FIXED FIVE-CATEGORY COLLECTION -->
+            <div id="collection-categories" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4 sm:gap-5">
+                <button type="button" data-category-card="suits" class="category-card group relative aspect-[4/5] overflow-hidden rounded-sm border border-darkslate/80 bg-obsidian text-left focus:outline-none focus:ring-2 focus:ring-gold">
+                    <img src="suit.jpg" alt="Suits" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" onerror="this.src='https://placehold.co/800x1000/1E1E1E/D4AF37?text=Suits'">
+                    <div class="absolute inset-0 bg-gradient-to-t from-obsidian via-obsidian/35 to-transparent"></div>
+                    <div class="absolute inset-x-0 bottom-0 p-5">
+                        <span class="text-[10px] tracking-[0.25em] uppercase text-gold font-semibold">01</span>
+                        <h3 class="font-serif text-2xl font-bold text-cream group-hover:text-gold transition-colors">Suits</h3>
+                        <span class="mt-2 inline-flex items-center gap-2 text-[10px] uppercase tracking-widest text-cream/70">Explore <i class="fa-solid fa-arrow-right"></i></span>
+                    </div>
                 </button>
-                <button data-main="suits" class="main-filter-btn px-5 py-2.5 text-xs font-semibold tracking-wider uppercase transition-all duration-300 rounded-sm border border-darkslate bg-obsidian text-cream/70 hover:text-gold hover:border-gold/50">
-                    Suits
+
+                <button type="button" data-category-card="shirts" class="category-card group relative aspect-[4/5] overflow-hidden rounded-sm border border-darkslate/80 bg-obsidian text-left focus:outline-none focus:ring-2 focus:ring-gold">
+                    <img src="shirts.PNG" alt="Shirts" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" onerror="this.src='https://placehold.co/800x1000/1E1E1E/D4AF37?text=Shirts'">
+                    <div class="absolute inset-0 bg-gradient-to-t from-obsidian via-obsidian/35 to-transparent"></div>
+                    <div class="absolute inset-x-0 bottom-0 p-5">
+                        <span class="text-[10px] tracking-[0.25em] uppercase text-gold font-semibold">02</span>
+                        <h3 class="font-serif text-2xl font-bold text-cream group-hover:text-gold transition-colors">Shirts</h3>
+                        <span class="mt-2 inline-flex items-center gap-2 text-[10px] uppercase tracking-widest text-cream/70">Explore <i class="fa-solid fa-arrow-right"></i></span>
+                    </div>
                 </button>
-                <button data-main="shirts" class="main-filter-btn px-5 py-2.5 text-xs font-semibold tracking-wider uppercase transition-all duration-300 rounded-sm border border-darkslate bg-obsidian text-cream/70 hover:text-gold hover:border-gold/50">
-                    Shirts
+
+                <button type="button" data-category-card="trousers" class="category-card group relative aspect-[4/5] overflow-hidden rounded-sm border border-darkslate/80 bg-obsidian text-left focus:outline-none focus:ring-2 focus:ring-gold">
+                    <img src="trouser.PNG" alt="Trousers" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" onerror="this.src='https://placehold.co/800x1000/1E1E1E/D4AF37?text=Trousers'">
+                    <div class="absolute inset-0 bg-gradient-to-t from-obsidian via-obsidian/35 to-transparent"></div>
+                    <div class="absolute inset-x-0 bottom-0 p-5">
+                        <span class="text-[10px] tracking-[0.25em] uppercase text-gold font-semibold">03</span>
+                        <h3 class="font-serif text-2xl font-bold text-cream group-hover:text-gold transition-colors">Trousers</h3>
+                        <span class="mt-2 inline-flex items-center gap-2 text-[10px] uppercase tracking-widest text-cream/70">Explore <i class="fa-solid fa-arrow-right"></i></span>
+                    </div>
                 </button>
-                <button data-main="trousers" class="main-filter-btn px-5 py-2.5 text-xs font-semibold tracking-wider uppercase transition-all duration-300 rounded-sm border border-darkslate bg-obsidian text-cream/70 hover:text-gold hover:border-gold/50">
-                    Trousers
+
+                <button type="button" data-category-card="shoes" class="category-card group relative aspect-[4/5] overflow-hidden rounded-sm border border-darkslate/80 bg-obsidian text-left focus:outline-none focus:ring-2 focus:ring-gold">
+                    <img src="shoes.jpg" alt="Shoes" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" onerror="this.src='https://placehold.co/800x1000/1E1E1E/D4AF37?text=Shoes'">
+                    <div class="absolute inset-0 bg-gradient-to-t from-obsidian via-obsidian/35 to-transparent"></div>
+                    <div class="absolute inset-x-0 bottom-0 p-5">
+                        <span class="text-[10px] tracking-[0.25em] uppercase text-gold font-semibold">04</span>
+                        <h3 class="font-serif text-2xl font-bold text-cream group-hover:text-gold transition-colors">Shoes</h3>
+                        <span class="mt-2 inline-flex items-center gap-2 text-[10px] uppercase tracking-widest text-cream/70">Explore <i class="fa-solid fa-arrow-right"></i></span>
+                    </div>
                 </button>
-                <button data-main="shoes" class="main-filter-btn px-5 py-2.5 text-xs font-semibold tracking-wider uppercase transition-all duration-300 rounded-sm border border-darkslate bg-obsidian text-cream/70 hover:text-gold hover:border-gold/50">
-                    Shoes
-                </button>
-                <button data-main="accessories" class="main-filter-btn px-5 py-2.5 text-xs font-semibold tracking-wider uppercase transition-all duration-300 rounded-sm border border-darkslate bg-obsidian text-cream/70 hover:text-gold hover:border-gold/50">
-                    Accessories
+
+                <button type="button" data-category-card="accessories" class="category-card group relative aspect-[4/5] overflow-hidden rounded-sm border border-darkslate/80 bg-obsidian text-left focus:outline-none focus:ring-2 focus:ring-gold">
+                    <img src="accessories.PNG" alt="Accessories" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" onerror="this.src='https://placehold.co/800x1000/1E1E1E/D4AF37?text=Accessories'">
+                    <div class="absolute inset-0 bg-gradient-to-t from-obsidian via-obsidian/35 to-transparent"></div>
+                    <div class="absolute inset-x-0 bottom-0 p-5">
+                        <span class="text-[10px] tracking-[0.25em] uppercase text-gold font-semibold">05</span>
+                        <h3 class="font-serif text-2xl font-bold text-cream group-hover:text-gold transition-colors">Accessories</h3>
+                        <span class="mt-2 inline-flex items-center gap-2 text-[10px] uppercase tracking-widest text-cream/70">Explore <i class="fa-solid fa-arrow-right"></i></span>
+                    </div>
                 </button>
             </div>
+
+            <!-- Product Listing View: hidden until a main category is selected -->
+            <div id="product-listing-view" class="hidden space-y-8">
+                <div class="flex flex-col sm:flex-row items-center justify-between gap-4 border-b border-darkslate/60 pb-5">
+                    <div>
+                        <span class="text-[10px] text-gold uppercase tracking-[0.25em] font-semibold">Category Collection</span>
+                        <h3 id="active-category-title" class="font-serif text-2xl sm:text-3xl font-bold text-cream mt-1">Collection</h3>
+                    </div>
+                    <button type="button" id="back-to-collection" class="inline-flex items-center gap-2 px-4 py-2 border border-darkslate bg-obsidian text-cream/80 hover:text-gold hover:border-gold/50 text-[10px] uppercase tracking-widest transition-all duration-300 rounded-sm">
+                        <i class="fa-solid fa-arrow-left"></i> Back to Collection
+                    </button>
+                </div>
+
+                <!-- Existing main-category filter state is retained for JavaScript compatibility -->
+                <div class="hidden" id="main-category-filters">
+                    <button data-main="all" class="main-filter-btn">All Items</button>
+                    <button data-main="suits" class="main-filter-btn">Suits</button>
+                    <button data-main="shirts" class="main-filter-btn">Shirts</button>
+                    <button data-main="trousers" class="main-filter-btn">Trousers</button>
+                    <button data-main="shoes" class="main-filter-btn">Shoes</button>
+                    <button data-main="accessories" class="main-filter-btn">Accessories</button>
+                </div>
 
             <!-- Dynamic Secondary Sub-Category Bar -->
             <div id="sub-category-wrapper" class="hidden transition-all duration-300 bg-obsidian/80 p-4 rounded-sm border border-darkslate/60 text-center">
@@ -664,7 +727,7 @@
                         <a href="https://www.facebook.com/share/1Ez6gbGFtz/?mibextid=wwXIfr" target="_blank" rel="noopener" class="w-9 h-9 bg-obsidian border border-darkslate hover:border-gold rounded-full flex items-center justify-center text-cream/80 hover:text-gold transition-colors text-sm" title="Facebook">
                             <i class="fa-brands fa-facebook-f"></i>
                         </a>
-                        <a href="http://tiktok.com/@ella.suit?_t=ZM-8xmTSIXtRJ8&_r=1" target="_blank" rel="noopener" class="w-9 h-9 bg-obsidian border border-darkslate hover:border-gold rounded-full flex items-center justify-center text-cream/80 hover:text-gold transition-colors text-sm" title="TikTok">
+                        <a href="https://tiktok.com/@ella.suit?_t=ZM-8xmTSIXtRJ8&_r=1" target="_blank" rel="noopener" class="w-9 h-9 bg-obsidian border border-darkslate hover:border-gold rounded-full flex items-center justify-center text-cream/80 hover:text-gold transition-colors text-sm" title="TikTok">
                             <i class="fa-brands fa-tiktok"></i>
                         </a>
                         <a href="https://t.me/Ellasuits" target="_blank" rel="noopener" class="w-9 h-9 bg-obsidian border border-darkslate hover:border-gold rounded-full flex items-center justify-center text-cream/80 hover:text-gold transition-colors text-sm" title="Telegram">
@@ -701,7 +764,7 @@
                 <div class="flex items-center gap-3">
                     <a href="https://www.instagram.com/ellasuitstore?stkn=a3p3Y2syYnVhbGZ5&utm_source=qr" target="_blank" class="hover:text-gold"><i class="fa-brands fa-instagram text-base"></i></a>
                     <a href="https://www.facebook.com/share/1Ez6gbGFtz/?mibextid=wwXIfr" target="_blank" class="hover:text-gold"><i class="fa-brands fa-facebook text-base"></i></a>
-                    <a href="http://tiktok.com/@ella.suit?_t=ZM-8xmTSIXtRJ8&_r=1" target="_blank" class="hover:text-gold"><i class="fa-brands fa-tiktok text-base"></i></a>
+                    <a href="https://tiktok.com/@ella.suit?_t=ZM-8xmTSIXtRJ8&_r=1" target="_blank" class="hover:text-gold"><i class="fa-brands fa-tiktok text-base"></i></a>
                     <a href="https://t.me/Ellasuits" target="_blank" class="hover:text-gold"><i class="fa-brands fa-telegram text-base"></i></a>
                 </div>
 
@@ -1349,6 +1412,15 @@
             }
         ];
 
+        // HOMEPAGE COLLECTION: fixed five feature categories
+        const collectionCategories = [
+            { key: 'suits', title: 'Suits', image: 'suit.jpg', route: '/suits' },
+            { key: 'shirts', title: 'Shirts', image: 'shirts.PNG', route: '/shirts' },
+            { key: 'trousers', title: 'Trousers', image: 'trouser.PNG', route: '/trousers' },
+            { key: 'shoes', title: 'Shoes', image: 'shoes.jpg', route: '/shoes' },
+            { key: 'accessories', title: 'Accessories', image: 'accessories.PNG', route: '/accessories' }
+        ];
+
         // SUB-CATEGORY MAPPINGS
         const subCategories = {
             suits: ['All Suits', '100% Virgin Wool', 'Executive 2-Piece', '2-Piece & 3-Piece', 'Modern Slim Fit'],
@@ -1447,18 +1519,76 @@
             currentSubFilter = subs[0];
         }
 
-        // MAIN CATEGORY FILTER LISTENERS
+        // MAIN CATEGORY FILTER LISTENERS + FIVE-CATEGORY DRILL-DOWN
+        function selectMainCategory(category, updateUrl = true) {
+            const btn = document.querySelector(`#main-category-filters .main-filter-btn[data-main="${category}"]`);
+            if (!btn) return;
+
+            currentMainFilter = category;
+            updateSubCategoryBar(category);
+            renderProducts();
+
+            const listingView = document.getElementById('product-listing-view');
+            const categoryGrid = document.getElementById('collection-categories');
+            const title = document.getElementById('active-category-title');
+
+            if (category === 'all') {
+                categoryGrid.classList.remove('hidden');
+                listingView.classList.add('hidden');
+                title.textContent = 'Collection';
+                if (updateUrl) history.pushState({ category: null }, '', '#showcase');
+                return;
+            }
+
+            categoryGrid.classList.add('hidden');
+            listingView.classList.remove('hidden');
+
+            const categoryInfo = collectionCategories.find(c => c.key === category);
+            title.textContent = categoryInfo ? categoryInfo.title : category;
+
+            if (updateUrl) {
+                history.pushState({ category }, '', categoryInfo ? categoryInfo.route : `/${category}`);
+            }
+
+            document.getElementById('product-listing-view').scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+
         document.querySelectorAll('#main-category-filters .main-filter-btn').forEach(btn => {
-            btn.addEventListener('click', () => {
-                document.querySelectorAll('#main-category-filters .main-filter-btn').forEach(b => {
-                    b.className = 'main-filter-btn px-5 py-2.5 text-xs font-semibold tracking-wider uppercase transition-all duration-300 rounded-sm border border-darkslate bg-obsidian text-cream/70 hover:text-gold hover:border-gold/50';
-                });
-                btn.className = 'main-filter-btn active-main-filter px-5 py-2.5 text-xs font-semibold tracking-wider uppercase transition-all duration-300 rounded-sm border border-gold bg-gold text-obsidian shadow-md';
-                
-                currentMainFilter = btn.getAttribute('data-main');
-                updateSubCategoryBar(currentMainFilter);
-                renderProducts();
+            btn.addEventListener('click', () => selectMainCategory(btn.getAttribute('data-main')));
+        });
+
+        // HOMEPAGE FIVE-CATEGORY CARDS
+        document.querySelectorAll('[data-category-card]').forEach(card => {
+            card.addEventListener('click', () => {
+                selectMainCategory(card.getAttribute('data-category-card'));
             });
+        });
+
+        document.getElementById('back-to-collection').addEventListener('click', () => {
+            currentMainFilter = 'all';
+            currentSubFilter = 'all';
+            updateSubCategoryBar('all');
+            renderProducts();
+            document.getElementById('product-listing-view').classList.add('hidden');
+            document.getElementById('collection-categories').classList.remove('hidden');
+            history.pushState({ category: null }, '', '#showcase');
+        });
+
+        // Support direct /suits, /shirts, /trousers, /shoes and /accessories URLs
+        // when the hosting platform serves index.html as the SPA fallback.
+        function categoryFromLocation() {
+            const path = window.location.pathname.replace(/\/+$/, '') || '/';
+            const match = collectionCategories.find(c => c.route === path);
+            return match ? match.key : null;
+        }
+
+        window.addEventListener('popstate', () => {
+            const category = categoryFromLocation();
+            if (category) {
+                selectMainCategory(category, false);
+            } else {
+                document.getElementById('back-to-collection').click();
+            }
         });
 
         // MODAL LIGHTBOX
@@ -1695,6 +1825,17 @@
             updateAdvisor();
             setupStarRating();
             fetchTestimonials();
+
+            const initialCategory = categoryFromLocation();
+            if (initialCategory) {
+                selectMainCategory(initialCategory, false);
+            } else {
+                currentMainFilter = 'all';
+                currentSubFilter = 'all';
+                document.getElementById('collection-categories').classList.remove('hidden');
+                document.getElementById('product-listing-view').classList.add('hidden');
+                updateSubCategoryBar('all');
+            }
         });
     </script>
 </body>
