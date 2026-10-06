@@ -621,14 +621,12 @@
                         Around Edna Mall / Bole Medhanialem<br>
                         Addis Ababa, Ethiopia
                     </p>
-                    <a 
-  href="https://www.google.com/maps/search/?api=1&query=Mafi+City+Mall+Cameroon+Street+Addis+Ababa" 
-  target="_blank" 
-  rel="noopener noreferrer" 
-  class="hover:text-gold transition-colors"
->
-  Location
-</a>
+                    <a href="https://www.google.com/maps/search/?api=1&query=Mafi+City+Mall+Cameroon+Street+Addis+Ababa" 
+                       target="_blank" 
+                       rel="noopener noreferrer" 
+                       class="hover:text-gold transition-colors text-xs text-gold uppercase tracking-wider font-semibold inline-block pt-1">
+                        View Map Location
+                    </a>
                 </div>
 
                 <!-- Phone Channels (Direct Calling Enabled) -->
@@ -748,10 +746,11 @@
 
     <!-- JAVASCRIPT LOGIC -->
     <script>
-        // EXPANDED CATALOG DATABASE WITH ALL SCREENSHOT IMAGES & MULTI-OPTION COLOR VARIATIONS
+        const API_URL = 'https://ellasuit-api.onrender.com/api/testimonials';
+
+        // CATALOG DATABASE
         const catalogData = [
             // ================= SUITS CATEGORY =================
-            // 1. 100% Virgin Wool Options
             {
                 id: 'suit-wool-navy',
                 title: 'Italian Super 150s Virgin Wool Suit - Navy Blue',
@@ -800,8 +799,6 @@
                 sizes: 'EU 48, 50, 52, 54',
                 desc: 'Sophisticated tobacco brown virgin wool suit designed for the modern gentleman.'
             },
-
-            // 2. Executive 2-Piece Options
             {
                 id: 'suit-2p-black',
                 title: 'Executive Tailored 2-Piece Suit - Classic Black',
@@ -850,8 +847,6 @@
                 sizes: 'EU 48, 50, 52, 54, 56',
                 desc: 'Versatile dark slate 2-piece suit crafted with smooth interior satin lining.'
             },
-
-            // 3. 2-Piece & 3-Piece Options
             {
                 id: 'suit-3p-navy',
                 title: 'Italian Tuxedo & Vest 3-Piece - Midnight Navy',
@@ -900,8 +895,6 @@
                 sizes: 'EU 48, 50, 52, 54, 56',
                 desc: 'Sleek black tie formal suit with satin notch lapels and tailored slacks.'
             },
-
-            // 4. Modern Slim Fit Options
             {
                 id: 'suit-slim-black',
                 title: 'Italian Modern Slim Fit Suit - Jet Black',
@@ -987,9 +980,7 @@
                 desc: 'Warm camel tan slim fit suit offering bespoke elegance and modern proportions.'
             },
 
-
             // ================= SHIRTS CATEGORY =================
-            // 1. Turkish Fine Cotton
             {
                 id: 'shirt-cotton-white',
                 title: 'Turkish Fine Cotton Dress Shirt - Crisp White',
@@ -1038,8 +1029,6 @@
                 sizes: 'Neck 38cm, 39cm, 40cm, 41cm, 42cm',
                 desc: 'Executive pin-stripe pattern shirt crafted from smooth Turkish woven cotton.'
             },
-
-            // 2. White & Crisp Formal
             {
                 id: 'shirt-white-spread',
                 title: 'Spread Collar Formal Shirt - Crisp Pure White',
@@ -1088,8 +1077,6 @@
                 sizes: 'Neck 39cm, 40cm, 41cm, 42cm, 43cm',
                 desc: 'Elegant dobby weave micro-pattern formal white shirt.'
             },
-
-            // 3. Slim Fit Shirts
             {
                 id: 'shirt-slim-white',
                 title: 'Slim Fit Tailored Shirt - Pure White',
@@ -1211,7 +1198,6 @@
                 desc: 'Rich texture sky blue slim shirt.'
             },
 
-
             // ================= TROUSERS CATEGORY =================
             {
                 id: 'trouser-wool-charcoal',
@@ -1262,7 +1248,6 @@
                 desc: 'Premium twill cotton chinos designed for business casual comfort.'
             },
 
-
             // ================= SHOES CATEGORY =================
             {
                 id: 'shoe-oxford-black',
@@ -1312,7 +1297,6 @@
                 sizes: 'EU 40, 41, 42, 43, 44',
                 desc: 'Minimalist leather dress sneakers combining comfort with sleek luxury styling.'
             },
-
 
             // ================= ACCESSORIES CATEGORY =================
             {
@@ -1421,9 +1405,7 @@
                     </div>
                 `;
 
-                // Attach modal lightbox event on image click
                 card.querySelector('.modal-trigger-img').addEventListener('click', () => openModal(item));
-
                 grid.appendChild(card);
             });
         }
@@ -1465,7 +1447,7 @@
             currentSubFilter = subs[0];
         }
 
-        // SETUP MAIN CATEGORY FILTER LISTENERS
+        // MAIN CATEGORY FILTER LISTENERS
         document.querySelectorAll('#main-category-filters .main-filter-btn').forEach(btn => {
             btn.addEventListener('click', () => {
                 document.querySelectorAll('#main-category-filters .main-filter-btn').forEach(b => {
@@ -1519,7 +1501,6 @@
             document.getElementById('sleeve-val').textContent = `${sl} cm (${(sl/2.54).toFixed(1)} in)`;
             document.getElementById('waist-val').textContent = `${w} Inches (EU ${w + 16})`;
 
-            // Calculate EU Size based on shoulder/waist formula
             let euSize = 48;
             if (sh <= 43) euSize = 46;
             else if (sh <= 45) euSize = 48;
@@ -1538,7 +1519,6 @@
             document.getElementById('summary-waist').textContent = `${w} Inches`;
             document.getElementById('summary-cut').textContent = selectedCut;
 
-            // WhatsApp button update
             const advWaText = encodeURIComponent(`Hello ELLA Suit Store, my Sartorial Size Advisor calculation: EU ${euSize} (${usSize}) Jacket, Shoulder ${sh}cm, Sleeve ${sl}cm, Trouser Waist ${w} inches, Preferred Fit: ${selectedCut}. Please reserve available options at Shop M06.`);
             document.getElementById('whatsapp-advisor-btn').onclick = () => {
                 window.open(`https://wa.me/251975338888?text=${advWaText}`, '_blank');
@@ -1585,177 +1565,137 @@
             link.addEventListener('click', () => mobileMenu.classList.add('hidden'));
         });
 
-        // FUNCTIONAL CLIENT TESTIMONIAL FORM
+        // UNIFIED TESTIMONIAL SYSTEM
         let selectedStarRating = 5;
-        document.querySelectorAll('#rating-stars .star-opt').forEach(star => {
-            star.addEventListener('click', () => {
-                selectedStarRating = parseInt(star.getAttribute('data-rating'));
-                document.getElementById('rating-value-display').textContent = `${selectedStarRating} Star${selectedStarRating > 1 ? 's' : ''}`;
-                
-                document.querySelectorAll('#rating-stars .star-opt').forEach((s, idx) => {
-                    if (idx < selectedStarRating) {
-                        s.classList.remove('text-softgrey');
-                        s.classList.add('text-gold');
-                    } else {
-                        s.classList.remove('text-gold');
-                        s.classList.add('text-softgrey');
-                    }
+
+        function setupStarRating() {
+            const stars = document.querySelectorAll('#rating-stars .star-opt');
+            const display = document.getElementById('rating-value-display');
+
+            stars.forEach((star) => {
+                star.addEventListener('click', () => {
+                    selectedStarRating = parseInt(star.getAttribute('data-rating'));
+                    if (display) display.textContent = `${selectedStarRating} Star${selectedStarRating > 1 ? 's' : ''}`;
+                    
+                    stars.forEach((s, idx) => {
+                        if (idx < selectedStarRating) {
+                            s.classList.remove('fa-regular', 'text-softgrey');
+                            s.classList.add('fa-solid', 'text-gold');
+                        } else {
+                            s.classList.remove('fa-solid', 'text-gold');
+                            s.classList.add('fa-regular', 'text-softgrey');
+                        }
+                    });
                 });
             });
-        });
+        }
 
-        document.getElementById('testimonial-form').addEventListener('submit', (e) => {
-            e.preventDefault();
-            const name = document.getElementById('review-name').value.trim();
-            const title = document.getElementById('review-title').value.trim();
-            const text = document.getElementById('review-text').value.trim();
-
-            if (!name || !text) return;
-
-            // Generate star icons HTML
+        function createTestimonialCard(item) {
+            const card = document.createElement('div');
+            card.className = 'bg-obsidian p-8 rounded-sm border border-gold/40 flex flex-col justify-between space-y-6';
+            
             let starsHtml = '';
             for (let i = 0; i < 5; i++) {
-                if (i < selectedStarRating) {
+                if (i < item.rating) {
                     starsHtml += '<i class="fa-solid fa-star"></i>';
                 } else {
-                    starsHtml += '<i class="fa-regular fa-star"></i>';
+                    starsHtml += '<i class="fa-regular fa-star text-softgrey"></i>';
                 }
             }
 
-            const newCard = document.createElement('div');
-            newCard.className = 'bg-obsidian p-8 rounded-sm border border-gold/50 flex flex-col justify-between space-y-6 animate-fade-in';
-            newCard.innerHTML = `
+            card.innerHTML = `
                 <div class="space-y-4">
                     <div class="flex text-gold text-xs gap-1">
                         ${starsHtml}
                     </div>
                     <p class="text-xs text-cream/80 leading-relaxed font-light italic">
-                        "${text}"
+                        "${item.message || item.text}"
                     </p>
                 </div>
                 <div class="border-t border-darkslate/60 pt-4 flex items-center justify-between">
                     <div>
-                        <h4 class="font-serif text-cream font-bold text-base">${name}</h4>
-                        <p class="text-[10px] text-gold uppercase tracking-wider">${title || 'Verified Client'}</p>
+                        <h4 class="font-serif text-cream font-bold text-base">${item.name}</h4>
+                        <p class="text-[10px] text-gold uppercase tracking-wider">${item.title || 'Verified Client'}</p>
                     </div>
                     <i class="fa-solid fa-quote-right text-darkslate text-2xl"></i>
                 </div>
             `;
+            return card;
+        }
 
-            const grid = document.getElementById('testimonials-grid');
-            grid.insertBefore(newCard, grid.firstChild);
+        async function fetchTestimonials() {
+            try {
+                const response = await fetch(API_URL);
+                if (!response.ok) return;
+                const testimonials = await response.json();
+                
+                const container = document.getElementById('testimonials-grid'); 
+                if (!container || !Array.isArray(testimonials)) return;
 
-            // Reset Form
-            document.getElementById('testimonial-form').reset();
-            alert('Thank you for sharing your experience! Your testimonial has been posted.');
-        });
+                testimonials.forEach(item => {
+                    container.insertBefore(createTestimonialCard(item), container.firstChild);
+                });
+            } catch (err) {
+                console.warn('Backend API unavailable; operating on static testimonials.', err);
+            }
+        }
+
+        // SUBMIT TESTIMONIAL FORM
+        const testimonialForm = document.getElementById('testimonial-form');
+        if (testimonialForm) {
+            testimonialForm.addEventListener('submit', async function(e) {
+                e.preventDefault();
+
+                const nameInput = document.getElementById('review-name');
+                const titleInput = document.getElementById('review-title');
+                const textInput = document.getElementById('review-text');
+
+                const name = nameInput.value.trim();
+                const title = titleInput.value.trim();
+                const message = textInput.value.trim();
+
+                if (!name || !message) return;
+
+                const payload = {
+                    name: name,
+                    title: title || 'Verified Client',
+                    rating: selectedStarRating,
+                    message: message
+                };
+
+                // Add to UI immediately
+                const grid = document.getElementById('testimonials-grid');
+                grid.insertBefore(createTestimonialCard(payload), grid.firstChild);
+
+                // Attempt API Sync
+                try {
+                    await fetch(API_URL, {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify(payload)
+                    });
+                } catch (err) {
+                    console.warn('Saved review locally; backend offline.', err);
+                }
+
+                // Reset Form
+                testimonialForm.reset();
+                selectedStarRating = 5;
+                if (document.getElementById('rating-value-display')) {
+                    document.getElementById('rating-value-display').textContent = '5 Stars';
+                }
+                
+                alert('Thank you for sharing your experience! Your review has been posted.');
+            });
+        }
 
         // INITIALIZE APPLICATION
-        renderProducts();
-        updateAdvisor();
+        document.addEventListener('DOMContentLoaded', () => {
+            renderProducts();
+            updateAdvisor();
+            setupStarRating();
+            fetchTestimonials();
+        });
     </script>
-    <script>
-  const API_URL = 'https://ellasuit-api.onrender.com/api/testimonials';
-
-  let selectedRating = 5;
-
-  document.addEventListener('DOMContentLoaded', () => {
-    fetchTestimonials();
-    setupStarRating();
-  });
-
-  function setupStarRating() {
-    const stars = document.querySelectorAll('.star-opt');
-    const display = document.getElementById('rating-value-display');
-
-    stars.forEach((star) => {
-      star.addEventListener('click', () => {
-        selectedRating = parseInt(star.getAttribute('data-rating'));
-        if (display) display.textContent = `${selectedRating} Star${selectedRating > 1 ? 's' : ''}`;
-        
-        stars.forEach((s, idx) => {
-          if (idx < selectedRating) {
-            s.classList.remove('fa-regular');
-            s.classList.add('fa-solid');
-          } else {
-            s.classList.remove('fa-solid');
-            s.classList.add('fa-regular');
-          }
-        });
-      });
-    });
-  }
-
-  async function fetchTestimonials() {
-    try {
-      const response = await fetch(API_URL);
-      const testimonials = await response.json();
-      
-      const container = document.getElementById('testimonial-list'); 
-      if (!container) return;
-      
-      container.innerHTML = ''; 
-
-      testimonials.forEach(item => {
-        const starsHtml = '★'.repeat(item.rating) + '☆'.repeat(5 - item.rating);
-        const card = document.createElement('div');
-        card.className = "bg-charcoal p-6 rounded-sm border border-darkslate text-cream space-y-3";
-        card.innerHTML = `
-          <div class="text-gold text-sm">${starsHtml}</div>
-          <p class="text-xs text-cream/90 italic font-light">"${item.message}"</p>
-          <div class="text-[11px] text-cream/60 flex justify-between items-center pt-2 border-t border-darkslate/50">
-              <div>
-                <span class="font-bold text-cream block">${item.name}</span>
-                <span class="text-[10px] text-softgrey">${item.title || ''}</span>
-              </div>
-              <span>${item.date}</span>
-          </div>
-        `;
-        container.appendChild(card);
-      });
-    } catch (err) {
-      console.error('Error fetching testimonials:', err);
-    }
-  }
-
-  const testimonialForm = document.getElementById('testimonial-form');
-  if (testimonialForm) {
-    testimonialForm.addEventListener('submit', async function(e) {
-      e.preventDefault();
-
-      const nameInput = document.getElementById('review-name');
-      const titleInput = document.getElementById('review-title');
-      const messageInput = document.getElementById('review-text');
-
-      const payload = {
-        name: nameInput.value,
-        title: titleInput.value,
-        rating: selectedRating,
-        message: messageInput.value
-      };
-
-      try {
-        const response = await fetch(API_URL, {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify(payload)
-        });
-
-        if (response.ok) {
-          testimonialForm.reset();
-          selectedRating = 5;
-          if (document.getElementById('rating-value-display')) {
-            document.getElementById('rating-value-display').textContent = '5 Stars';
-          }
-          fetchTestimonials();
-        } else {
-          alert('Could not submit review. Please try again.');
-        }
-      } catch (err) {
-        console.error('Error submitting testimonial:', err);
-      }
-    });
-  }
-</script>
 </body>
 </html>
